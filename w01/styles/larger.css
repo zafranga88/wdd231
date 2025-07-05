@@ -12,4 +12,18 @@
 .hamburger {
     display: none;
 }
+
+.navigation {
+    display: block;
+    border-bottom: solid 1px #eee;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation a {
+    border: none;
+}
+
 }
