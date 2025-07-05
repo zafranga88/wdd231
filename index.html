@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franco Zarate - Web Developer Portfolio</title>
     <meta name="description" content="Professional web developer portfolio showcasing modern web development skills, responsive design, and innovative projects.">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Franco Zarate">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -53,6 +53,25 @@
                 <img src="images/profile.jpg" alt="Franco Zarate - Web Developer" class="profile-image">
             </div>
         </div>
+
+        <!-- Courses Section -->
+        <section class="courses-section">
+            <h2>My Courses</h2>
+            
+            <div class="course-filters">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="CSE">CSE</button>
+                <button class="filter-btn" data-filter="WDD">WDD</button>
+            </div>
+            
+            <div class="credits-display">
+                Total Credits: <span id="total-credits">0</span>
+            </div>
+            
+            <div class="courses-grid" id="courses-container">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
+        </section>
     </main>
 
     <footer>

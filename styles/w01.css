@@ -1,284 +1,20 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Add these styles to your existing w01.css file */
 
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #f59e0b;
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --background-light: #f9fafb;
-    --background-white: #ffffff;
-    --border-color: #e5e7eb;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text-primary);
-    background-color: var(--background-light);
-}
-
-/* Header Styles */
-header {
-    background: var(--background-white);
-    box-shadow: var(--shadow-md);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 1rem 0;
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-}
-
-.logo-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 0.5rem;
-    border: none;
-    background: none;
-    gap: 4px;
-    z-index: 1001;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-primary);
-    transition: all 0.3s ease;
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Navigation Styles */
-nav {
-    display: flex;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.nav-menu li a:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.nav-menu li a.active {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-/* About Me Section Styles */
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    background: var(--background-white);
-    border-radius: 1rem;
-    padding: 3rem;
-    box-shadow: var(--shadow-lg);
-    margin-top: 2rem;
-}
-
-.about-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: left;
-}
-
-.about-content p {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-.about-content p:last-child {
-    margin-bottom: 0;
-}
-
-.about-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-lg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
-
-/* Legacy styles for backward compatibility */
-h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.sections-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-section {
-    background: var(--background-white);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: var(--shadow-lg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
-
-h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.section-icon {
-    width: 32px;
-    height: 32px;
-    fill: var(--primary-color);
-}
-
-section p {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.feature-list {
-    list-style: none;
-    margin-top: 1rem;
-}
-
-.feature-list li {
-    padding: 0.5rem 0;
-    color: var(--text-secondary);
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.feature-list li::before {
-    content: "✓";
-    color: var(--accent-color);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Footer Styles */
-footer {
-    background: var(--text-primary);
-    color: white;
-    padding: 3rem 0 1rem;
-    margin-top: 4rem;
-}
-
-/* Course Section Styles */
+/* Course Section Styles - Add these if missing or incomplete */
 .courses-section {
     background: var(--background-white);
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: var(--shadow-lg);
     margin-top: 3rem;
+}
+
+.courses-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .course-filters {
@@ -298,6 +34,8 @@ footer {
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 .filter-btn:hover {
@@ -345,7 +83,7 @@ footer {
 
 .course-card.completed {
     background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
-    border-color: #22c55e;
+    border-color: var(--success-color);
 }
 
 .course-card.completed::before {
@@ -353,7 +91,7 @@ footer {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #22c55e;
+    background: var(--success-color);
     color: white;
     width: 32px;
     height: 32px;
@@ -398,7 +136,7 @@ footer {
 }
 
 .course-card.completed .course-subject {
-    background: #22c55e;
+    background: var(--success-color);
     color: white;
 }
 
@@ -410,128 +148,8 @@ footer {
     color: #166534;
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem;
-    border-radius: 50%;
-    background: var(--primary-color);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-links a:hover {
-    background: var(--accent-color);
-    transform: translateY(-3px);
-}
-
-.social-icon {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1); /* Makes the icon white */
-}
-
-.footer-info {
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-#lastModified {
-    font-size: 0.8rem;
-    color: #9ca3af;
-}
-
-/* Responsive Design */
+/* Responsive updates for course section */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 70px; /* Fixed height from top */
-        left: -100%; /* Start hidden to the left */
-        width: 100%;
-        height: calc(100vh - 70px); /* Full height minus header */
-        background: var(--background-white);
-        flex-direction: column;
-        padding: 2rem 1rem;
-        box-shadow: var(--shadow-lg);
-        transition: left 0.3s ease;
-        z-index: 999;
-    }
-
-    .nav-menu.active {
-        left: 0; /* Slide in from the left */
-    }
-
-    .nav-menu li {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .nav-menu li a {
-        display: block;
-        width: 100%;
-        padding: 1rem;
-        text-align: center;
-        font-size: 1.1rem;
-    }
-
-    /* About Me responsive styles */
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 2rem;
-    }
-
-    .about-content h1 {
-        font-size: 2.5rem;
-        text-align: center;
-    }
-
-    .about-content p {
-        font-size: 1rem;
-    }
-
-    .profile-image {
-        max-width: 300px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .sections-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-
-    .social-links {
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
-
     .course-filters {
         flex-direction: column;
         align-items: stretch;
@@ -547,42 +165,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .header-container {
-        padding: 0 0.5rem;
-    }
-
-    main {
-        padding: 1rem 0.5rem;
-    }
-
-    .about-container {
-        padding: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .about-content h1 {
-        font-size: 2rem;
-    }
-
-    .profile-image {
-        max-width: 250px;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    section {
-        padding: 1rem;
-    }
-
-    .logo-name {
-        font-size: 1.25rem;
-    }
-
-    .nav-menu {
-        top: 60px; /* Adjust for smaller header on mobile */
-        height: calc(100vh - 60px);
-    }
+/* Add success color variable if not already defined */
+:root {
+    --success-color: #22c55e;
 }

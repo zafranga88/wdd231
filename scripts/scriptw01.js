@@ -170,7 +170,7 @@ function createCourseCard(course) {
     return card;
 }
 
-// Update credits display
+// Update credits display using reduce function
 function updateCreditsDisplay(coursesToDisplay) {
     const totalCreditsElement = document.getElementById('total-credits');
     if (!totalCreditsElement) return;
