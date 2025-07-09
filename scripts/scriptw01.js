@@ -1,4 +1,4 @@
-// Course List Array
+
 const courses = [
     {
         subject: 'CSE',
@@ -79,26 +79,20 @@ const courses = [
     }
 ];
 
-// Global variables
 let currentFilter = 'all';
 let filteredCourses = [...courses];
 
-// DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
+
     setCurrentYear();
-    
-    // Set last modified date
+
     setLastModified();
-    
-    // Initialize responsive menu
+
     initializeResponsiveMenu();
-    
-    // Initialize course functionality
+
     initializeCourses();
 });
 
-// Set current year dynamically
 function setCurrentYear() {
     const currentYearElement = document.getElementById('currentyear');
     if (currentYearElement) {
@@ -106,7 +100,6 @@ function setCurrentYear() {
     }
 }
 
-// Set last modified date
 function setLastModified() {
     const lastModifiedElement = document.getElementById('lastModified');
     if (lastModifiedElement) {
@@ -114,7 +107,6 @@ function setLastModified() {
     }
 }
 
-// Initialize responsive menu functionality
 function initializeResponsiveMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -124,8 +116,7 @@ function initializeResponsiveMenu() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-        
-        // Close mobile menu when clicking on a link
+
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', function() {
                 hamburger.classList.remove('active');
@@ -135,14 +126,12 @@ function initializeResponsiveMenu() {
     }
 }
 
-// Initialize courses functionality
 function initializeCourses() {
     displayCourses(courses);
     updateCreditsDisplay(courses);
     initializeFilterButtons();
 }
 
-// Display courses in the grid
 function displayCourses(coursesToDisplay) {
     const coursesContainer = document.getElementById('courses-container');
     if (!coursesContainer) return;
@@ -155,7 +144,6 @@ function displayCourses(coursesToDisplay) {
     });
 }
 
-// Create individual course card
 function createCourseCard(course) {
     const card = document.createElement('div');
     card.className = `course-card ${course.completed ? 'completed' : ''}`;
@@ -170,7 +158,6 @@ function createCourseCard(course) {
     return card;
 }
 
-// Update credits display using reduce function
 function updateCreditsDisplay(coursesToDisplay) {
     const totalCreditsElement = document.getElementById('total-credits');
     if (!totalCreditsElement) return;
@@ -182,25 +169,21 @@ function updateCreditsDisplay(coursesToDisplay) {
     totalCreditsElement.textContent = totalCredits;
 }
 
-// Initialize filter buttons
 function initializeFilterButtons() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             const filter = this.getAttribute('data-filter');
-            
-            // Update active button
+
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            
-            // Filter and display courses
+
             filterCourses(filter);
         });
     });
 }
 
-// Filter courses based on selected filter
 function filterCourses(filter) {
     currentFilter = filter;
     
@@ -214,22 +197,18 @@ function filterCourses(filter) {
     updateCreditsDisplay(filteredCourses);
 }
 
-// Utility function to get completed courses
 function getCompletedCourses() {
     return courses.filter(course => course.completed);
 }
 
-// Utility function to get incomplete courses
 function getIncompleteCourses() {
     return courses.filter(course => !course.completed);
 }
 
-// Utility function to get total credits for all courses
 function getTotalCredits() {
     return courses.reduce((total, course) => total + course.credits, 0);
 }
 
-// Utility function to get completed credits
 function getCompletedCredits() {
     return courses.filter(course => course.completed)
                   .reduce((total, course) => total + course.credits, 0);
