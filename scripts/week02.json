@@ -1,0 +1,33 @@
+{
+  "family_name": "Rodriguez",
+  "move_in_date": "2023-09-15",
+  "number_of_people": 5,
+  "visited_by_bishopric": false,
+  "family_members": [
+    {
+      "name": "Carlos Rodriguez",
+      "gender": "Male",
+      "birthdate": "1985-12-08"
+    },
+    {
+      "name": "Elena Rodriguez",
+      "gender": "Female",
+      "birthdate": "1987-04-22"
+    },
+    {
+      "name": "Sofia Rodriguez",
+      "gender": "Female",
+      "birthdate": "2012-07-14"
+    },
+    {
+      "name": "Miguel Rodriguez",
+      "gender": "Male",
+      "birthdate": "2015-01-30"
+    },
+    {
+      "name": "Isabella Rodriguez",
+      "gender": "Female",
+      "birthdate": "2018-11-05"
+    }
+  ]
+}
