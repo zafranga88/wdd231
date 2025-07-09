@@ -23,7 +23,48 @@ async function getProphetData() {
 const displayProphets = (prophets) => {
  // 12. Use a forEach loop to process each prophet record
  prophets.forEach((prophet) => {
-   // card build code goes here
+   // 1. Create a section element and store it in a variable named card
+   const card = document.createElement('section');
+   
+   // 2. Create an h2 element and store it in a variable named "fullName"
+   const fullName = document.createElement('h2');
+   
+   // 3. Create an img element and store it in a variable named "portrait"
+   const portrait = document.createElement('img');
+   
+   // 4. Populate the heading element with the prophet's full name using a template string
+   fullName.textContent = `${prophet.name} ${prophet.lastname}`;
+   
+   // 5. Build the image element by setting the attributes using setAttribute()
+   portrait.setAttribute('src', prophet.imageurl);
+   portrait.setAttribute('alt', `${prophet.name} ${prophet.lastname}`);
+   portrait.setAttribute('loading', 'lazy');
+   portrait.setAttribute('width', '340');
+   portrait.setAttribute('height', '440');
+   
+   // Create birth information container
+   const birthInfo = document.createElement('div');
+   birthInfo.className = 'birth-info';
+   
+   // Create and populate birth date paragraph
+   const birthDate = document.createElement('p');
+   birthDate.innerHTML = `<strong>Date of Birth:</strong> ${prophet.birthdate}`;
+   
+   // Create and populate birth place paragraph
+   const birthPlace = document.createElement('p');
+   birthPlace.innerHTML = `<strong>Place of Birth:</strong> ${prophet.birthplace}`;
+   
+   // Add birth information to the birth info container
+   birthInfo.appendChild(birthDate);
+   birthInfo.appendChild(birthPlace);
+   
+   // Using appendChild() on the section element named "card", add the heading, image, and birth info
+   card.appendChild(fullName);
+   card.appendChild(portrait);
+   card.appendChild(birthInfo);
+   
+   // Finally, add the section card to the "cards" div
+   cards.appendChild(card);
  });
 }
 
