@@ -1,4 +1,3 @@
-// DOM Elements
 const membersContainer = document.getElementById('membersContainer');
 const loadingMessage = document.getElementById('loadingMessage');
 const gridViewBtn = document.getElementById('gridViewBtn');
@@ -6,27 +5,54 @@ const listViewBtn = document.getElementById('listViewBtn');
 const currentYearSpan = document.getElementById('currentYear');
 const lastModifiedSpan = document.getElementById('lastModified');
 
-// Current view state
+const hamburger = document.getElementById('hamburger');
+const navigation = document.getElementById('navigation');
+
 let currentView = 'grid';
 let membersData = [];
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     loadMembers();
     setupEventListeners();
     updateFooterInfo();
 });
 
-// Event listeners
 function setupEventListeners() {
     gridViewBtn.addEventListener('click', () => switchView('grid'));
     listViewBtn.addEventListener('click', () => switchView('list'));
+
+    hamburger.addEventListener('click', toggleMobileMenu);
+
+    const navLinks = document.querySelectorAll('.nav-list a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navigation.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMobileMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+        }
+    });
 }
 
-// Load members data from JSON
+function toggleMobileMenu() {
+    hamburger.classList.toggle('active');
+    navigation.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    hamburger.classList.remove('active');
+    navigation.classList.remove('active');
+}
+
 async function loadMembers() {
     try {
-        // Fixed: Changed path from 'data/members.json' to 'members.json'
         const response = await fetch('members.json');
         if (!response.ok) {
             throw new Error('Failed to load members data');
@@ -39,7 +65,6 @@ async function loadMembers() {
     }
 }
 
-// Display members based on current view
 function displayMembers() {
     hideLoading();
     
@@ -50,7 +75,6 @@ function displayMembers() {
     }
 }
 
-// Display members in grid view
 function displayGridView() {
     membersContainer.className = 'members-grid';
     membersContainer.innerHTML = '';
@@ -61,7 +85,6 @@ function displayGridView() {
     });
 }
 
-// Display members in list view
 function displayListView() {
     membersContainer.className = 'members-list';
     membersContainer.innerHTML = '';
@@ -72,7 +95,6 @@ function displayListView() {
     });
 }
 
-// Create member card for grid view
 function createMemberCard(member) {
     const card = document.createElement('div');
     card.className = 'member-card';
@@ -96,7 +118,6 @@ function createMemberCard(member) {
     return card;
 }
 
-// Create member list item for list view
 function createMemberListItem(member) {
     const item = document.createElement('div');
     item.className = 'member-card';
@@ -122,7 +143,6 @@ function createMemberListItem(member) {
     return item;
 }
 
-// Get membership level label
 function getMembershipLabel(level) {
     switch(level) {
         case 1:
@@ -136,24 +156,19 @@ function getMembershipLabel(level) {
     }
 }
 
-// Switch between grid and list views
 function switchView(view) {
     currentView = view;
-    
-    // Update button states
+
     gridViewBtn.classList.toggle('active', view === 'grid');
     listViewBtn.classList.toggle('active', view === 'list');
-    
-    // Display members in new view
+
     displayMembers();
 }
 
-// Hide loading message
 function hideLoading() {
     loadingMessage.style.display = 'none';
 }
 
-// Show error message
 function showError(message) {
     hideLoading();
     membersContainer.innerHTML = `
@@ -164,15 +179,12 @@ function showError(message) {
     `;
 }
 
-// Update footer information
 function updateFooterInfo() {
-    // Set current year
     const currentYear = new Date().getFullYear();
     if (currentYearSpan) {
         currentYearSpan.textContent = currentYear;
     }
-    
-    // Set last modified date
+
     const lastModified = new Date(document.lastModified);
     const options = { 
         year: 'numeric', 

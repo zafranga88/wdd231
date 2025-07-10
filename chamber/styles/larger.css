@@ -1,0 +1,85 @@
+
+@media (min-width: 1200px) {
+    .header-content {
+        padding: 0 3rem;
+    }
+
+    .nav-content {
+        padding: 0 3rem;
+    }
+
+    .container {
+        padding: 0 3rem;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .logo-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .page-header h2 {
+        font-size: 3rem;
+    }
+
+    .page-header p {
+        font-size: 1.3rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .member-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .view-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .footer-content {
+        padding: 0 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+    }
+
+    .footer-bottom {
+        padding: 1rem 3rem 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header-content,
+    .nav-content,
+    .container,
+    .footer-content {
+        max-width: 1400px;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 3rem;
+    }
+
+    .page-header h2 {
+        font-size: 3.5rem;
+    }
+
+    .logo h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,146 @@
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .logo {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--secondary-color);
+        transition: var(--transition);
+        overflow-y: auto;
+        z-index: 99;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .nav-content {
+        padding: 2rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    .nav-list li {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-list a {
+        padding: 1.5rem 0;
+        font-size: 1.1rem;
+        border-bottom: none;
+    }
+
+    .nav-list a.active::after {
+        display: none;
+    }
+
+    .nav-list a.active {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    .page-header h2 {
+        font-size: 2rem;
+    }
+
+    .view-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .members-list .member-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .members-list .member-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .members-list .member-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .members-list .membership-badge {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 20px;
+    }
+
+    .nav-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .nav-list a {
+        padding: 1.25rem 0;
+        font-size: 1rem;
+    }
+
+    .page-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .view-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

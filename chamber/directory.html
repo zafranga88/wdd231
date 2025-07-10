@@ -13,7 +13,9 @@
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
@@ -23,10 +25,15 @@
                 <div class="logo-icon">CC</div>
                 <h1>Córdoba Chamber of Commerce</h1>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
 
-    <nav>
+    <nav id="navigation">
         <div class="nav-content">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -89,7 +96,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="currentYear"></span> Córdoba Chamber of Commerce | Your Name | WDD 231</p>
+            <p>&copy; <span id="currentYear"></span> Córdoba Chamber of Commerce | Franco Zarate | WDD 231</p>
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
