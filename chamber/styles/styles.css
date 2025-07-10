@@ -1,0 +1,471 @@
+/* CSS Variables */
+:root {
+    --primary-color: #2c5530;
+    --secondary-color: #8b4513;
+    --background-color: #f5f5dc;
+    --text-color: #333;
+    --accent-color: #daa520;
+    --card-background: #ffffff;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary-color);
+    position: sticky;
+    top: 80px;
+    z-index: 90;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+    display: block;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--accent-color);
+}
+
+.nav-list a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* View Controls */
+.view-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--card-background);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.view-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.view-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.view-btn .icon {
+    font-size: 1.2rem;
+}
+
+/* Members Display */
+#membersContainer {
+    min-height: 400px;
+}
+
+/* Grid View */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.member-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.member-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--background-color);
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-address {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-phone {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.member-website {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.member-website:hover {
+    color: var(--primary-color);
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+}
+
+.membership-1 {
+    background-color: #6c757d;
+}
+
+.membership-2 {
+    background-color: #c0c0c0;
+    color: var(--text-color);
+}
+
+.membership-3 {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* List View */
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.members-list .member-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.members-list .member-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.members-list .member-info {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.members-list .member-details {
+    flex: 1;
+}
+
+.members-list .member-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.members-list .member-address,
+.members-list .member-phone {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.members-list .member-website {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.members-list .membership-badge {
+    margin-left: 1rem;
+}
+
+/* Loading Message */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .page-header h2 {
+        font-size: 2rem;
+    }
+
+    .view-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .members-list .member-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .members-list .member-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .members-list .member-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .members-list .membership-badge {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .nav-list a {
+        padding: 0.75rem 0;
+    }
+
+    .page-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .view-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

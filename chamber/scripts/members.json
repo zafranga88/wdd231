@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Estancia Los Alamos",
+    "address": "Ruta Provincial 17 Km 45, Córdoba, Argentina",
+    "phone": "+54 351 456-7890",
+    "website": "https://estancia-los-alamos.com.ar",
+    "image": "images/estancia-los-alamos.jpg",
+    "membershipLevel": 3,
+    "description": "Traditional Argentine estancia offering authentic gaucho experiences and premium beef",
+    "founded": "1920",
+    "employees": "150+"
+  },
+  {
+    "name": "Parrilla El Asador Cordobés",
+    "address": "Belgrano 245, Centro, Córdoba, Argentina",
+    "phone": "+54 351 423-1234",
+    "website": "https://asador-cordobes.com.ar",
+    "image": "images/asador-cordobes.jpg",
+    "membershipLevel": 2,
+    "description": "Authentic Argentine parrilla serving the finest cuts of meat and traditional dishes",
+    "founded": "1985",
+    "employees": "25-35"
+  },
+  {
+    "name": "Fernet Branca Distribuidora",
+    "address": "Av. Rafael Núñez 4567, Córdoba, Argentina",
+    "phone": "+54 351 468-9012",
+    "website": "https://fernet-distribuidor.com.ar",
+    "image": "images/fernet-distribuidor.jpg",
+    "membershipLevel": 3,
+    "description": "Official distributor of Fernet Branca and other premium spirits in Córdoba",
+    "founded": "1978",
+    "employees": "200+"
+  },
+  {
+    "name": "Artesanías Cordobesas",
+    "address": "Paseo de las Artes 89, Córdoba, Argentina",
+    "phone": "+54 351 445-6789",
+    "website": "https://artesanias-cordobesas.com.ar",
+    "image": "images/artesanias-cordobesas.jpg",
+    "membershipLevel": 1,
+    "description": "Traditional crafts and handmade goods from local artisans",
+    "founded": "1995",
+    "employees": "8-12"
+  },
+  {
+    "name": "Turismo Sierras de Córdoba",
+    "address": "Av. Hipólito Yrigoyen 567, Córdoba, Argentina",
+    "phone": "+54 351 412-3456",
+    "website": "https://turismo-sierras.com.ar",
+    "image": "images/turismo-sierras.jpg",
+    "membershipLevel": 2,
+    "description": "Adventure tourism and guided tours through the beautiful Córdoba mountains",
+    "founded": "2002",
+    "employees": "30-45"
+  },
+  {
+    "name": "Hotel Sheraton Córdoba",
+    "address": "Duarte Quirós 1300, Nueva Córdoba, Argentina",
+    "phone": "+54 351 434-5678",
+    "website": "https://sheraton-cordoba.com",
+    "image": "images/sheraton-cordoba.jpg",
+    "membershipLevel": 3,
+    "description": "Five-star luxury hotel in the heart of Nueva Córdoba",
+    "founded": "1998",
+    "employees": "180+"
+  },
+  {
+    "name": "Cooperativa Textil Córdoba",
+    "address": "Barrio San Vicente 234, Córdoba, Argentina",
+    "phone": "+54 351 456-7801",
+    "website": "https://textil-cordoba.coop.ar",
+    "image": "images/textil-cordoba.jpg",
+    "membershipLevel": 1,
+    "description": "Textile cooperative producing quality fabrics and supporting local workers",
+    "founded": "1987",
+    "employees": "65-80"
+  },
+  {
+    "name": "TechCórdoba Solutions",
+    "address": "Av. Fader 3200, Cerro de las Rosas, Córdoba, Argentina",
+    "phone": "+54 351 489-0123",
+    "website": "https://tech-cordoba.com.ar",
+    "image": "images/tech-cordoba.jpg",
+    "membershipLevel": 2,
+    "description": "Software development and IT consulting for businesses across Argentina",
+    "founded": "2010",
+    "employees": "45-60"
+  },
+  {
+    "name": "Universidad Nacional de Córdoba - Librería",
+    "address": "Av. Haya de la Torre s/n, Ciudad Universitaria, Córdoba, Argentina",
+    "phone": "+54 351 433-4567",
+    "website": "https://libreria-unc.edu.ar",
+    "image": "images/libreria-unc.jpg",
+    "membershipLevel": 1,
+    "description": "Academic bookstore serving Argentina's oldest university since 1613",
+    "founded": "1613",
+    "employees": "15-20"
+  },
+  {
+    "name": "Vinos de Córdoba Bodega",
+    "address": "Camino a Colonia Caroya Km 12, Córdoba, Argentina",
+    "phone": "+54 351 498-7654",
+    "website": "https://vinos-cordoba.com.ar",
+    "image": "images/vinos-cordoba.jpg",
+    "membershipLevel": 3,
+    "description": "Premium wine production featuring native Argentine grape varieties",
+    "founded": "1953",
+    "employees": "120+"
+  },
+  {
+    "name": "Alfajores La Falda",
+    "address": "9 de Julio 1456, Córdoba, Argentina",
+    "phone": "+54 351 467-8901",
+    "website": "https://alfajores-lafalda.com.ar",
+    "image": "images/alfajores-lafalda.jpg",
+    "membershipLevel": 2,
+    "description": "Traditional Argentine alfajores and confectionery since 1947",
+    "founded": "1947",
+    "employees": "40-55"
+  }
+]
