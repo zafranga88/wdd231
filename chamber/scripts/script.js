@@ -4,6 +4,7 @@ const gridViewBtn = document.getElementById('gridViewBtn');
 const listViewBtn = document.getElementById('listViewBtn');
 const currentYearSpan = document.getElementById('currentYear');
 const lastModifiedSpan = document.getElementById('lastModified');
+const featuredMembersContainer = document.getElementById('featuredMembers');
 
 const hamburger = document.getElementById('hamburger');
 const navigation = document.getElementById('navigation');
@@ -12,33 +13,48 @@ let currentView = 'grid';
 let membersData = [];
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadMembers();
+    // Load members for directory page
+    if (membersContainer) {
+        loadMembers();
+    }
+    
+    // Load featured members for home page
+    if (featuredMembersContainer) {
+        loadFeaturedMembers();
+    }
+    
     setupEventListeners();
     updateFooterInfo();
 });
 
 function setupEventListeners() {
-    gridViewBtn.addEventListener('click', () => switchView('grid'));
-    listViewBtn.addEventListener('click', () => switchView('list'));
+    // View controls (only for directory page)
+    if (gridViewBtn && listViewBtn) {
+        gridViewBtn.addEventListener('click', () => switchView('grid'));
+        listViewBtn.addEventListener('click', () => switchView('list'));
+    }
 
-    hamburger.addEventListener('click', toggleMobileMenu);
+    // Mobile menu
+    if (hamburger && navigation) {
+        hamburger.addEventListener('click', toggleMobileMenu);
 
-    const navLinks = document.querySelectorAll('.nav-list a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
+        const navLinks = document.querySelectorAll('.nav-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
 
-    document.addEventListener('click', (e) => {
-        if (!navigation.contains(e.target) && !hamburger.contains(e.target)) {
-            closeMobileMenu();
-        }
-    });
+        document.addEventListener('click', (e) => {
+            if (!navigation.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            closeMobileMenu();
-        }
-    });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+    }
 }
 
 function toggleMobileMenu() {
@@ -65,8 +81,67 @@ async function loadMembers() {
     }
 }
 
+async function loadFeaturedMembers() {
+    try {
+        const response = await fetch('members.json');
+        if (!response.ok) {
+            throw new Error('Failed to load members data');
+        }
+        const allMembers = await response.json();
+        
+        // Filter for gold and silver members, then get first 3
+        const featuredMembers = allMembers
+            .filter(member => member.membershipLevel === 3 || member.membershipLevel === 2)
+            .sort((a, b) => b.membershipLevel - a.membershipLevel)
+            .slice(0, 3);
+        
+        displayFeaturedMembers(featuredMembers);
+    } catch (error) {
+        console.error('Error loading featured members:', error);
+        featuredMembersContainer.innerHTML = `
+            <div class="error-message" style="text-align: center; padding: 2rem; color: #d32f2f;">
+                <p>Unable to load featured members at this time.</p>
+            </div>
+        `;
+    }
+}
+
+function displayFeaturedMembers(members) {
+    featuredMembersContainer.innerHTML = '';
+    
+    members.forEach(member => {
+        const memberCard = createFeaturedMemberCard(member);
+        featuredMembersContainer.appendChild(memberCard);
+    });
+}
+
+function createFeaturedMemberCard(member) {
+    const card = document.createElement('div');
+    card.className = 'featured-member-card';
+    
+    card.innerHTML = `
+        <img src="${member.image}" alt="${member.name}" class="featured-member-image" 
+             onerror="this.src='images/placeholder.jpg'">
+        <div class="featured-member-info">
+            <h3 class="featured-member-name">${member.name}</h3>
+            <p class="featured-member-address">${member.address}</p>
+            <p class="featured-member-phone">${member.phone}</p>
+            <a href="${member.website}" target="_blank" class="featured-member-website">
+                Visit Website
+            </a>
+            <div class="membership-badge membership-${member.membershipLevel}">
+                ${getMembershipLabel(member.membershipLevel)}
+            </div>
+        </div>
+    `;
+    
+    return card;
+}
+
 function displayMembers() {
-    hideLoading();
+    if (loadingMessage) {
+        hideLoading();
+    }
     
     if (currentView === 'grid') {
         displayGridView();
@@ -166,17 +241,21 @@ function switchView(view) {
 }
 
 function hideLoading() {
-    loadingMessage.style.display = 'none';
+    if (loadingMessage) {
+        loadingMessage.style.display = 'none';
+    }
 }
 
 function showError(message) {
     hideLoading();
-    membersContainer.innerHTML = `
-        <div class="error-message" style="text-align: center; padding: 2rem; color: #d32f2f;">
-            <h3>Error</h3>
-            <p>${message}</p>
-        </div>
-    `;
+    if (membersContainer) {
+        membersContainer.innerHTML = `
+            <div class="error-message" style="text-align: center; padding: 2rem; color: #d32f2f;">
+                <h3>Error</h3>
+                <p>${message}</p>
+            </div>
+        `;
+    }
 }
 
 function updateFooterInfo() {
