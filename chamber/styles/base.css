@@ -3,11 +3,15 @@
     --secondary-color: #8b4513;
     --background-color: #f5f5dc;
     --text-color: #333;
-    --accent-color: #daa520;
+    /* Changed from #daa520 to darker gold for better contrast */
+    --accent-color: #b8860b;
     --card-background: #ffffff;
     --shadow: 0 2px 8px rgba(0,0,0,0.1);
     --border-radius: 8px;
     --transition: all 0.3s ease;
+    /* Added new colors for better contrast combinations */
+    --accent-text-light: #f4e4a6;
+    --membership-gray: #5a5a5a;
 }
 
 * {
@@ -60,7 +64,8 @@ header {
 .logo-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--accent-color);
+    /* Changed to use lighter accent color for better contrast on primary color */
+    background-color: var(--accent-text-light);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -133,7 +138,8 @@ nav {
 
 .nav-list a:hover,
 .nav-list a.active {
-    color: var(--accent-color);
+    /* Changed to use lighter accent color for better contrast */
+    color: var(--accent-text-light);
 }
 
 .nav-list a.active::after {
@@ -143,7 +149,7 @@ nav {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: var(--accent-color);
+    background-color: var(--accent-text-light);
 }
 
 main {
@@ -208,7 +214,8 @@ main h1 {
 
 .stat-item h3 {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    /* Changed to use lighter accent color for better contrast on gradient background */
+    color: var(--accent-text-light);
     margin-bottom: 0.5rem;
 }
 
@@ -350,6 +357,7 @@ main h1 {
     box-shadow: var(--shadow);
     overflow: hidden;
     transition: var(--transition);
+    /* Changed to use darker accent color for better contrast */
     border: 2px solid var(--accent-color);
 }
 
@@ -389,6 +397,7 @@ main h1 {
 
 .featured-member-website {
     display: inline-block;
+    /* Changed to use darker accent color for better contrast */
     color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
@@ -454,8 +463,9 @@ main h1 {
 }
 
 .event-date {
+    /* Changed to use darker accent color for better contrast */
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: white;
     padding: 1rem;
     border-radius: var(--border-radius);
     text-align: center;
@@ -518,8 +528,9 @@ main h1 {
 }
 
 .btn-primary {
+    /* Changed to use darker accent color for better contrast */
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: white;
 }
 
 .btn-primary:hover {
@@ -636,6 +647,7 @@ main h1 {
 
 .member-website {
     display: inline-block;
+    /* Changed to use darker accent color for better contrast */
     color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
@@ -657,7 +669,8 @@ main h1 {
 }
 
 .membership-1 {
-    background-color: #6c757d;
+    /* Changed to use darker gray for better contrast */
+    background-color: var(--membership-gray);
 }
 
 .membership-2 {
@@ -666,8 +679,9 @@ main h1 {
 }
 
 .membership-3 {
+    /* Changed to use darker accent color for better contrast */
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: white;
 }
 
 .members-list {
@@ -752,7 +766,8 @@ footer {
 }
 
 .footer-section h3 {
-    color: var(--accent-color);
+    /* Changed to use lighter accent color for better contrast */
+    color: var(--accent-text-light);
     margin-bottom: 1rem;
 }
 
@@ -772,7 +787,8 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
+    /* Changed to use lighter accent color for better contrast */
+    color: var(--accent-text-light);
 }
 
 .footer-bottom {
