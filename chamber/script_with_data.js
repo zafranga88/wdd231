@@ -121,33 +121,6 @@ const members = [
     "employees": "40-55"
   }
 ];
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("membersContainer");
-  const loading = document.getElementById("loadingMessage");
-
-  // Hide loading message
-  if (loading) loading.style.display = "none";
-
-  members.forEach(member => {
-    const card = document.createElement("div");
-    card.className = "member-card";
-
-    card.innerHTML = `
-      <img src="${member.image}" alt="${member.name}" class="member-image">
-      <div class="member-info">
-        <h3 class="member-name">${member.name}</h3>
-        <p class="member-address">${member.address}</p>
-        <p class="member-phone">${member.phone}</p>
-        <a href="${member.website}" target="_blank" class="member-website">Visit Website</a>
-        <div class="membership-badge membership-${member.membershipLevel}">
-          Level ${member.membershipLevel}
-        </div>
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-});
 
 const membersContainer = document.getElementById('membersContainer');
 const loadingMessage = document.getElementById('loadingMessage');
