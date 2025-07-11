@@ -1,7 +1,7 @@
 const members = [
   {
     "name": "Estancia Los Alamos",
-    "address": "Ruta Provincial 17 Km 45, C\u00f3rdoba, Argentina",
+    "address": "Ruta Provincial 17 Km 45, Córdoba, Argentina",
     "phone": "+54 351 456-7890",
     "website": "https://estancia-los-alamos.com.ar",
     "image": "images/estancia-los-alamos.jpg",
@@ -11,8 +11,8 @@ const members = [
     "employees": "150+"
   },
   {
-    "name": "Parrilla El Asador Cordob\u00e9s",
-    "address": "Belgrano 245, Centro, C\u00f3rdoba, Argentina",
+    "name": "Parrilla El Asador Cordobés",
+    "address": "Belgrano 245, Centro, Córdoba, Argentina",
     "phone": "+54 351 423-1234",
     "website": "https://asador-cordobes.com.ar",
     "image": "images/asador-cordobes.jpg",
@@ -23,18 +23,18 @@ const members = [
   },
   {
     "name": "Fernet Branca Distribuidora",
-    "address": "Av. Rafael N\u00fa\u00f1ez 4567, C\u00f3rdoba, Argentina",
+    "address": "Av. Rafael Núñez 4567, Córdoba, Argentina",
     "phone": "+54 351 468-9012",
     "website": "https://fernet-distribuidor.com.ar",
     "image": "images/fernet-distribuidor.jpg",
     "membershipLevel": 3,
-    "description": "Official distributor of Fernet Branca and other premium spirits in C\u00f3rdoba",
+    "description": "Official distributor of Fernet Branca and other premium spirits in Córdoba",
     "founded": "1978",
     "employees": "200+"
   },
   {
-    "name": "Artesan\u00edas Cordobesas",
-    "address": "Paseo de las Artes 89, C\u00f3rdoba, Argentina",
+    "name": "Artesanías Cordobesas",
+    "address": "Paseo de las Artes 89, Córdoba, Argentina",
     "phone": "+54 351 445-6789",
     "website": "https://artesanias-cordobesas.com.ar",
     "image": "images/artesanias-cordobesas.jpg",
@@ -44,30 +44,30 @@ const members = [
     "employees": "8-12"
   },
   {
-    "name": "Turismo Sierras de C\u00f3rdoba",
-    "address": "Av. Hip\u00f3lito Yrigoyen 567, C\u00f3rdoba, Argentina",
+    "name": "Turismo Sierras de Córdoba",
+    "address": "Av. Hipólito Yrigoyen 567, Córdoba, Argentina",
     "phone": "+54 351 412-3456",
     "website": "https://turismo-sierras.com.ar",
     "image": "images/turismo-sierras.jpg",
     "membershipLevel": 2,
-    "description": "Adventure tourism and guided tours through the beautiful C\u00f3rdoba mountains",
+    "description": "Adventure tourism and guided tours through the beautiful Córdoba mountains",
     "founded": "2002",
     "employees": "30-45"
   },
   {
-    "name": "Hotel Sheraton C\u00f3rdoba",
-    "address": "Duarte Quir\u00f3s 1300, Nueva C\u00f3rdoba, Argentina",
+    "name": "Hotel Sheraton Córdoba",
+    "address": "Duarte Quirós 1300, Nueva Córdoba, Argentina",
     "phone": "+54 351 434-5678",
     "website": "https://sheraton-cordoba.com",
     "image": "images/sheraton-cordoba.jpg",
     "membershipLevel": 3,
-    "description": "Five-star luxury hotel in the heart of Nueva C\u00f3rdoba",
+    "description": "Five-star luxury hotel in the heart of Nueva Córdoba",
     "founded": "1998",
     "employees": "180+"
   },
   {
-    "name": "Cooperativa Textil C\u00f3rdoba",
-    "address": "Barrio San Vicente 234, C\u00f3rdoba, Argentina",
+    "name": "Cooperativa Textil Córdoba",
+    "address": "Barrio San Vicente 234, Córdoba, Argentina",
     "phone": "+54 351 456-7801",
     "website": "https://textil-cordoba.coop.ar",
     "image": "images/textil-cordoba.jpg",
@@ -77,8 +77,8 @@ const members = [
     "employees": "65-80"
   },
   {
-    "name": "TechC\u00f3rdoba Solutions",
-    "address": "Av. Fader 3200, Cerro de las Rosas, C\u00f3rdoba, Argentina",
+    "name": "TechCórdoba Solutions",
+    "address": "Av. Fader 3200, Cerro de las Rosas, Córdoba, Argentina",
     "phone": "+54 351 489-0123",
     "website": "https://tech-cordoba.com.ar",
     "image": "images/tech-cordoba.jpg",
@@ -88,8 +88,8 @@ const members = [
     "employees": "45-60"
   },
   {
-    "name": "Universidad Nacional de C\u00f3rdoba - Librer\u00eda",
-    "address": "Av. Haya de la Torre s/n, Ciudad Universitaria, C\u00f3rdoba, Argentina",
+    "name": "Universidad Nacional de Córdoba - Librería",
+    "address": "Av. Haya de la Torre s/n, Ciudad Universitaria, Córdoba, Argentina",
     "phone": "+54 351 433-4567",
     "website": "https://libreria-unc.edu.ar",
     "image": "images/libreria-unc.jpg",
@@ -99,8 +99,8 @@ const members = [
     "employees": "15-20"
   },
   {
-    "name": "Vinos de C\u00f3rdoba Bodega",
-    "address": "Camino a Colonia Caroya Km 12, C\u00f3rdoba, Argentina",
+    "name": "Vinos de Córdoba Bodega",
+    "address": "Camino a Colonia Caroya Km 12, Córdoba, Argentina",
     "phone": "+54 351 498-7654",
     "website": "https://vinos-cordoba.com.ar",
     "image": "images/vinos-cordoba.jpg",
@@ -111,7 +111,7 @@ const members = [
   },
   {
     "name": "Alfajores La Falda",
-    "address": "9 de Julio 1456, C\u00f3rdoba, Argentina",
+    "address": "9 de Julio 1456, Córdoba, Argentina",
     "phone": "+54 351 467-8901",
     "website": "https://alfajores-lafalda.com.ar",
     "image": "images/alfajores-lafalda.jpg",
@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("membersContainer");
   const loading = document.getElementById("loadingMessage");
 
-  // Hide loading message
   if (loading) loading.style.display = "none";
 
   members.forEach(member => {
@@ -164,12 +163,11 @@ let currentView = 'grid';
 let membersData = [];
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Load members for directory page
+
     if (membersContainer) {
         loadMembers();
     }
-    
-    // Load featured members for home page
+
     if (featuredMembersContainer) {
         loadFeaturedMembers();
     }
@@ -179,13 +177,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function setupEventListeners() {
-    // View controls (only for directory page)
+
     if (gridViewBtn && listViewBtn) {
         gridViewBtn.addEventListener('click', () => switchView('grid'));
         listViewBtn.addEventListener('click', () => switchView('list'));
     }
 
-    // Mobile menu
     if (hamburger && navigation) {
         hamburger.addEventListener('click', toggleMobileMenu);
 
@@ -239,8 +236,7 @@ async function loadFeaturedMembers() {
             throw new Error('Failed to load members data');
         }
         const allMembers = await response.json();
-        
-        // Filter for gold and silver members, then get first 3
+
         const featuredMembers = allMembers
             .filter(member => member.membershipLevel === 3 || member.membershipLevel === 2)
             .sort((a, b) => b.membershipLevel - a.membershipLevel)
