@@ -1,154 +1,3 @@
-const members = [
-  {
-    "name": "Grupo Arcor",
-    "address": "Av. Fulvio Salvador Pagani 487, Arroyito, Córdoba, Argentina",
-    "phone": "+54 3576 482000",
-    "website": "https://www.arcor.com",
-    "image": "images/arcor.jpg",
-    "membershipLevel": 3,
-    "description": "Leading Argentine multinational food company specializing in confectionery, chocolates, cookies and ice cream",
-    "founded": "1951",
-    "employees": "18000+"
-  },
-  {
-    "name": "Renault Argentina",
-    "address": "Av. Fuerza Aérea Argentina 2000, Córdoba, Argentina",
-    "phone": "+54 351 4682000",
-    "website": "https://www.renault.com.ar",
-    "image": "images/renault.jpg",
-    "membershipLevel": 3,
-    "description": "Automotive manufacturer producing vehicles for South American market since 1955",
-    "founded": "1955",
-    "employees": "3500+"
-  },
-  {
-    "name": "Volkswagen Argentina",
-    "address": "Ruta Nacional 9 Km 696, Córdoba, Argentina",
-    "phone": "+54 351 4971000",
-    "website": "https://www.volkswagen.com.ar",
-    "image": "images/volkswagen.jpg",
-    "membershipLevel": 3,
-    "description": "Major automotive manufacturer with production facility in Córdoba since 2001",
-    "founded": "2001",
-    "employees": "2000+"
-  },
-  {
-    "name": "Universidad Nacional de Córdoba",
-    "address": "Av. Haya de la Torre s/n, Ciudad Universitaria, Córdoba, Argentina",
-    "phone": "+54 351 4334000",
-    "website": "https://www.unc.edu.ar",
-    "image": "images/unc.jpg",
-    "membershipLevel": 2,
-    "description": "Argentina's oldest university, founded in 1613, leading institution in higher education",
-    "founded": "1613",
-    "employees": "8000+"
-  },
-  {
-    "name": "Banco de Córdoba",
-    "address": "Av. Colón 681, Córdoba, Argentina",
-    "phone": "+54 351 4208900",
-    "website": "https://www.bancor.com.ar",
-    "image": "images/bancor.jpg",
-    "membershipLevel": 2,
-    "description": "Provincial bank serving Córdoba with comprehensive financial services",
-    "founded": "1973",
-    "employees": "3000+"
-  },
-  {
-    "name": "Electroingeniería",
-    "address": "Ruta 19 Km 3, Córdoba, Argentina",
-    "phone": "+54 351 4334567",
-    "website": "https://www.electroingenieria.com",
-    "image": "images/electroingenieria.jpg",
-    "membershipLevel": 2,
-    "description": "Leading engineering and construction company specializing in electrical infrastructure",
-    "founded": "1979",
-    "employees": "1500+"
-  },
-  {
-    "name": "Grupo Dinosaurio",
-    "address": "Av. Rafael Núñez 4450, Córdoba, Argentina",
-    "phone": "+54 351 4721000",
-    "website": "https://www.dinosaurio.com.ar",
-    "image": "images/dinosaurio.jpg",
-    "membershipLevel": 2,
-    "description": "Multi-format retail chain and entertainment complex operator",
-    "founded": "1991",
-    "employees": "2500+"
-  },
-  {
-    "name": "Agrometal",
-    "address": "Ruta 178 Km 388, Monte Maíz, Córdoba, Argentina",
-    "phone": "+54 3472 421001",
-    "website": "https://www.agrometal.com.ar",
-    "image": "images/agrometal.jpg",
-    "membershipLevel": 2,
-    "description": "Agricultural machinery manufacturer, leader in seeding technology",
-    "founded": "1978",
-    "employees": "800+"
-  },
-  {
-    "name": "Cooperativa Obrera",
-    "address": "Av. Colón 1615, Córdoba, Argentina",
-    "phone": "+54 351 4247000",
-    "website": "https://www.cooperativaobrera.coop",
-    "image": "images/cooperativa.jpg",
-    "membershipLevel": 1,
-    "description": "Consumer cooperative operating supermarkets and retail stores",
-    "founded": "1920",
-    "employees": "5000+"
-  },
-  {
-    "name": "Laboratorios Bagó",
-    "address": "Av. Presidente Perón 1479, Córdoba, Argentina",
-    "phone": "+54 351 4330200",
-    "website": "https://www.bago.com.ar",
-    "image": "images/bago.jpg",
-    "membershipLevel": 2,
-    "description": "Pharmaceutical company with research and manufacturing facilities",
-    "founded": "1934",
-    "employees": "1200+"
-  },
-  {
-    "name": "Mastellone Hermanos",
-    "address": "Ruta 9 Km 633, Córdoba, Argentina",
-    "phone": "+54 351 4950000",
-    "website": "https://www.mastellone.com.ar",
-    "image": "images/mastellone.jpg",
-    "membershipLevel": 2,
-    "description": "Dairy products manufacturer, producer of La Serenísima brand",
-    "founded": "1929",
-    "employees": "6000+"
-  }
-];
-
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("membersContainer");
-  const loading = document.getElementById("loadingMessage");
-
-  if (loading) loading.style.display = "none";
-
-  members.forEach(member => {
-    const card = document.createElement("div");
-    card.className = "member-card";
-
-    card.innerHTML = `
-      <img src="${member.image}" alt="${member.name}" class="member-image">
-      <div class="member-info">
-        <h3 class="member-name">${member.name}</h3>
-        <p class="member-address">${member.address}</p>
-        <p class="member-phone">${member.phone}</p>
-        <a href="${member.website}" target="_blank" class="member-website">Visit Website</a>
-        <div class="membership-badge membership-${member.membershipLevel}">
-          Level ${member.membershipLevel}
-        </div>
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-});
-
 const membersContainer = document.getElementById('membersContainer');
 const loadingMessage = document.getElementById('loadingMessage');
 const gridViewBtn = document.getElementById('gridViewBtn');
@@ -218,7 +67,11 @@ function closeMobileMenu() {
 
 async function loadMembers() {
     try {
-        membersData = members;
+        const response = await fetch('data/members.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch members data');
+        }
+        membersData = await response.json();
         displayMembers();
     } catch (error) {
         console.error('Error loading members:', error);
@@ -228,7 +81,11 @@ async function loadMembers() {
 
 async function loadFeaturedMembers() {
     try {
-        const allMembers = members;
+        const response = await fetch('data/members.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch members data');
+        }
+        const allMembers = await response.json();
 
         const featuredMembers = allMembers
             .filter(member => member.membershipLevel === 3 || member.membershipLevel === 2)
