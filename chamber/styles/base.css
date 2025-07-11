@@ -156,7 +156,6 @@ main {
     padding: 0 2rem;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -203,7 +202,6 @@ main {
     font-size: 1.1rem;
 }
 
-/* About Section */
 .about {
     padding: 4rem 0;
     background-color: var(--card-background);
@@ -260,7 +258,6 @@ main {
     box-shadow: var(--shadow);
 }
 
-/* Services Section */
 .services {
     padding: 4rem 0;
     background-color: var(--background-color);
@@ -390,7 +387,6 @@ main {
     text-align: center;
 }
 
-/* News & Events Section */
 .news-events {
     padding: 4rem 0;
     background-color: var(--background-color);
@@ -470,7 +466,6 @@ main {
     font-size: 0.9rem;
 }
 
-/* CTA Section */
 .cta {
     padding: 4rem 0;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -491,7 +486,6 @@ main {
     margin-right: auto;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
@@ -514,7 +508,6 @@ main {
     color: white;
 }
 
-/* Directory Page Styles */
 .page-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -716,14 +709,12 @@ main {
     font-size: 1.2rem;
 }
 
-/* Social Icons */
 .social-icon {
     width: 24px;
     height: 24px;
     fill: currentColor;
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: white;
