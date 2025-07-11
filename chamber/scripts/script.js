@@ -121,6 +121,7 @@ const members = [
     "employees": "40-55"
   }
 ];
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("membersContainer");
   const loading = document.getElementById("loadingMessage");
@@ -217,11 +218,7 @@ function closeMobileMenu() {
 
 async function loadMembers() {
     try {
-        const response = await fetch('members.json');
-        if (!response.ok) {
-            throw new Error('Failed to load members data');
-        }
-        membersData = await response.json();
+        membersData = members;
         displayMembers();
     } catch (error) {
         console.error('Error loading members:', error);
@@ -231,11 +228,7 @@ async function loadMembers() {
 
 async function loadFeaturedMembers() {
     try {
-        const response = await fetch('members.json');
-        if (!response.ok) {
-            throw new Error('Failed to load members data');
-        }
-        const allMembers = await response.json();
+        const allMembers = members;
 
         const featuredMembers = allMembers
             .filter(member => member.membershipLevel === 3 || member.membershipLevel === 2)
