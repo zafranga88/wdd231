@@ -1113,3 +1113,14 @@ footer {
 .featured-cta {
     text-align: center;
 }
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .news-events-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .weather-content {
+        grid-template-columns: 1fr;
+    }
+}
