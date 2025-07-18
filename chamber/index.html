@@ -8,8 +8,8 @@
     <meta name="author" content="Franco Zarate">
     <meta property="og:title" content="Córdoba Chamber of Commerce - Supporting Local Business">
     <meta property="og:description" content="Join the leading business network in Córdoba, Argentina. Connect, grow, and thrive with local enterprises.">
-    <meta property="og:image" content="https://your-domain.com/images/chamber-social.jpg">
-    <meta property="og:url" content="https://your-domain.com/chamber/index.html">
+    <meta property="og:image" content="https://zafranga88.github.io/wdd231/chamber/images/cordoba-city.jpg">
+    <meta property="og:url" content="https://zafranga88.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -45,12 +45,16 @@
     </nav>
 
     <main>
-
         <section class="hero">
-            <div class="hero-content">
-                <h2>Welcome to Córdoba's Premier Business Network</h2>
-                <p>Connecting businesses, fostering growth, and strengthening our community since 1920</p>
-
+            <div class="hero-image">
+                <img src="images/cordoba-city.jpg" alt="Córdoba business district skyline" onerror="this.src='images/placeholder-hero.jpg'">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h2>Welcome to Córdoba's Premier Business Network</h2>
+                        <p>Connecting businesses, fostering growth, and strengthening our community since 1920</p>
+                        <a href="join.html" class="btn btn-primary hero-cta">Join the Chamber Today</a>
+                    </div>
+                </div>
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -64,6 +68,98 @@
                 <div class="stat-item">
                     <h3>50+</h3>
                     <p>Industries Represented</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-events">
+            <div class="container">
+                <div class="news-events-content">
+                    <div class="news-section">
+                        <h2>Latest News</h2>
+                        <div class="news-item">
+                            <h3>Córdoba Economy Shows Strong Growth</h3>
+                            <p class="news-date">July 5, 2025</p>
+                            <p>Recent economic indicators show positive trends in the Córdoba business sector...</p>
+                        </div>
+                        <div class="news-item">
+                            <h3>New International Trade Agreement</h3>
+                            <p class="news-date">June 28, 2025</p>
+                            <p>Chamber successfully advocates for new trade opportunities with Brazil...</p>
+                        </div>
+                        <div class="news-item">
+                            <h3>Technology Sector Expansion</h3>
+                            <p class="news-date">June 20, 2025</p>
+                            <p>Growing tech presence in Córdoba creates new opportunities for local businesses...</p>
+                        </div>
+                    </div>
+                    <div class="events-section">
+                        <h2>Current Events</h2>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">22</span>
+                                <span class="month">JUL</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Annual Business Expo 2025</h3>
+                                <p>Centro de Convenciones Córdoba • 9:00 AM - 5:00 PM</p>
+                                <p>Join us for the largest business exposition in the region. Network with industry leaders, discover new opportunities, and showcase your business.</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">JUL</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Business Networking Breakfast</h3>
+                                <p>Hotel Sheraton Córdoba • 8:00 AM - 10:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">5</span>
+                                <span class="month">AUG</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>International Trade Workshop</h3>
+                                <p>Chamber Office • 2:00 PM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather">
+            <div class="container">
+                <h2>Current Weather in Córdoba</h2>
+                <div class="weather-content">
+                    <div class="current-weather" id="currentWeather">
+                        <div class="weather-loading">
+                            <p>Loading weather data...</p>
+                        </div>
+                    </div>
+                    <div class="weather-forecast" id="weatherForecast">
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-grid" id="forecastGrid">
+                            <div class="forecast-loading">
+                                <p>Loading forecast...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-members">
+            <div class="container">
+                <h2>Featured Members</h2>
+                <p>Highlighting some of our distinguished chamber members</p>
+                <div class="featured-grid" id="featuredMembers">
+                </div>
+                <div class="featured-cta">
+                    <a href="directory.html" class="btn btn-primary">View All Members</a>
                 </div>
             </div>
         </section>
@@ -123,76 +219,6 @@
                         <div class="service-icon">🎓</div>
                         <h3>Training & Workshops</h3>
                         <p>Educational programs to enhance skills and knowledge in various business areas</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-members">
-            <div class="container">
-                <h2>Featured Members</h2>
-                <p>Highlighting some of our distinguished chamber members</p>
-                <div class="featured-grid" id="featuredMembers">
-                </div>
-                <div class="featured-cta">
-                    <a href="directory.html" class="btn btn-primary">View All Members</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="news-events">
-            <div class="container">
-                <div class="news-events-content">
-                    <div class="news-section">
-                        <h2>Latest News</h2>
-                        <div class="news-item">
-                            <h3>Córdoba Economy Shows Strong Growth</h3>
-                            <p class="news-date">July 5, 2025</p>
-                            <p>Recent economic indicators show positive trends in the Córdoba business sector...</p>
-                        </div>
-                        <div class="news-item">
-                            <h3>New International Trade Agreement</h3>
-                            <p class="news-date">June 28, 2025</p>
-                            <p>Chamber successfully advocates for new trade opportunities with Brazil...</p>
-                        </div>
-                        <div class="news-item">
-                            <h3>Technology Sector Expansion</h3>
-                            <p class="news-date">June 20, 2025</p>
-                            <p>Growing tech presence in Córdoba creates new opportunities for local businesses...</p>
-                        </div>
-                    </div>
-                    <div class="events-section">
-                        <h2>Upcoming Events</h2>
-                        <div class="event-item">
-                            <div class="event-date">
-                                <span class="day">15</span>
-                                <span class="month">JUL</span>
-                            </div>
-                            <div class="event-details">
-                                <h3>Business Networking Breakfast</h3>
-                                <p>Hotel Sheraton Córdoba • 8:00 AM</p>
-                            </div>
-                        </div>
-                        <div class="event-item">
-                            <div class="event-date">
-                                <span class="day">22</span>
-                                <span class="month">JUL</span>
-                            </div>
-                            <div class="event-details">
-                                <h3>Export Workshop</h3>
-                                <p>Chamber Office • 2:00 PM</p>
-                            </div>
-                        </div>
-                        <div class="event-item">
-                            <div class="event-date">
-                                <span class="day">5</span>
-                                <span class="month">AUG</span>
-                            </div>
-                            <div class="event-details">
-                                <h3>Annual Business Awards</h3>
-                                <p>Centro de Convenciones • 7:00 PM</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
