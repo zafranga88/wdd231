@@ -170,7 +170,6 @@ main h1 {
     padding: 0 2rem;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     margin-bottom: 0;
@@ -262,7 +261,6 @@ main h1 {
     font-size: 1.1rem;
 }
 
-/* Current Events Section */
 .current-events {
     padding: 4rem 0;
     background-color: var(--background-color);
@@ -371,7 +369,6 @@ main h1 {
     background-color: var(--primary-color);
 }
 
-/* Weather Section */
 .weather {
     padding: 4rem 0;
     background-color: var(--card-background);
@@ -417,7 +414,6 @@ main h1 {
     gap: 1rem;
 }
 
-/* Spotlights Section - Updated for consistent sizing */
 .spotlights {
     padding: 4rem 0;
     background-color: var(--background-color);
@@ -452,7 +448,7 @@ main h1 {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure all cards have the same height */
+    height: 100%; 
 }
 
 .spotlight-card:hover {
@@ -462,22 +458,22 @@ main h1 {
 
 .spotlight-image {
     width: 100%;
-    height: 200px; /* Fixed height for all images */
+    height: 200px; 
     object-fit: cover;
     background-color: var(--background-color);
-    flex-shrink: 0; /* Prevent image from shrinking */
+    flex-shrink: 0; 
 }
 
 .spotlight-info {
     padding: 1.5rem;
-    flex: 1; /* Take up remaining space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute content evenly */
+    justify-content: space-between; 
 }
 
 .spotlight-content {
-    flex: 1; /* Allow content to grow */
+    flex: 1; 
 }
 
 .spotlight-name {
@@ -518,8 +514,8 @@ main h1 {
     font-size: 0.9rem;
     font-weight: bold;
     color: white;
-    margin-top: auto; /* Push to bottom */
-    align-self: flex-start; /* Align to left */
+    margin-top: auto; 
+    align-self: flex-start; 
 }
 
 .spotlight-membership.membership-1 {
@@ -536,7 +532,6 @@ main h1 {
     color: white;
 }
 
-/* About Section */
 .about {
     padding: 4rem 0;
     background-color: var(--card-background);
@@ -594,7 +589,6 @@ main h1 {
     box-shadow: var(--shadow);
 }
 
-/* Services Section */
 .services {
     padding: 4rem 0;
     background-color: var(--background-color);
@@ -638,7 +632,6 @@ main h1 {
     margin-bottom: 1rem;
 }
 
-/* CTA Section */
 .cta {
     padding: 4rem 0;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -682,7 +675,6 @@ main h1 {
     color: white;
 }
 
-/* Directory Page Styles */
 .page-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -945,7 +937,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/*dsfsdfsdfsdfsdfs*/
 
 .news-events {
     padding: 4rem 0;
@@ -1123,4 +1114,387 @@ footer {
     .weather-content {
         grid-template-columns: 1fr;
     }
+}
+
+.join-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.membership-form-section {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+fieldset {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.membership-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.membership-options label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.membership-options label:hover {
+    background-color: var(--background-color);
+}
+
+.membership-options input[type="radio"] {
+    margin-right: 0.75rem;
+    margin-top: 0;
+    scale: 1.2;
+    accent-color: var(--primary-color);
+}
+
+.membership-levels h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.membership-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    text-align: center;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.membership-card[data-level="np"] {
+    animation-delay: 0.1s;
+}
+
+.membership-card[data-level="bronze"] {
+    animation-delay: 0.3s;
+}
+
+.membership-card[data-level="silver"] {
+    animation-delay: 0.5s;
+}
+
+.membership-card[data-level="gold"] {
+    animation-delay: 0.7s;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.membership-card[data-level="np"] {
+    border-color: var(--membership-gray);
+}
+
+.membership-card[data-level="np"]::before {
+    background: linear-gradient(45deg, var(--membership-gray), #7a7a7a);
+}
+
+.membership-card[data-level="bronze"] {
+    border-color: #cd7f32;
+}
+
+.membership-card[data-level="bronze"]::before {
+    background: linear-gradient(45deg, #cd7f32, #b8732d);
+}
+
+.membership-card[data-level="silver"] {
+    border-color: #c0c0c0;
+}
+
+.membership-card[data-level="silver"]::before {
+    background: linear-gradient(45deg, #c0c0c0, #a8a8a8);
+}
+
+.membership-card[data-level="gold"] {
+    border-color: var(--accent-color);
+}
+
+.membership-card[data-level="gold"]::before {
+    background: linear-gradient(45deg, var(--accent-color), #d4af37);
+}
+
+.membership-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.membership-card:hover::before {
+    left: 100%;
+}
+
+.membership-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.membership-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.membership-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.membership-card p:not(.price) {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.membership-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.membership-card[data-level="gold"] {
+    animation: slideInUp 0.8s ease-out 0.7s forwards, goldPulse 3s ease-in-out 2s infinite;
+}
+
+@keyframes goldPulse {
+    0%, 100% {
+        box-shadow: var(--shadow);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(184, 134, 11, 0.3), var(--shadow);
+        border-color: #d4af37;
+    }
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--background-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.modal-content li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.modal-content li:last-child {
+    border-bottom: none;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.close:hover {
+    color: var(--primary-color);
+}
+
+@media (min-width: 769px) {
+    .join-content {
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+    
+    .membership-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .membership-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+input:invalid {
+    border-color: #e74c3c;
+}
+
+input:valid {
+    border-color: #27ae60;
+}
+
+.btn-secondary:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Córdoba Chamber of Commerce</title>
+    <meta name="description" content="Thank you for your membership application to the Córdoba Chamber of Commerce. We appreciate your interest in joining our business community.">
+    <meta name="author" content="Franco Zarate">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">CC</div>
+                <h1>Córdoba Chamber of Commerce</h1>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="navigation">
+        <div class="nav-content">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="thankyou-section">
+                <div class="thankyou-header">
+                    <div class="thankyou-icon">✅</div>
+                    <h1>Thank You!</h1>
+                    <p class="thankyou-subtitle">Your membership application has been received successfully.</p>
+                </div>
+
+                <div class="application-summary">
+                    <h2>Application Summary</h2>
+                    <div class="summary-card">
+                        <div class="summary-item">
+                            <span class="summary-label">First Name:</span>
+                            <span class="summary-value" id="displayFirstName">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Last Name:</span>
+                            <span class="summary-value" id="displayLastName">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Email:</span>
+                            <span class="summary-value" id="displayEmail">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Mobile Phone:</span>
+                            <span class="summary-value" id="displayMobile">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Business Name:</span>
+                            <span class="summary-value" id="displayBusinessName">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Membership Level:</span>
+                            <span class="summary-value" id="displayMembershipLevel">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Application Date:</span>
+                            <span class="summary-value" id="displayTimestamp">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h2>What Happens Next?</h2>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h3>Review Process</h3>
+                            <p>Our membership committee will review your application within 3-5 business days.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h3>Welcome Package</h3>
+                            <p>Once approved, you'll receive a welcome package with all membership details and benefits.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h3>Get Involved</h3>
+                            <p>Start networking and taking advantage of your membership benefits immediately!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thankyou-actions">
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                    <a href="directory.html" class="btn btn-secondary">Browse Members</a>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Questions?</h3>
+                    <p>If you have any questions about your membership application, please don't hesitate to contact us:</p>
+                    <p><strong>Email:</strong> membership@cordoba-chamber.org.ar</p>
+                    <p><strong>Phone:</strong> +54 351 424-5678</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>📍 Av. Colón 123, Córdoba, Argentina</p>
+                <p>📞 +54 351 424-5678</p>
+                <p>✉️ info@cordoba-chamber.org.ar</p>
+            </div>
+            <div class="footer-section">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.twitter.com/" aria-label="Twitter">
+                        <img src="images/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Córdoba Chamber of Commerce | Franco Zarate | WDD 231</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

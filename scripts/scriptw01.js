@@ -213,3 +213,59 @@ function getCompletedCredits() {
     return courses.filter(course => course.completed)
                   .reduce((total, course) => total + course.credits, 0);
 }
+
+
+function displayCourseDetails(course) {
+    const courseDetails = document.getElementById('course-details');
+    
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    
+    courseDetails.showModal();
+    
+    const closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+    
+    courseDetails.addEventListener('click', (e) => {
+        if (e.target === courseDetails) {
+            courseDetails.close();
+        }
+    });
+}
+
+function createCourseCard(course) {
+    const courseDiv = document.createElement('div');
+    courseDiv.className = `course-card ${course.completed ? 'completed' : ''}`;
+    
+    courseDiv.innerHTML = `
+        <div class="course-subject">${course.subject}</div>
+        <div class="course-number">${course.number}</div>
+        <div class="course-title">${course.title}</div>
+        <div class="course-credits">${course.credits} Credits</div>
+    `;
+    
+    courseDiv.addEventListener('click', () => {
+        displayCourseDetails(course);
+    });
+    
+    return courseDiv;
+}
+
+function addModalEventListeners(courses) {
+    const courseCards = document.querySelectorAll('.course-card');
+    courseCards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            displayCourseDetails(courses[index]);
+        });
+    });
+}
