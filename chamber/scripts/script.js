@@ -18,6 +18,14 @@ const long = "-64.1888";
 const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&units=metric`;
 const FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${key}&units=metric`;
 
+// Discover page functionality
+const discoverGrid = document.getElementById('discoverGrid');
+const visitorMessage = document.getElementById('visitorMessage');
+const visitorStats = document.getElementById('visitorStats');
+const sidebarWeather = document.getElementById('sidebarWeather');
+
+let discoverData = [];
+
 let currentView = 'grid';
 let membersData = [];
 
@@ -483,5 +491,152 @@ function updateFooterInfo() {
     };
     if (lastModifiedSpan) {
         lastModifiedSpan.textContent = lastModified.toLocaleDateString('en-US', options);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadDiscoverData();
+    handleVisitorTracking();
+    loadSidebarWeather();
+});
+
+async function loadDiscoverData() {
+    try {
+        const response = await fetch('data/discover.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch discover data');
+        }
+        discoverData = await response.json();
+        displayDiscoverCards();
+    } catch (error) {
+        console.error('Error loading discover data:', error);
+        showDiscoverError('Unable to load discovery content at this time.');
+    }
+}
+
+function displayDiscoverCards() {
+    discoverGrid.innerHTML = '';
+    
+    discoverData.forEach((item, index) => {
+        const card = createDiscoverCard(item, index);
+        discoverGrid.appendChild(card);
+    });
+}
+
+function createDiscoverCard(item, index) {
+    const card = document.createElement('div');
+    card.className = 'discover-card';
+    card.setAttribute('data-area', `card-${index + 1}`);
+    
+    card.innerHTML = `
+        <h2>${item.name}</h2>
+        <figure class="discover-figure">
+            <img src="${item.image}" alt="${item.name}" class="discover-image" loading="lazy"
+                 onerror="this.src='images/placeholder.jpg'">
+            <figcaption class="discover-category">${item.category}</figcaption>
+        </figure>
+        <address class="discover-address">${item.address}</address>
+        <p class="discover-description">${item.description}</p>
+        <button class="discover-btn" onclick="learnMore('${item.name}')">Learn More</button>
+    `;
+    
+    return card;
+}
+
+function learnMore(placeName) {
+    alert(`More information about ${placeName} would be available on the full website!`);
+}
+
+function handleVisitorTracking() {
+    const currentDate = Date.now();
+    const lastVisit = localStorage.getItem('lastVisit');
+    
+    let message = '';
+    let visitCount = parseInt(localStorage.getItem('visitCount') || '0');
+    
+    if (!lastVisit) {
+        message = 'Welcome! Let us know if you have any questions.';
+        visitCount = 1;
+    } else {
+        const daysBetween = Math.floor((currentDate - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
+        visitCount++;
+        
+        if (daysBetween < 1) {
+            message = 'Back so soon! Awesome!';
+        } else if (daysBetween === 1) {
+            message = 'You last visited 1 day ago.';
+        } else {
+            message = `You last visited ${daysBetween} days ago.`;
+        }
+    }
+    
+    visitorMessage.innerHTML = `
+        <div class="visitor-welcome">
+            <h2>👋 ${message}</h2>
+        </div>
+    `;
+    
+    visitorStats.innerHTML = `
+        <div class="stat-item">
+            <span class="stat-number">${visitCount}</span>
+            <span class="stat-label">Visit${visitCount === 1 ? '' : 's'}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">${new Date().toLocaleDateString()}</span>
+            <span class="stat-label">Current Date</span>
+        </div>
+    `;
+    
+    localStorage.setItem('lastVisit', currentDate.toString());
+    localStorage.setItem('visitCount', visitCount.toString());
+}
+
+async function loadSidebarWeather() {
+    try {
+        const key = "5435015f3ffa65cdfbf86473b8e0f9a6";
+        const lat = "-31.4201";
+        const long = "-64.1888";
+        const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&units=metric`;
+        
+        if (key === 'YOUR_API_KEY_HERE') {
+            sidebarWeather.innerHTML = '<p>Weather data unavailable</p>';
+            return;
+        }
+
+        const response = await fetch(WEATHER_API_URL);
+        if (response.ok) {
+            const data = await response.json();
+            displaySidebarWeather(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.error('Error loading sidebar weather:', error);
+        sidebarWeather.innerHTML = '<p>Weather data unavailable</p>';
+    }
+}
+
+function displaySidebarWeather(data) {
+    const temperature = Math.round(data.main.temp);
+    const description = data.weather[0].description;
+    const icon = data.weather[0].icon;
+    
+    sidebarWeather.innerHTML = `
+        <div class="sidebar-weather-content">
+            <div class="weather-temp">${temperature}°C</div>
+            <div class="weather-desc">${description.charAt(0).toUpperCase() + description.slice(1)}</div>
+            <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${description}" class="weather-small-icon">
+        </div>
+    `;
+}
+
+function showDiscoverError(message) {
+    if (discoverGrid) {
+        discoverGrid.innerHTML = `
+            <div class="discover-error">
+                <h2>Oops!</h2>
+                <p>${message}</p>
+            </div>
+        `;
     }
 }

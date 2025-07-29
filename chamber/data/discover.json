@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Jesuit Block and Estancias",
+        "address": "Caseros 124, Córdoba, Argentina",
+        "description": "A UNESCO World Heritage Site representing the heart of the Jesuit missions in South America. The complex includes the University of Córdoba, one of the oldest in the Americas, founded in 1613.",
+        "image": "images/jesuit-block.webp",
+        "category": "Historical"
+    },
+    {
+        "id": 2,
+        "name": "Sarmiento Park",
+        "address": "Hipólito Yrigoyen 302, Córdoba, Argentina",
+        "description": "The largest urban park in Córdoba, featuring beautiful lakes, walking paths, and the famous Sarmiento Park Zoo. Perfect for families and nature lovers seeking tranquility in the city.",
+        "image": "images/sarmiento-park.webp",
+        "category": "Recreation"
+    },
+    {
+        "id": 3,
+        "name": "Córdoba Cathedral",
+        "address": "Independencia 80, Córdoba, Argentina",
+        "description": "The main cathedral of Córdoba, showcasing stunning colonial architecture with baroque and neoclassical elements. A must-visit landmark in the historic city center.",
+        "image": "images/cathedral.webp",
+        "category": "Religious"
+    },
+    {
+        "id": 4,
+        "name": "Nueva Córdoba District",
+        "address": "Nueva Córdoba, Córdoba, Argentina",
+        "description": "The vibrant cultural and nightlife district of Córdoba, home to numerous cafes, restaurants, theaters, and the iconic Patio Olmos shopping center. The heart of student life.",
+        "image": "images/nueva-cordoba.webp",
+        "category": "Cultural"
+    },
+    {
+        "id": 5,
+        "name": "Paseo del Buen Pastor",
+        "address": "Hipólito Yrigoyen 325, Córdoba, Argentina",
+        "description": "A beautifully restored cultural center housed in a former women's prison. Now features art galleries, shops, restaurants, and hosts various cultural events throughout the year.",
+        "image": "images/buen-pastor.webp",
+        "category": "Cultural"
+    },
+    {
+        "id": 6,
+        "name": "Evita Fine Arts Museum",
+        "address": "Hipólito Yrigoyen 511, Córdoba, Argentina",
+        "description": "Premier art museum showcasing Argentine and international contemporary art. Houses an impressive collection of paintings, sculptures, and rotating exhibitions.",
+        "image": "images/evita-museum.webp",
+        "category": "Cultural"
+    },
+    {
+        "id": 7,
+        "name": "San Martin Square",
+        "address": "Plaza San Martín, Córdoba, Argentina",
+        "description": "The main square of Córdoba, surrounded by historic colonial buildings and the Cathedral. A perfect starting point to explore the historic center and enjoy street performances.",
+        "image": "images/san-martin-square.webp",
+        "category": "Historical"
+    },
+    {
+        "id": 8,
+        "name": "Cerro de las Rosas",
+        "address": "Cerro de las Rosas, Córdoba, Argentina",
+        "description": "An upscale residential area offering panoramic views of the city and surrounding mountains. Features beautiful parks, exclusive shopping areas, and excellent restaurants.",
+        "image": "images/cerro-rosas.webp",
+        "category": "Recreation"
+    }
+]
