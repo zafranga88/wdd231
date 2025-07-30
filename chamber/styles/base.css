@@ -2400,3 +2400,203 @@ textarea:focus {
         box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
 }
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .discover-container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "visitor sidebar"
+            "discover sidebar";
+    }
+    
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card-1 card-2"
+            "card-3 card-4"
+            "card-5 card-6"
+            "card-7 card-8";
+    }
+    
+    .discover-card {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "description description"
+            "button button";
+        gap: 1.5rem;
+        align-items: start;
+        padding: 2rem;
+    }
+    
+    .discover-card h2 {
+        grid-area: title;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .discover-figure {
+        grid-area: image;
+        margin: 0;
+    }
+    
+    .discover-image {
+        height: 180px;
+        border-radius: var(--border-radius);
+    }
+    
+    .discover-address {
+        grid-area: address;
+        margin-bottom: 0.5rem;
+    }
+    
+    .discover-description {
+        grid-area: description;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .discover-btn {
+        grid-area: button;
+        width: fit-content;
+        justify-self: start;
+    }
+}
+
+/* Extra Large Desktop Layout (1200px+) - NEW THIRD LAYOUT */
+@media (min-width: 1200px) {
+    .discover-container {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: 
+            "visitor sidebar"
+            "discover sidebar";
+        gap: 3rem;
+    }
+    
+    /* NEW: 3-column grid for large screens */
+    .discover-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card-1 card-2 card-3"
+            "card-4 card-5 card-6"
+            "card-7 card-8 card-8";
+    }
+    
+    /* NEW: Vertical card layout for 3-column grid */
+    .discover-card {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        height: 100%;
+    }
+    
+    .discover-card h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+    
+    .discover-figure {
+        margin: 0 0 1rem 0;
+        flex-shrink: 0;
+    }
+    
+    .discover-image {
+        height: 150px;
+        border-radius: var(--border-radius);
+    }
+    
+    .discover-address {
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+    
+    .discover-description {
+        margin-bottom: 1rem;
+        flex-grow: 1;
+        font-size: 0.9rem;
+    }
+    
+    .discover-btn {
+        width: 100%;
+        margin-top: auto;
+    }
+    
+    /* Special styling for card-8 which spans 2 columns */
+    .discover-card[data-area="card-8"] {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "description description"
+            "button button";
+        gap: 2rem;
+        align-items: start;
+    }
+    
+    .discover-card[data-area="card-8"] h2 {
+        grid-area: title;
+        text-align: left;
+        font-size: 1.8rem;
+    }
+    
+    .discover-card[data-area="card-8"] .discover-figure {
+        grid-area: image;
+    }
+    
+    .discover-card[data-area="card-8"] .discover-image {
+        height: 200px;
+    }
+    
+    .discover-card[data-area="card-8"] .discover-address {
+        grid-area: address;
+        text-align: left;
+    }
+    
+    .discover-card[data-area="card-8"] .discover-description {
+        grid-area: description;
+        font-size: 1rem;
+    }
+    
+    .discover-card[data-area="card-8"] .discover-btn {
+        grid-area: button;
+        width: fit-content;
+        justify-self: start;
+    }
+}
+
+/* Fix: Restrict hover effects to larger screens only (not mobile) */
+@media (min-width: 769px) {
+    .discover-image:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1) saturate(1.2);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    .discover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .discover-btn:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+}
+
+/* Remove existing hover effects from base styles to avoid mobile activation */
+.discover-image {
+    transition: var(--transition);
+}
+
+.discover-card {
+    transition: var(--transition);
+}
+
+.discover-btn {
+    transition: var(--transition);
+}
