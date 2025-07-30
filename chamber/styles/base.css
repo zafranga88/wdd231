@@ -2466,7 +2466,6 @@ textarea:focus {
     }
 }
 
-/* Extra Large Desktop Layout (1200px+) - NEW THIRD LAYOUT */
 @media (min-width: 1200px) {
     .discover-container {
         grid-template-columns: 3fr 1fr;
@@ -2476,7 +2475,6 @@ textarea:focus {
         gap: 3rem;
     }
     
-    /* NEW: 3-column grid for large screens */
     .discover-grid {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
@@ -2485,7 +2483,6 @@ textarea:focus {
             "card-7 card-8 card-8";
     }
     
-    /* NEW: Vertical card layout for 3-column grid */
     .discover-card {
         display: flex;
         flex-direction: column;
@@ -2525,7 +2522,6 @@ textarea:focus {
         margin-top: auto;
     }
     
-    /* Special styling for card-8 which spans 2 columns */
     .discover-card[data-area="card-8"] {
         display: grid;
         grid-template-columns: 300px 1fr;
@@ -2569,7 +2565,6 @@ textarea:focus {
     }
 }
 
-/* Fix: Restrict hover effects to larger screens only (not mobile) */
 @media (min-width: 769px) {
     .discover-image:hover {
         transform: scale(1.05);
@@ -2588,7 +2583,6 @@ textarea:focus {
     }
 }
 
-/* Remove existing hover effects from base styles to avoid mobile activation */
 .discover-image {
     transition: var(--transition);
 }
