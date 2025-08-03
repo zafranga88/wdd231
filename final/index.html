@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover and explore the best hiking trails in Patagonia. Get detailed trail information, weather updates, and planning tools for your adventure.">
+    <meta name="author" content="Franco Zarate">
+    <meta name="keywords" content="patagonia, hiking, trails, trekking, argentina, chile, outdoor, adventure">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Patagonia Trail Explorers - Your Gateway to Patagonian Adventures">
+    <meta property="og:description" content="Discover and explore the best hiking trails in Patagonia. Get detailed trail information, weather updates, and planning tools for your adventure.">
+    <meta property="og:url" content="https://yourdomainhere.com">
+    <meta property="og:site_name" content="Patagonia Trail Explorers">
+    <meta property="og:image" content="https://yourdomainhere.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Patagonia Trail Explorers - Your Gateway to Patagonian Adventures">
+    <meta name="twitter:description" content="Discover and explore the best hiking trails in Patagonia. Get detailed trail information, weather updates, and planning tools for your adventure.">
+    <meta name="twitter:image" content="https://yourdomainhere.com/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <title>Patagonia Trail Explorers - Your Gateway to Patagonian Adventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>Patagonia Trail Explorers</h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="trails.html" class="nav-link">Trails</a>
+                        <a href="planning.html" class="nav-link">Planning</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h2 class="hero-title">Explore Patagonia's Greatest Trails</h2>
+                    <p class="hero-subtitle">Discover comprehensive trail information, weather updates, and planning tools for your ultimate Patagonian hiking adventure. From beginner-friendly paths to challenging multi-day treks.</p>
+                    <div class="hero-buttons">
+                        <a href="trails.html" class="btn btn-primary">Explore Trails</a>
+                        <a href="planning.html" class="btn btn-secondary">Planning Tools</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image">
+                        <img src="images/placeholder.jpg" 
+                             data-src="images/hero-patagonia.jpg" 
+                             alt="Stunning Patagonian mountain landscape with granite spires"
+                             class="hero-img lazy-load"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Trails Preview -->
+    <section class="featured-preview">
+        <div class="container">
+            <h3 class="section-title">Featured Trails</h3>
+            <p class="section-subtitle">Get a taste of what Patagonia has to offer with these popular trails</p>
+            <div class="trail-preview-grid" id="featuredTrailsGrid">
+                <!-- Featured trails will be populated by JavaScript -->
+            </div>
+            <div class="preview-action">
+                <a href="trails.html" class="btn btn-outline">View All Trails</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalTrails">0</div>
+                    <div class="stat-label">Total Trails</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalDistance">0</div>
+                    <div class="stat-label">Total Distance (km)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="avgDuration">0</div>
+                    <div class="stat-label">Avg Duration (days)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="maxElevation">0</div>
+                    <div class="stat-label">Max Elevation (m)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Updated on Trail Conditions</h3>
+                <p>Get the latest trail conditions, weather updates, and hiking tips delivered to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm" action="form-confirmation.html" method="get">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Hiking Experience</label>
+                        <select id="experience" name="experience">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interests">Trail Interests (Check all that apply)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="interests" value="day-hikes"> Day Hikes</label>
+                            <label><input type="checkbox" name="interests" value="multi-day"> Multi-day Treks</label>
+                            <label><input type="checkbox" name="interests" value="glaciers"> Glacier Tours</label>
+                            <label><input type="checkbox" name="interests" value="wildlife"> Wildlife Viewing</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="newsletter">Newsletter Frequency</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="frequency" value="weekly" checked> Weekly</label>
+                            <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
+                            <label><input type="radio" name="frequency" value="seasonal"> Seasonal</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe to Updates</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Recent Updates -->
+                <section class="updates-section">
+                    <h3 class="section-title">Recent Updates</h3>
+                    <div class="updates-list" id="recentUpdates">
+                        <!-- Updates will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Weather Widget -->
+                    <div class="widget weather-widget">
+                        <h4>Current Weather</h4>
+                        <div class="weather-info" id="weatherInfo">
+                            <div class="weather-location">El Calafate, Argentina</div>
+                            <div class="weather-temp">12°C</div>
+                            <div class="weather-condition">Partly Cloudy</div>
+                            <div class="weather-wind">Wind: 15 km/h SW</div>
+                        </div>
+                    </div>
+
+                    <!-- Trail Conditions -->
+                    <div class="widget conditions-widget">
+                        <h4>Trail Conditions</h4>
+                        <div class="condition-list" id="trailConditions">
+                            <!-- Conditions will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Planning Tools -->
+                    <div class="widget planning-widget">
+                        <h4>Quick Tools</h4>
+                        <div class="tool-list">
+                            <a href="planning.html#checklist" class="tool-link">📋 Packing Checklist</a>
+                            <a href="planning.html#maps" class="tool-link">🗺️ Trail Maps</a>
+                            <a href="planning.html#calculator" class="tool-link">⏱️ Duration Calculator</a>
+                            <a href="planning.html#weather" class="tool-link">🌤️ Weather Forecast</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Patagonia Trail Explorers</h4>
+                    <p>Your comprehensive guide to hiking adventures in Argentine and Chilean Patagonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="trails.html">Trail Database</a></li>
+                        <li><a href="planning.html">Planning Tools</a></li>
+                        <li><a href="contact.html#weather">Weather Updates</a></li>
+                        <li><a href="contact.html#safety">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="trails.html#maps">Interactive Maps</a></li>
+                        <li><a href="trails.html#conditions">Trail Conditions</a></li>
+                        <li><a href="planning.html#guides">Hiking Guides</a></li>
+                        <li><a href="contact.html#community">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@patagonia-trails.org">Email Us</a></li>
+                        <li><a href="contact.html#emergency">Emergency Contacts</a></li>
+                        <li><a href="contact.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Franco Zarate | Patagonia Trail Explorers</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Trail Details Modal -->
+    <div class="modal" id="trailModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Trail Details</h3>
+                <button type="button" class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be dynamically populated -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalCloseBtn">Close</button>
+                <button type="button" class="btn btn-primary" id="addToFavorites">Add to Favorites</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script type="module" src="scripts/script.js"></script>
+</body>
+</html>
