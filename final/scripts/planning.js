@@ -20,7 +20,7 @@ const PlanningState = {
 // Planning Utilities
 const PlanningUtils = {
     // Weather API configuration
-    WEATHER_API_KEY: 'demo', // You'll need to replace with actual API key
+    WEATHER_API_KEY: '5435015f3ffa65cdfbf86473b8e0f9a6', 
     WEATHER_BASE_URL: 'https://api.openweathermap.org/data/2.5',
 
     // Location mapping for weather API
