@@ -2,345 +2,350 @@
   "trails": [
     {
       "id": 1,
-      "name": "Fitz Roy Circuit",
-      "description": "A challenging multi-day trek offering breathtaking views of granite spires and pristine alpine lakes. This iconic circuit takes you through some of Patagonia's most spectacular scenery.",
-      "difficulty": "advanced",
-      "duration": "3-4 days",
-      "distance": "42 km",
-      "elevation_gain": "1,200m",
-      "season": "Nov-Mar",
-      "region": "El Chaltén, Argentina",
-      "country": "Argentina",
-      "coordinates": {
-        "lat": -49.2931,
-        "lng": -73.0442
-      },
-      "trail_type": "circuit",
-      "camping": true,
-      "water_sources": true,
-      "permits_required": false,
-      "best_months": ["November", "December", "January", "February", "March"],
-      "highlights": [
-        "Laguna de los Tres viewpoint",
-        "Fitz Roy granite spires",
-        "Laguna Capri",
-        "Rio de las Vueltas valley"
-      ],
-      "gear_recommendations": [
-        "4-season tent",
-        "Warm sleeping bag (-10°C)",
-        "Waterproof layers",
-        "Trekking poles",
-        "GPS device"
-      ]
+      "name": "Torres del Paine W Trek",
+      "description": "The classic W Trek through Torres del Paine National Park, featuring iconic granite towers, glacial lakes, and diverse wildlife. This challenging multi-day trek rewards hikers with some of Patagonia's most spectacular scenery.",
+      "difficulty": "intermediate",
+      "duration": 5,
+      "distance": 71,
+      "elevation": 1200,
+      "country": "Chile",
+      "location": "Torres del Paine National Park",
+      "season": "October-April",
+      "highlights": ["Torres Base viewpoint", "French Valley", "Grey Glacier", "Cuernos del Paine"],
+      "conditions": "good",
+      "image": "torres-del-paine.jpg",
+      "coordinates": {"lat": -50.9423, "lng": -73.4068},
+      "featured": true
     },
     {
       "id": 2,
-      "name": "Torres del Paine W Trek",
-      "description": "The classic W-shaped route through Torres del Paine National Park with iconic tower views. One of the most popular multi-day treks in Patagonia.",
-      "difficulty": "intermediate",
-      "duration": "4-5 days",
-      "distance": "71 km",
-      "elevation_gain": "800m",
-      "season": "Oct-Apr",
-      "region": "Torres del Paine, Chile",
-      "country": "Chile",
-      "coordinates": {
-        "lat": -50.9423,
-        "lng": -73.4068
-      },
-      "trail_type": "linear",
-      "camping": true,
-      "water_sources": true,
-      "permits_required": true,
-      "best_months": ["October", "November", "December", "January", "February", "March", "April"],
-      "highlights": [
-        "Base Torres viewpoint",
-        "French Valley",
-        "Grey Glacier",
-        "Cuernos del Paine"
-      ],
-      "gear_recommendations": [
-        "3-season tent",
-        "Sleeping bag (-5°C)",
-        "Wind-resistant jacket",
-        "Trekking poles",
-        "Water purification"
-      ]
+      "name": "Fitz Roy Circuit",
+      "description": "A demanding trek around the dramatic Fitz Roy massif in Los Glaciares National Park. Experience close-up views of jagged peaks, pristine lakes, and the famous Laguna de los Tres.",
+      "difficulty": "advanced",
+      "duration": 3,
+      "distance": 42,
+      "elevation": 1400,
+      "country": "Argentina",
+      "location": "El Chaltén",
+      "season": "November-March",
+      "highlights": ["Laguna de los Tres", "Fitz Roy summit views", "Laguna Capri", "Cerro Torre viewpoint"],
+      "conditions": "excellent",
+      "image": "fitz-roy.jpg",
+      "coordinates": {"lat": -49.2931, "lng": -73.0544},
+      "featured": true
     },
     {
       "id": 3,
       "name": "Perito Moreno Glacier Walk",
-      "description": "An accessible glacier experience suitable for beginners with stunning ice formations. Walk on the glacier with professional guides and crampons.",
+      "description": "An accessible day hike offering stunning views of the famous Perito Moreno Glacier. Perfect for families and beginners, with well-maintained walkways and incredible photo opportunities.",
       "difficulty": "beginner",
-      "duration": "3-4 hours",
-      "distance": "6 km",
-      "elevation_gain": "200m",
-      "season": "Year-round",
-      "region": "El Calafate, Argentina",
+      "duration": 1,
+      "distance": 6,
+      "elevation": 200,
       "country": "Argentina",
-      "coordinates": {
-        "lat": -50.4648,
-        "lng": -73.0311
-      },
-      "trail_type": "guided_tour",
-      "camping": false,
-      "water_sources": false,
-      "permits_required": true,
-      "best_months": ["All year"],
-      "highlights": [
-        "Glacier ice walking",
-        "Ice formations and crevasses",
-        "Panoramic glacier views",
-        "Professional guide experience"
-      ],
-      "gear_recommendations": [
-        "Waterproof boots",
-        "Warm layers",
-        "Sunglasses",
-        "Sunscreen",
-        "Camera"
-      ]
+      "location": "Los Glaciares National Park",
+      "season": "Year-round",
+      "highlights": ["Glacier viewpoints", "Ice formations", "Wildlife spotting", "Visitor center"],
+      "conditions": "excellent",
+      "image": "perito-moreno.jpg",
+      "coordinates": {"lat": -50.4952, "lng": -73.1378},
+      "featured": true
     },
     {
       "id": 4,
-      "name": "Laguna de los Tres",
-      "description": "A day hike to a spectacular lagoon with perfect views of Fitz Roy's granite spires. One of the most rewarding day hikes in El Chaltén.",
-      "difficulty": "intermediate",
-      "duration": "8-10 hours",
-      "distance": "20 km",
-      "elevation_gain": "900m",
-      "season": "Nov-Mar",
-      "region": "El Chaltén, Argentina",
-      "country": "Argentina",
-      "coordinates": {
-        "lat": -49.2919,
-        "lng": -73.0439
-      },
-      "trail_type": "out_and_back",
-      "camping": false,
-      "water_sources": true,
-      "permits_required": false,
-      "best_months": ["November", "December", "January", "February", "March"],
-      "highlights": [
-        "Fitz Roy mountain views",
-        "Laguna de los Tres",
-        "Piedras Blancas Glacier",
-        "Poincenot basecamp"
-      ],
-      "gear_recommendations": [
-        "Day pack",
-        "Trekking poles",
-        "Extra layers",
-        "Rain gear",
-        "Plenty of water"
-      ]
+      "name": "Cerro Castillo Circuit",
+      "description": "A hidden gem featuring dramatic spires, turquoise lakes, and ancient forests. This challenging circuit offers solitude and pristine wilderness away from the crowds.",
+      "difficulty": "advanced",
+      "duration": 4,
+      "distance": 56,
+      "elevation": 1600,
+      "country": "Chile",
+      "location": "Cerro Castillo National Reserve",
+      "season": "December-March",
+      "highlights": ["Cerro Castillo spires", "Laguna Cerro Castillo", "Virgin forests", "Panoramic views"],
+      "conditions": "good",
+      "image": "cerro-castillo.jpg",
+      "coordinates": {"lat": -46.1000, "lng": -72.1000},
+      "featured": false
     },
     {
       "id": 5,
-      "name": "Cerro Torre Base Trek",
-      "description": "Advanced trek to the base of the infamous Cerro Torre, one of the world's most challenging peaks. Spectacular views of the needle-like summit.",
+      "name": "Dientes de Navarino",
+      "description": "The world's southernmost trekking circuit on Navarino Island. Experience the raw beauty of Tierra del Fuego with challenging weather and unforgettable landscapes.",
       "difficulty": "advanced",
-      "duration": "6-8 hours",
-      "distance": "18 km",
-      "elevation_gain": "700m",
-      "season": "Dec-Feb",
-      "region": "El Chaltén, Argentina",
-      "country": "Argentina",
-      "coordinates": {
-        "lat": -49.2953,
-        "lng": -73.1033
-      },
-      "trail_type": "out_and_back",
-      "camping": true,
-      "water_sources": true,
-      "permits_required": false,
-      "best_months": ["December", "January", "February"],
-      "highlights": [
-        "Cerro Torre views",
-        "Torre Glacier",
-        "Laguna Torre",
-        "Advanced mountaineering access"
-      ],
-      "gear_recommendations": [
-        "Mountaineering boots",
-        "Warm layers",
-        "Wind protection",
-        "Trekking poles",
-        "Emergency shelter"
-      ]
+      "duration": 6,
+      "distance": 53,
+      "elevation": 900,
+      "country": "Chile",
+      "location": "Navarino Island",
+      "season": "December-February",
+      "highlights": ["Southernmost trek", "Beagle Channel views", "Unique flora", "Remote wilderness"],
+      "conditions": "caution",
+      "image": "dientes-navarino.jpg",
+      "coordinates": {"lat": -55.0833, "lng": -67.6167},
+      "featured": false
     },
     {
       "id": 6,
-      "name": "Valle del Frances",
-      "description": "Beautiful valley hike in Torres del Paine with panoramic views of granite towers and glaciers. Part of the famous W trek but can be done as a day hike.",
-      "difficulty": "intermediate",
-      "duration": "6-7 hours",
-      "distance": "14 km",
-      "elevation_gain": "600m",
-      "season": "Oct-Apr",
-      "region": "Torres del Paine, Chile",
-      "country": "Chile",
-      "coordinates": {
-        "lat": -50.9324,
-        "lng": -73.1972
-      },
-      "trail_type": "out_and_back",
-      "camping": true,
-      "water_sources": true,
-      "permits_required": true,
-      "best_months": ["October", "November", "December", "January", "February", "March", "April"],
-      "highlights": [
-        "French Valley viewpoint",
-        "Paine Grande",
-        "Hanging glaciers",
-        "Granite spires"
-      ],
-      "gear_recommendations": [
-        "Day pack",
-        "Wind jacket",
-        "Warm layers",
-        "Trekking poles",
-        "Park permit"
-      ]
+      "name": "Huemul Circuit",
+      "description": "A challenging high-altitude trek featuring glaciers, alpine lakes, and stunning mountain views. Known for its technical sections and rewarding panoramas.",
+      "difficulty": "advanced",
+      "duration": 4,
+      "distance": 38,
+      "elevation": 1800,
+      "country": "Argentina",
+      "location": "El Chaltén",
+      "season": "December-February",
+      "highlights": ["Glacial views", "Alpine scenery", "Technical climbing", "Pristine wilderness"],
+      "conditions": "good",
+      "image": "huemul-circuit.jpg",
+      "coordinates": {"lat": -49.3319, "lng": -73.0131},
+      "featured": false
     },
     {
       "id": 7,
       "name": "Laguna Esmeralda",
-      "description": "A moderate hike through lenga forests to a stunning emerald-colored lagoon. Perfect introduction to Fuegian landscapes near Ushuaia.",
-      "difficulty": "beginner",
-      "duration": "4-5 hours",
-      "distance": "10 km",
-      "elevation_gain": "300m",
-      "season": "Oct-May",
-      "region": "Ushuaia, Argentina",
+      "description": "A moderate day hike through forests and wetlands to a beautiful emerald lake. Perfect for those seeking a shorter adventure with stunning rewards.",
+      "difficulty": "intermediate",
+      "duration": 1,
+      "distance": 9,
+      "elevation": 300,
       "country": "Argentina",
-      "coordinates": {
-        "lat": -54.7328,
-        "lng": -68.4347
-      },
-      "trail_type": "out_and_back",
-      "camping": false,
-      "water_sources": true,
-      "permits_required": false,
-      "best_months": ["October", "November", "December", "January", "February", "March", "April", "May"],
-      "highlights": [
-        "Emerald-colored lagoon",
-        "Lenga forest",
-        "Peat bog crossing",
-        "Mountain reflections"
-      ],
-      "gear_recommendations": [
-        "Waterproof boots",
-        "Day pack",
-        "Rain gear",
-        "Warm layers",
-        "Camera"
-      ]
+      "location": "Ushuaia, Tierra del Fuego",
+      "season": "October-April",
+      "highlights": ["Emerald lake", "Peat bog crossing", "Mountain views", "Diverse ecosystems"],
+      "conditions": "excellent",
+      "image": "laguna-esmeralda.jpg",
+      "coordinates": {"lat": -54.7500, "lng": -68.1500},
+      "featured": false
     },
     {
       "id": 8,
-      "name": "Dientes de Navarino",
-      "description": "The southernmost trekking circuit in the world, offering rugged wilderness and incredible views. An expedition-style trek for experienced hikers only.",
-      "difficulty": "advanced",
-      "duration": "5-7 days",
-      "distance": "53 km",
-      "elevation_gain": "1,100m",
-      "season": "Dec-Mar",
-      "region": "Navarino Island, Chile",
+      "name": "Glacier Martial",
+      "description": "An accessible trail near Ushuaia offering panoramic views of the Beagle Channel and surrounding mountains. Great for acclimatization and sunset views.",
+      "difficulty": "beginner",
+      "duration": 1,
+      "distance": 7,
+      "elevation": 400,
+      "country": "Argentina",
+      "location": "Ushuaia",
+      "season": "Year-round",
+      "highlights": ["Beagle Channel views", "Easy access", "Chairlift option", "City panorama"],
+      "conditions": "excellent",
+      "image": "glacier-martial.jpg",
+      "coordinates": {"lat": -54.7833, "lng": -68.3000},
+      "featured": false
+    },
+    {
+      "id": 9,
+      "name": "Paso de los Cuervos",
+      "description": "A moderate trek through ancient lenga forests leading to spectacular viewpoints of the Fitz Roy range. Perfect for photography enthusiasts.",
+      "difficulty": "intermediate",
+      "duration": 2,
+      "distance": 18,
+      "elevation": 600,
+      "country": "Argentina",
+      "location": "El Chaltén",
+      "season": "October-April",
+      "highlights": ["Forest trails", "Fitz Roy views", "Photography spots", "Diverse wildlife"],
+      "conditions": "good",
+      "image": "paso-cuervos.jpg",
+      "coordinates": {"lat": -49.3167, "lng": -73.0333},
+      "featured": false
+    },
+    {
+      "id": 10,
+      "name": "Valle Frances",
+      "description": "The heart of the Torres del Paine W Trek, featuring a dramatic valley surrounded by towering granite spires and hanging glaciers.",
+      "difficulty": "intermediate",
+      "duration": 1,
+      "distance": 12,
+      "elevation": 800,
       "country": "Chile",
-      "coordinates": {
-        "lat": -55.0833,
-        "lng": -67.6167
-      },
-      "trail_type": "circuit",
-      "camping": true,
-      "water_sources": true,
-      "permits_required": false,
-      "best_months": ["December", "January", "February", "March"],
-      "highlights": [
-        "World's southernmost trek",
-        "Beagle Channel views",
-        "Cape Horn proximity",
-        "Pristine wilderness"
-      ],
-      "gear_recommendations": [
-        "4-season tent",
-        "Cold weather sleeping bag",
-        "Full rain gear",
-        "GPS and compass",
-        "Emergency beacon"
+      "location": "Torres del Paine",
+      "season": "October-April",
+      "highlights": ["French Valley", "Hanging glaciers", "Granite spires", "Alpine scenery"],
+      "conditions": "good",
+      "image": "valle-frances.jpg",
+      "coordinates": {"lat": -50.9500, "lng": -73.2000},
+      "featured": false
+    },
+    {
+      "id": 11,
+      "name": "Sendero Costero",
+      "description": "A scenic coastal trail along the Beagle Channel offering marine wildlife viewing and historical sites. Suitable for all fitness levels.",
+      "difficulty": "beginner",
+      "duration": 1,
+      "distance": 8,
+      "elevation": 100,
+      "country": "Argentina",
+      "location": "Tierra del Fuego National Park",
+      "season": "Year-round",
+      "highlights": ["Coastal views", "Marine wildlife", "Historical sites", "Easy walking"],
+      "conditions": "excellent",
+      "image": "sendero-costero.jpg",
+      "coordinates": {"lat": -54.8500, "lng": -68.5500},
+      "featured": false
+    },
+    {
+      "id": 12,
+      "name": "Mirador Las Torres",
+      "description": "The iconic day hike to the base of Torres del Paine's famous granite towers. A challenging but rewarding trek with spectacular sunrise views.",
+      "difficulty": "intermediate",
+      "duration": 1,
+      "distance": 14,
+      "elevation": 900,
+      "country": "Chile",
+      "location": "Torres del Paine",
+      "season": "October-April",
+      "highlights": ["Iconic towers", "Sunrise views", "Glacial lake", "Photography paradise"],
+      "conditions": "good",
+      "image": "mirador-torres.jpg",
+      "coordinates": {"lat": -50.9000, "lng": -72.9500},
+      "featured": true
+    },
+    {
+      "id": 13,
+      "name": "Cerro Guanaco",
+      "description": "A challenging summit hike offering 360-degree views of the Patagonian steppe and Andes. Perfect for experienced hikers seeking solitude.",
+      "difficulty": "advanced",
+      "duration": 2,
+      "distance": 22,
+      "elevation": 1200,
+      "country": "Argentina",
+      "location": "Santa Cruz Province",
+      "season": "November-March",
+      "highlights": ["Summit views", "Steppe landscape", "Solitude", "Wildlife spotting"],
+      "conditions": "caution",
+      "image": "cerro-guanaco.jpg",
+      "coordinates": {"lat": -50.0000, "lng": -72.0000},
+      "featured": false
+    },
+    {
+      "id": 14,
+      "name": "Laguna Torre",
+      "description": "A moderate day hike to a glacial lake with stunning views of Cerro Torre. Features well-marked trails and interpretive signs about glacial geology.",
+      "difficulty": "intermediate",
+      "duration": 1,
+      "distance": 11,
+      "elevation": 400,
+      "country": "Argentina",
+      "location": "El Chaltén",
+      "season": "October-April",
+      "highlights": ["Cerro Torre views", "Glacial lake", "Educational trail", "Accessible"],
+      "conditions": "excellent",
+      "image": "laguna-torre.jpg",
+      "coordinates": {"lat": -49.2900, "lng": -73.1000},
+      "featured": false
+    },
+    {
+      "id": 15,
+      "name": "Peninsula Valdes Wildlife Trek",
+      "description": "A unique coastal walking experience focusing on marine wildlife observation. Best known for whale watching and penguin colonies during breeding season.",
+      "difficulty": "beginner",
+      "duration": 1,
+      "distance": 5,
+      "elevation": 50,
+      "country": "Argentina",
+      "location": "Peninsula Valdés",
+      "season": "September-March",
+      "highlights": ["Whale watching", "Penguin colonies", "Marine wildlife", "Coastal scenery"],
+      "conditions": "excellent",
+      "image": "peninsula-valdes.jpg",
+      "coordinates": {"lat": -42.5000, "lng": -64.0000},
+      "featured": false
+    }
+  ],
+  "weather_locations": [
+    {
+      "name": "El Calafate",
+      "coordinates": {"lat": -50.3374, "lng": -72.2647}
+    },
+    {
+      "name": "El Chaltén",
+      "coordinates": {"lat": -49.3319, "lng": -73.0131}
+    },
+    {
+      "name": "Ushuaia",
+      "coordinates": {"lat": -54.8019, "lng": -68.3030}
+    },
+    {
+      "name": "Puerto Natales",
+      "coordinates": {"lat": -51.7236, "lng": -72.5064}
+    }
+  ],
+  "recent_updates": [
+    {
+      "date": "2025-08-01",
+      "title": "Torres del Paine Access Update",
+      "content": "The Catamaran service to Grey Glacier is now operational for the 2025 season. Advance booking recommended due to high demand."
+    },
+    {
+      "date": "2025-07-28",
+      "title": "El Chaltén Weather Advisory",
+      "content": "Strong winds expected this weekend. Hikers planning Fitz Roy circuit should consider postponing or bringing extra wind protection gear."
+    },
+    {
+      "date": "2025-07-25",
+      "title": "New Trail Opening: Cerro Castillo",
+      "content": "The full Cerro Castillo circuit is now accessible after winter maintenance. Trail conditions are excellent with clear weather windows."
+    },
+    {
+      "date": "2025-07-22",
+      "title": "Permit Requirements Updated",
+      "content": "Torres del Paine now requires online camping permits for all backcountry sites. Book at least 2 weeks in advance during peak season."
+    },
+    {
+      "date": "2025-07-20",
+      "title": "Wildlife Alert: Penguin Season",
+      "content": "Peninsula Valdés penguin colonies are at peak activity. Best viewing times are early morning and late afternoon. Maintain 5-meter distance."
+    }
+  ],
+  "planning_tools": [
+    {
+      "category": "Essential Gear",
+      "items": [
+        "Waterproof hiking boots",
+        "Rain jacket and pants",
+        "Warm insulation layer",
+        "Hiking poles",
+        "Headlamp with extra batteries",
+        "First aid kit",
+        "Navigation tools (GPS/map/compass)",
+        "Emergency whistle",
+        "Sunglasses and sunscreen",
+        "Water bottles/hydration system"
+      ]
+    },
+    {
+      "category": "Camping Gear",
+      "items": [
+        "4-season tent (wind resistant)",
+        "Sleeping bag rated for -10°C",
+        "Insulated sleeping pad",
+        "Portable stove and fuel",
+        "Lightweight cookware",
+        "Food storage containers",
+        "Water purification tablets",
+        "Rope and guy lines",
+        "Camping pillow",
+        "Multi-tool or knife"
+      ]
+    },
+    {
+      "category": "Clothing",
+      "items": [
+        "Moisture-wicking base layers",
+        "Insulating mid-layers",
+        "Windproof outer shell",
+        "Warm hat and sun hat",
+        "Insulated gloves",
+        "Extra socks and underwear",
+        "Gaiters",
+        "Comfortable hiking pants",
+        "Quick-dry shirts",
+        "Warm sleeping clothes"
       ]
     }
-  ],
-  "regions": [
-    {
-      "name": "El Chaltén, Argentina",
-      "description": "The trekking capital of Argentina",
-      "best_season": "November to March",
-      "climate": "Cold, windy, unpredictable weather"
-    },
-    {
-      "name": "Torres del Paine, Chile",
-      "description": "Chile's premier national park",
-      "best_season": "October to April",
-      "climate": "Windy with frequent weather changes"
-    },
-    {
-      "name": "El Calafate, Argentina",
-      "description": "Gateway to glaciers and ice fields",
-      "best_season": "Year round for glacier tours",
-      "climate": "Cold, dry steppe climate"
-    },
-    {
-      "name": "Ushuaia, Argentina",
-      "description": "End of the world city",
-      "best_season": "October to May",
-      "climate": "Maritime subantarctic climate"
-    }
-  ],
-  "difficulty_levels": {
-    "beginner": {
-      "description": "Suitable for hikers with basic fitness level",
-      "requirements": "Basic hiking experience",
-      "typical_duration": "Half day to 1 day",
-      "elevation_gain": "Less than 500m"
-    },
-    "intermediate": {
-      "description": "Requires moderate fitness and some hiking experience",
-      "requirements": "Regular physical activity",
-      "typical_duration": "Full day to 2 days",
-      "elevation_gain": "500m to 1000m"
-    },
-    "advanced": {
-      "description": "Requires excellent fitness and extensive hiking experience",
-      "requirements": "High fitness level and mountaineering skills",
-      "typical_duration": "Multi-day expeditions",
-      "elevation_gain": "Over 1000m"
-    }
-  },
-  "essential_gear": {
-    "base_layers": [
-      "Merino wool base layers",
-      "Synthetic insulation layer",
-      "Waterproof outer shell"
-    ],
-    "footwear": [
-      "Waterproof hiking boots",
-      "Camp shoes",
-      "Crampons (for glacier walks)"
-    ],
-    "navigation": [
-      "GPS device",
-      "Detailed topographic maps",
-      "Compass",
-      "Emergency beacon"
-    ],
-    "safety": [
-      "First aid kit",
-      "Emergency shelter",
-      "Headlamp with extra batteries",
-      "Whistle"
-    ]
-  }
+  ]
 }

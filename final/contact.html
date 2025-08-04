@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Patagonia Trail Explorers. Contact us for trail information, emergency contacts, and hiking support in Patagonia.">
+    <meta name="author" content="Franco Zarate">
+    <meta name="keywords" content="patagonia, contact, hiking support, emergency contacts, trail information">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us - Patagonia Trail Explorers">
+    <meta property="og:description" content="Get in touch with Patagonia Trail Explorers. Contact us for trail information, emergency contacts, and hiking support in Patagonia.">
+    <meta property="og:url" content="https://yourdomainhere.com/contact.html">
+    <meta property="og:site_name" content="Patagonia Trail Explorers">
+    <meta property="og:image" content="https://yourdomainhere.com/images/contact-og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Patagonia Trail Explorers">
+    <meta name="twitter:description" content="Get in touch with Patagonia Trail Explorers. Contact us for trail information, emergency contacts, and hiking support in Patagonia.">
+    <meta name="twitter:image" content="https://yourdomainhere.com/images/contact-twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <title>Contact Us - Patagonia Trail Explorers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>Patagonia Trail Explorers</h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="trails.html" class="nav-link">Trails</a>
+                        <a href="planning.html" class="nav-link">Planning</a>
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">Contact Us</h2>
+            <p class="page-subtitle">Get in touch for trail information, hiking support, or emergency assistance. We're here to help make your Patagonian adventure safe and memorable.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <main class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <section class="contact-form-section">
+                    <h3>Send Us a Message</h3>
+                    <p>Have questions about trails, need hiking advice, or want to share your experience? We'd love to hear from you!</p>
+                    
+                    <form class="contact-form" id="contactForm" action="form-confirmation.html" method="get">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="emailContact">Email Address *</label>
+                            <input type="email" id="emailContact" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="trail-info">Trail Information</option>
+                                <option value="planning-help">Planning Assistance</option>
+                                <option value="conditions">Trail Conditions Update</option>
+                                <option value="feedback">Website Feedback</option>
+                                <option value="emergency">Emergency/Urgent</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="visitPlans">When are you planning to visit Patagonia?</label>
+                            <input type="month" id="visitPlans" name="visitPlans">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="newsletter" value="yes">
+                                Subscribe me to trail updates and newsletters
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                </section>
+
+                <!-- Contact Information -->
+                <aside class="contact-info-section">
+                    
+                    <!-- Emergency Contacts -->
+                    <div class="contact-card" id="emergency">
+                        <h4>🚨 Emergency Contacts</h4>
+                        <div class="emergency-list">
+                            <div class="emergency-item">
+                                <h5>Argentina</h5>
+                                <p><strong>Emergency Services:</strong> 911</p>
+                                <p><strong>Tourist Police:</strong> +54 11 4346-5748</p>
+                                <p><strong>Mountain Rescue (El Chaltén):</strong> +54 2962 493-004</p>
+                                <p><strong>Los Glaciares Park:</strong> +54 2902 491-005</p>
+                            </div>
+                            <div class="emergency-item">
+                                <h5>Chile</h5>
+                                <p><strong>Emergency Services:</strong> 133</p>
+                                <p><strong>Carabineros (Police):</strong> 133</p>
+                                <p><strong>CONAF (Parks):</strong> +56 61 238-1931</p>
+                                <p><strong>Mountain Rescue:</strong> +56 61 241-1594</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather Information -->
+                    <div class="contact-card" id="weather">
+                        <h4>🌤️ Current Weather</h4>
+                        <div class="weather-locations" id="contactWeather">
+                            <!-- Weather will be populated by JavaScript -->
+                        </div>
+                        <p class="weather-note">Weather conditions in Patagonia can change rapidly. Always check current forecasts before heading out.</p>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="contact-card">
+                        <h4>📧 Get In Touch</h4>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <a href="mailto:info@patagonia-trails.org">info@patagonia-trails.org</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Response Time:</strong>
+                                <span>Usually within 24 hours</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Office Hours:</strong>
+                                <span>Monday - Friday, 9:00 AM - 6:00 PM (GMT-3)</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Languages:</strong>
+                                <span>English, Spanish, Portuguese</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="contact-card">
+                        <h4>🌐 Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">📷 Instagram</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">📺 YouTube</a>
+                        </div>
+                        <p>Follow us for daily trail updates, weather alerts, and stunning Patagonian photography!</p>
+                    </div>
+
+                </aside>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Community Section -->
+    <section class="community-section" id="community">
+        <div class="container">
+            <h3 class="section-title">Join Our Community</h3>
+            <p class="section-subtitle">Connect with fellow hikers and share your Patagonian adventures</p>
+            
+            <div class="community-grid">
+                <div class="community-card">
+                    <h4>💬 Discussion Forum</h4>
+                    <p>Join conversations about trail conditions, gear recommendations, and hiking experiences.</p>
+                    <a href="#" class="btn btn-outline">Join Forum</a>
+                </div>
+                
+                <div class="community-card">
+                    <h4>📸 Photo Gallery</h4>
+                    <p>Share your stunning Patagonian photos and get inspired by others' adventures.</p>
+                    <a href="#" class="btn btn-outline">View Gallery</a>
+                </div>
+                
+                <div class="community-card">
+                    <h4>👥 Find Hiking Partners</h4>
+                    <p>Connect with other hikers planning similar trips and find travel companions.</p>
+                    <a href="#" class="btn btn-outline">Find Partners</a>
+                </div>
+                
+                <div class="community-card">
+                    <h4>📝 Trip Reports</h4>
+                    <p>Read detailed trip reports and share your own hiking experiences with the community.</p>
+                    <a href="#" class="btn btn-outline">Read Reports</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h3 class="section-title">Frequently Asked Questions</h3>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>What's the best time to visit Patagonia for hiking?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The best time for hiking in Patagonia is during the summer months (November to March). December to February offers the warmest weather and longest days, while November and March provide fewer crowds and can still have excellent conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Do I need permits for hiking in Patagonia?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Some areas require permits, especially for camping. Torres del Paine requires reservations for all campsites and refugios. Los Glaciares National Park requires registration for certain trails. Always check current permit requirements before your trip.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>How difficult are Patagonian hiking trails?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Patagonia offers trails for all levels, from easy day hikes to challenging multi-day treks. The main challenges are unpredictable weather, strong winds, and river crossings. We categorize all trails by difficulty to help you choose appropriate routes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>What gear is essential for Patagonian hiking?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Essential gear includes windproof and waterproof clothing, warm layers, sturdy hiking boots, navigation tools, and a first aid kit. Check our detailed packing checklist in the Planning section for comprehensive gear recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Is it safe to hike alone in Patagonia?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>While many people hike alone safely, we recommend hiking with others when possible. If hiking solo, inform someone of your plans, carry emergency communication devices, stick to well-marked trails, and be extra cautious with weather conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Patagonia Trail Explorers</h4>
+                    <p>Your comprehensive guide to hiking adventures in Argentine and Chilean Patagonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="trails.html">Trail Database</a></li>
+                        <li><a href="planning.html">Planning Tools</a></li>
+                        <li><a href="contact.html#weather">Weather Updates</a></li>
+                        <li><a href="contact.html#safety">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@patagonia-trails.org">Email Us</a></li>
+                        <li><a href="contact.html#emergency">Emergency Contacts</a></li>
+                        <li><a href="contact.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul class="footer-links">
+                    <a href="https://www.facebook.com/" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.twitter.com/" aria-label="Twitter">
+                        <img src="images/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Franco Zarate | Patagonia Trail Explorers</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>

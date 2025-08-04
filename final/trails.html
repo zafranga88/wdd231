@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our comprehensive database of Patagonian hiking trails. Filter by difficulty, duration, and location to find your perfect adventure.">
+    <meta name="author" content="Franco Zarate">
+    <meta name="keywords" content="patagonia, hiking trails, trekking routes, trail database, argentina, chile">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Patagonian Trails Database - Find Your Perfect Hike">
+    <meta property="og:description" content="Browse our comprehensive database of Patagonian hiking trails. Filter by difficulty, duration, and location to find your perfect adventure.">
+    <meta property="og:url" content="https://yourdomainhere.com/trails.html">
+    <meta property="og:site_name" content="Patagonia Trail Explorers">
+    <meta property="og:image" content="https://yourdomainhere.com/images/trails-og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Patagonian Trails Database - Find Your Perfect Hike">
+    <meta name="twitter:description" content="Browse our comprehensive database of Patagonian hiking trails. Filter by difficulty, duration, and location to find your perfect adventure.">
+    <meta name="twitter:image" content="https://yourdomainhere.com/images/trails-twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <title>Trails Database - Patagonia Trail Explorers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>Patagonia Trail Explorers</h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="trails.html" class="nav-link active">Trails</a>
+                        <a href="planning.html" class="nav-link">Planning</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">Trail Database</h2>
+            <p class="page-subtitle">Discover all the amazing hiking trails Patagonia has to offer. Use our filters to find the perfect trail for your adventure.</p>
+        </div>
+    </section>
+
+    <!-- Trail Filters -->
+    <section class="trail-filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <input type="text" id="trailSearch" placeholder="Search trails by name, location, or description..." class="search-input">
+                        <button type="button" class="search-btn" id="searchBtn">🔍</button>
+                    </div>
+                </div>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="difficultyFilter">Difficulty Level</label>
+                        <select id="difficultyFilter" class="filter-select">
+                            <option value="">All Difficulties</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="countryFilter">Country</label>
+                        <select id="countryFilter" class="filter-select">
+                            <option value="">All Countries</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Chile">Chile</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="durationFilter">Duration</label>
+                        <select id="durationFilter" class="filter-select">
+                            <option value="">All Durations</option>
+                            <option value="1">1 Day</option>
+                            <option value="2-3">2-3 Days</option>
+                            <option value="4-7">4-7 Days</option>
+                            <option value="7+">7+ Days</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sortTrails">Sort By</label>
+                        <select id="sortTrails" class="filter-select">
+                            <option value="name">Name</option>
+                            <option value="difficulty">Difficulty</option>
+                            <option value="duration">Duration</option>
+                            <option value="distance">Distance</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button type="button" class="btn btn-secondary" id="clearFilters">Clear Filters</button>
+                    <button type="button" class="btn btn-primary" id="showFavorites">Show Favorites Only</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trail Results -->
+    <main class="trails-main">
+        <div class="container">
+            <div class="trails-header">
+                <div class="results-info">
+                    <span id="resultsCount">Loading trails...</span>
+                </div>
+                <div class="view-controls">
+                    <button type="button" class="view-btn active" id="gridView" aria-label="Grid view">⊞</button>
+                    <button type="button" class="view-btn" id="listView" aria-label="List view">☰</button>
+                </div>
+            </div>
+            
+            <div class="trails-container" id="trailsContainer">
+                <!-- Trails will be populated by JavaScript -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be added if needed -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section" id="mapSection">
+        <div class="container">
+            <h3 class="section-title">Trail Locations Map</h3>
+            <div class="map-container">
+                <div id="trailsMap" class="interactive-map">
+                    <div class="map-placeholder">
+                        <h4>Interactive Trail Map</h4>
+                        <p>Explore trail locations across Patagonia</p>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <span class="legend-marker beginner"></span>
+                                <span>Beginner Trails</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker intermediate"></span>
+                                <span>Intermediate Trails</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker advanced"></span>
+                                <span>Advanced Trails</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Patagonia Trail Explorers</h4>
+                    <p>Your comprehensive guide to hiking adventures in Argentine and Chilean Patagonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="trails.html">Trail Database</a></li>
+                        <li><a href="planning.html">Planning Tools</a></li>
+                        <li><a href="contact.html#weather">Weather Updates</a></li>
+                        <li><a href="contact.html#safety">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@patagonia-trails.org">Email Us</a></li>
+                        <li><a href="contact.html#emergency">Emergency Contacts</a></li>
+                        <li><a href="contact.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul class="footer-links">
+                    <a href="https://www.facebook.com/" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.twitter.com/" aria-label="Twitter">
+                        <img src="images/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Franco Zarate | Patagonia Trail Explorers</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Trail Details Modal -->
+    <div class="modal" id="trailModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Trail Details</h3>
+                <button type="button" class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be dynamically populated -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalCloseBtn">Close</button>
+                <button type="button" class="btn btn-primary" id="addToFavorites">Add to Favorites</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+</body>
+</html>

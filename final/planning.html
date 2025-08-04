@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential planning tools for your Patagonian hiking adventure. Packing checklists, duration calculators, weather forecasts, and expert tips.">
+    <meta name="author" content="Franco Zarate">
+    <meta name="keywords" content="patagonia, hiking planning, packing checklist, trip planning, hiking preparation">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Planning Tools - Patagonia Trail Explorers">
+    <meta property="og:description" content="Essential planning tools for your Patagonian hiking adventure. Packing checklists, duration calculators, weather forecasts, and expert tips.">
+    <meta property="og:url" content="https://yourdomainhere.com/planning.html">
+    <meta property="og:site_name" content="Patagonia Trail Explorers">
+    <meta property="og:image" content="https://yourdomainhere.com/images/planning-og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Planning Tools - Patagonia Trail Explorers">
+    <meta name="twitter:description" content="Essential planning tools for your Patagonian hiking adventure. Packing checklists, duration calculators, weather forecasts, and expert tips.">
+    <meta name="twitter:image" content="https://yourdomainhere.com/images/planning-twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <title>Planning Tools - Patagonia Trail Explorers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>Patagonia Trail Explorers</h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="trails.html" class="nav-link">Trails</a>
+                        <a href="planning.html" class="nav-link active">Planning</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">Planning Tools</h2>
+            <p class="page-subtitle">Everything you need to plan your perfect Patagonian hiking adventure. From packing lists to weather forecasts, we've got you covered.</p>
+        </div>
+    </section>
+
+    <!-- Planning Tools Grid -->
+    <main class="planning-main">
+        <div class="container">
+            <div class="planning-grid">
+                
+                <!-- Packing Checklist -->
+                <section class="planning-card" id="checklist">
+                    <div class="card-header">
+                        <h3>📋 Packing Checklist</h3>
+                        <p>Essential gear for your Patagonian adventure</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="checklist-controls">
+                            <button type="button" class="btn btn-secondary btn-sm" id="clearChecklist">Clear All</button>
+                            <button type="button" class="btn btn-primary btn-sm" id="printChecklist">Print List</button>
+                        </div>
+                        <div class="packing-checklist" id="packingChecklist">
+                            <!-- Checklist will be populated by JavaScript -->
+                        </div>
+                        <div class="checklist-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="checklistProgress"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">0% Complete</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Duration Calculator -->
+                <section class="planning-card" id="calculator">
+                    <div class="card-header">
+                        <h3>⏱️ Duration Calculator</h3>
+                        <p>Estimate hiking time based on distance and elevation</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="duration-calculator" id="durationCalculator">
+                            <!-- Calculator will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weather Forecast -->
+                <section class="planning-card" id="weather">
+                    <div class="card-header">
+                        <h3>🌤️ Weather Forecast</h3>
+                        <p>5-day weather forecast for major Patagonian locations</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="weather-controls">
+                            <select id="weatherLocation" class="weather-select">
+                                <option value="el-calafate">El Calafate, Argentina</option>
+                                <option value="el-chalten">El Chaltén, Argentina</option>
+                                <option value="ushuaia">Ushuaia, Argentina</option>
+                                <option value="puerto-natales">Puerto Natales, Chile</option>
+                            </select>
+                        </div>
+                        <div class="weather-forecast" id="weatherForecast">
+                            <!-- Weather forecast will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Trail Maps -->
+                <section class="planning-card" id="maps">
+                    <div class="card-header">
+                        <h3>🗺️ Trail Maps & Resources</h3>
+                        <p>Digital maps and useful resources for navigation</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="map-resources">
+                            <div class="resource-item">
+                                <h4>Official Park Maps</h4>
+                                <p>Download official maps from national parks</p>
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">Torres del Paine Map</a>
+                                    <a href="#" class="resource-link">Los Glaciares Map</a>
+                                    <a href="#" class="resource-link">Tierra del Fuego Map</a>
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <h4>GPS Coordinates</h4>
+                                <p>Key waypoints and emergency coordinates</p>
+                                <div class="gps-list" id="gpsList">
+                                    <!-- GPS coordinates will be populated by JavaScript -->
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <h4>Mobile Apps</h4>
+                                <p>Recommended apps for offline navigation</p>
+                                <div class="app-recommendations">
+                                    <div class="app-item">
+                                        <strong>Maps.me</strong> - Offline maps with trail overlays
+                                    </div>
+                                    <div class="app-item">
+                                        <strong>Gaia GPS</strong> - Professional GPS navigation
+                                    </div>
+                                    <div class="app-item">
+                                        <strong>AllTrails</strong> - Trail reviews and photos
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Safety Guidelines -->
+                <section class="planning-card" id="safety">
+                    <div class="card-header">
+                        <h3>🚨 Safety Guidelines</h3>
+                        <p>Essential safety information for Patagonian hiking</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="safety-sections">
+                            <div class="safety-section">
+                                <h4>Weather Awareness</h4>
+                                <ul class="safety-list">
+                                    <li>Check weather forecasts daily and be prepared for sudden changes</li>
+                                    <li>Patagonian weather is notoriously unpredictable</li>
+                                    <li>Always carry windproof and waterproof gear</li>
+                                    <li>Turn back if conditions deteriorate</li>
+                                </ul>
+                            </div>
+                            <div class="safety-section">
+                                <h4>Emergency Preparedness</h4>
+                                <ul class="safety-list">
+                                    <li>Inform someone of your hiking plans and expected return</li>
+                                    <li>Carry a satellite communicator or emergency beacon</li>
+                                    <li>Know emergency contact numbers for each region</li>
+                                    <li>Carry a comprehensive first aid kit</li>
+                                </ul>
+                            </div>
+                            <div class="safety-section">
+                                <h4>River Crossings</h4>
+                                <ul class="safety-list">
+                                    <li>Many trails require river crossings - assess conditions carefully</li>
+                                    <li>Cross early in the morning when water levels are lowest</li>
+                                    <li>Unbuckle pack waist belt before crossing</li>
+                                    <li>Use trekking poles for stability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Budget Planner -->
+                <section class="planning-card" id="budget">
+                    <div class="card-header">
+                        <h3>💰 Budget Planner</h3>
+                        <p>Estimate costs for your Patagonian adventure</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="budget-calculator">
+                            <div class="budget-section">
+                                <h4>Trip Duration</h4>
+                                <div class="form-group">
+                                    <label for="tripDays">Number of Days</label>
+                                    <input type="number" id="tripDays" min="1" max="30" value="7">
+                                </div>
+                            </div>
+                            
+                            <div class="budget-section">
+                                <h4>Accommodation Type</h4>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="accommodation" value="camping" checked> Camping</label>
+                                    <label><input type="radio" name="accommodation" value="hostels"> Hostels</label>
+                                    <label><input type="radio" name="accommodation" value="hotels"> Hotels</label>
+                                </div>
+                            </div>
+                            
+                            <div class="budget-section">
+                                <h4>Transportation</h4>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="transport" value="flights"> International Flights</label>
+                                    <label><input type="checkbox" name="transport" value="domestic"> Domestic Flights</label>
+                                    <label><input type="checkbox" name="transport" value="bus"> Bus Travel</label>
+                                    <label><input type="checkbox" name="transport" value="rental"> Car Rental</label>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary" id="calculateBudget">Calculate Budget</button>
+                            
+                            <div class="budget-result" id="budgetResult">
+                                <!-- Budget result will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Patagonia Trail Explorers</h4>
+                    <p>Your comprehensive guide to hiking adventures in Argentine and Chilean Patagonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="trails.html">Trail Database</a></li>
+                        <li><a href="planning.html">Planning Tools</a></li>
+                        <li><a href="contact.html#weather">Weather Updates</a></li>
+                        <li><a href="contact.html#safety">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@patagonia-trails.org">Email Us</a></li>
+                        <li><a href="contact.html#emergency">Emergency Contacts</a></li>
+                        <li><a href="contact.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul class="footer-links">
+                    <a href="https://www.facebook.com/" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.twitter.com/" aria-label="Twitter">
+                        <img src="images/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Franco Zarate | Patagonia Trail Explorers</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+</body>
+</html>
