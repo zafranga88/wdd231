@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting Patagonia Trail Explorers. Your message has been received and we'll get back to you soon.">
+    <meta name="author" content="Franco Zarate">
+    <meta name="keywords" content="patagonia, contact confirmation, thank you, message received">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Message Received - Patagonia Trail Explorers">
+    <meta property="og:description" content="Thank you for contacting Patagonia Trail Explorers. Your message has been received and we'll get back to you soon.">
+    <meta property="og:url" content="https://zafranga88.github.io/wdd231/final/form-confirmation.html">
+    <meta property="og:site_name" content="Patagonia Trail Explorers">
+    <meta property="og:image" content="https://yourdomainhere.com/images/confirmation-og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Message Received - Patagonia Trail Explorers">
+    <meta name="twitter:description" content="Thank you for contacting Patagonia Trail Explorers. Your message has been received and we'll get back to you soon.">
+    <meta name="twitter:image" content="https://yourdomainhere.com/images/confirmation-twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <title>Message Received - Patagonia Trail Explorers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>Patagonia Trail Explorers</h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="trails.html" class="nav-link">Trails</a>
+                        <a href="planning.html" class="nav-link">Planning</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Confirmation Content -->
+    <main class="confirmation-main">
+        <div class="container">
+            
+            <!-- Success Message -->
+            <section class="confirmation-hero">
+                <div class="success-icon">
+                    <div class="checkmark-circle">
+                        <div class="checkmark"></div>
+                    </div>
+                </div>
+                <h1 class="confirmation-title">Message Received!</h1>
+                <p class="confirmation-subtitle">Thank you for reaching out to Patagonia Trail Explorers. We've received your message and will get back to you within 24 hours.</p>
+            </section>
+
+            <!-- Form Data Display -->
+            <section class="form-data-section">
+                <div class="confirmation-card">
+                    <h2>Your Message Details</h2>
+                    <div class="message-summary" id="messageSummary">
+                        <!-- Data will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Steps -->
+            <section class="next-steps-section">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">📧</div>
+                        <h3>Response Time</h3>
+                        <p>We typically respond to messages within 24 hours during business days (Monday-Friday, 9 AM - 6 PM GMT-3).</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-icon">🏔️</div>
+                        <h3>Trail Planning</h3>
+                        <p>While you wait, explore our comprehensive trail database and planning tools to prepare for your Patagonian adventure.</p>
+                        <a href="trails.html" class="btn btn-outline">Explore Trails</a>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-icon">⚠️</div>
+                        <h3>Emergency Contacts</h3>
+                        <p>For urgent matters or emergencies while in Patagonia, please refer to our emergency contact information.</p>
+                        <a href="contact.html#emergency" class="btn btn-outline">Emergency Info</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Actions -->
+            <section class="confirmation-actions">
+                <div class="action-buttons">
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                    <a href="contact.html" class="btn btn-secondary">Send Another Message</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Patagonia Trail Explorers</h4>
+                    <p>Your comprehensive guide to hiking adventures in Argentine and Chilean Patagonia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="trails.html">Trail Database</a></li>
+                        <li><a href="planning.html">Planning Tools</a></li>
+                        <li><a href="contact.html#weather">Weather Updates</a></li>
+                        <li><a href="contact.html#safety">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@patagonia-trails.org">Email Us</a></li>
+                        <li><a href="contact.html#emergency">Emergency Contacts</a></li>
+                        <li><a href="contact.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul class="footer-links">
+                    <a href="https://www.facebook.com/" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.twitter.com/" aria-label="Twitter">
+                        <img src="images/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Franco Zarate | Patagonia Trail Explorers</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
