@@ -33,7 +33,7 @@ const IndexUtils = {
                 width: 100%;
                 height: 100%;
             ">
-                🏔️
+                
             </div>
         `;
         
@@ -395,17 +395,7 @@ const IndexUI = {
                      class="modal-trail-image" 
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
                      loading="lazy">
-                <div class="image-fallback" style="
-                    display: none;
-                    background: linear-gradient(45deg, var(--glacier-blue), var(--patagonian-navy));
-                    height: 200px;
-                    border-radius: 8px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: white;
-                    font-size: 4rem;
-                ">🏔️</div>
+
                 <div class="trail-details-grid">
                     <div class="detail-item">
                         <strong>Difficulty:</strong>
