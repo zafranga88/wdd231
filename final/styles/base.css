@@ -6,10 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-
-
 
 :root {
     --patagonian-navy: #1a365d;
@@ -22,71 +19,68 @@
     --warning-orange: #dd6b20;
     --danger-red: #e53e3e;
     --accent-teal: #319795;
-
 }
-
-
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     color: var(--mountain-charcoal);
     line-height: 1.7;
     background-color: var(--alpine-white);
-
 }
-
-
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-
 }
-
-
 
 /* Typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     color: var(--patagonian-navy);
-
 }
 
+h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: var(--patagonian-navy);
+    font-size: 2rem;
+}
 
+h3 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: var(--patagonian-navy);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: var(--patagonian-navy);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+h5 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: var(--patagonian-navy);
+}
+
+h6 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: var(--patagonian-navy);
+}
 
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
-
 }
-
-
-
-h2 {
-    font-size: 2rem;
-
-}
-
-
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-
-}
-
-
-
-h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-
-}
-
-
 
 /* Button Styles */
 
@@ -102,63 +96,42 @@ h4 {
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-
 }
-
-
 
 .btn-primary {
     background-color: var(--patagonian-navy);
     color: var(--alpine-white);
-
 }
-
-
 
 .btn-primary:hover {
     background-color: var(--glacier-blue);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgb(26 54 93 / 30%);
-
 }
-
-
 
 .btn-secondary {
     background-color: transparent;
     color: var(--patagonian-navy);
     border: 2px solid var(--patagonian-navy);
-
 }
-
-
 
 .btn-secondary:hover {
     background-color: var(--patagonian-navy);
     color: var(--alpine-white);
     transform: translateY(-2px);
-
 }
-
-
 
 .btn-outline {
     background-color: transparent;
     color: var(--glacier-blue);
     border: 2px solid var(--glacier-blue);
     margin-top: 2rem;
-
 }
-
-
 
 .btn-outline:hover {
     background-color: var(--glacier-blue);
     color: var(--alpine-white);
-
 }
-
-
 
 /* Header Styles */
 
@@ -169,44 +142,29 @@ h4 {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-
 }
-
-
 
 .navbar {
     padding: 1rem 0;
-
 }
-
-
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-
-
 
 .logo h1 {
     color: var(--alpine-white);
     font-size: 1.8rem;
     font-weight: 700;
-
 }
-
-
 
 .nav-menu {
     display: flex;
     gap: 2rem;
     align-items: center;
-
 }
-
-
 
 .nav-link {
     color: var(--alpine-white);
@@ -214,24 +172,15 @@ h4 {
     font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
-
 }
-
-
 
 .nav-link:hover {
     color: #e2e8f0;
-
 }
-
-
 
 .nav-link.active {
     color: var(--alpine-white);
-
 }
-
-
 
 .nav-link::after {
     content: '';
@@ -242,100 +191,69 @@ h4 {
     height: 2px;
     background-color: var(--alpine-white);
     transition: width 0.3s ease;
-
 }
 
-
-
-.nav-link:hover::after,
+.nav-link:hover::after {
+    width: 100%;
+}
 
 .nav-link.active::after {
     width: 100%;
-
 }
-
-
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
-
 }
-
-
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: var(--alpine-white);
     transition: all 0.3s ease;
-
 }
-
-
 
 /* Hero Section */
 
 .hero {
     background: linear-gradient(rgb(26 54 93 / 10%), rgb(44 82 130 / 10%)), var(--light-gray);
     padding: 4rem 0;
-
 }
-
-
 
 .hero-content {
     display: flex;
     align-items: center;
     gap: 3rem;
     min-height: 60vh;
-
 }
-
-
 
 .hero-left {
     flex: 1;
-
 }
-
-
 
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-
 }
-
-
 
 .hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: var(--glacier-blue);
-
 }
-
-
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
-
 }
-
-
 
 .hero-right {
     flex: 1;
-
 }
-
-
 
 .hero-image {
     background: linear-gradient(45deg, var(--glacier-blue), var(--patagonian-navy));
@@ -346,60 +264,42 @@ h4 {
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
-
 }
-
-
 
 .hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
-
 }
-
-
 
 /* Featured Trails Preview */
 
 .featured-preview {
     padding: 4rem 0;
     background-color: var(--light-gray);
-
 }
-
-
 
 .section-title {
     color: var(--patagonian-navy);
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2rem;
-
 }
-
-
 
 .section-subtitle {
     text-align: center;
     color: var(--glacier-blue);
     margin-bottom: 3rem;
     font-size: 1.1rem;
-
 }
-
-
 
 .trail-preview-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
-
 }
-
-
 
 .trail-preview-card {
     background-color: var(--alpine-white);
@@ -408,18 +308,12 @@ h4 {
     box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-
 }
-
-
 
 .trail-preview-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgb(0 0 0 / 15%);
-
 }
-
-
 
 .trail-preview-image {
     height: 200px;
@@ -429,27 +323,18 @@ h4 {
     justify-content: center;
     color: var(--alpine-white);
     font-size: 3rem;
-
 }
-
-
 
 .trail-preview-info {
     padding: 1.5rem;
-
 }
-
-
 
 .trail-preview-title {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--patagonian-navy);
-
 }
-
-
 
 .trail-preview-description {
     color: var(--mountain-charcoal);
@@ -459,19 +344,13 @@ h4 {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-
 }
-
-
 
 .trail-preview-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-
-
 
 .difficulty {
     padding: 4px 12px;
@@ -479,50 +358,32 @@ h4 {
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-
 }
-
-
 
 .difficulty.beginner {
     background-color: var(--success-green);
     color: var(--alpine-white);
-
 }
-
-
 
 .difficulty.intermediate {
     background-color: var(--warning-orange);
     color: var(--alpine-white);
-
 }
-
-
 
 .difficulty.advanced {
     background-color: var(--danger-red);
     color: var(--alpine-white);
-
 }
-
-
 
 .trail-preview-duration {
     color: var(--glacier-blue);
     font-weight: 600;
     font-size: 0.9rem;
-
 }
-
-
 
 .preview-action {
     text-align: center;
-
 }
-
-
 
 /* Stats Section */
 
@@ -530,10 +391,7 @@ h4 {
     padding: 4rem 0;
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
     color: var(--alpine-white);
-
 }
-
-
 
 .stats-grid {
     display: grid;
@@ -541,18 +399,12 @@ h4 {
     gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
-
 }
-
-
 
 .stat-item {
     text-align: center;
     padding: 1rem;
-
 }
-
-
 
 .stat-number {
     font-size: 3rem;
@@ -560,20 +412,14 @@ h4 {
     color: var(--alpine-white);
     margin-bottom: 0.5rem;
     font-family: Montserrat, sans-serif;
-
 }
-
-
 
 .stat-label {
     font-size: 1.1rem;
     color: rgb(255 255 255 / 90%);
     text-transform: uppercase;
     letter-spacing: 1px;
-
 }
-
-
 
 /* Newsletter Section */
 
@@ -581,67 +427,59 @@ h4 {
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
     color: var(--alpine-white);
     padding: 4rem 0;
-
 }
-
-
 
 .newsletter-content {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-
 }
-
-
 
 .newsletter-content h3 {
     color: var(--alpine-white);
     margin-bottom: 1rem;
     font-size: 2rem;
-
 }
-
-
 
 .newsletter-content p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     opacity: 0.9;
-
 }
-
-
 
 .newsletter-form {
     background-color: var(--alpine-white);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
-
 }
-
-
 
 .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
-
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
 }
-
-
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: var(--mountain-charcoal);
-
 }
 
-
-
-.form-group input,
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
 
 .form-group select {
     width: 100%;
@@ -650,34 +488,39 @@ h4 {
     border-radius: 6px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
-
 }
 
-
-
-.form-group input:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: var(--glacier-blue);
+}
 
 .form-group select:focus {
     outline: none;
     border-color: var(--glacier-blue);
-
 }
 
-
-
-.checkbox-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
 
 .radio-group {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.5rem;
-
 }
 
-
-
-.checkbox-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
 
 .radio-group label {
     display: flex;
@@ -685,39 +528,30 @@ h4 {
     margin-bottom: 0;
     font-weight: 400;
     cursor: pointer;
-
 }
 
-
-
-.checkbox-group input,
+.checkbox-group input {
+    width: auto;
+    margin-right: 0.5rem;
+}
 
 .radio-group input {
     width: auto;
     margin-right: 0.5rem;
-
 }
-
-
 
 /* Main Content */
 
 .main-content {
     padding: 3rem 0;
     background-color: var(--alpine-white);
-
 }
-
-
 
 .content-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
-
 }
-
-
 
 /* Updates Section */
 
@@ -725,19 +559,13 @@ h4 {
     background-color: var(--light-gray);
     padding: 2rem;
     border-radius: 12px;
-
 }
-
-
 
 .updates-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
 }
-
-
 
 .update-item {
     background-color: var(--alpine-white);
@@ -745,38 +573,26 @@ h4 {
     border-radius: 8px;
     border-left: 4px solid var(--glacier-blue);
     box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
-
 }
-
-
 
 .update-date {
     font-size: 0.9rem;
     color: var(--glacier-blue);
     font-weight: 600;
     margin-bottom: 0.5rem;
-
 }
-
-
 
 .update-title {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--patagonian-navy);
     margin-bottom: 0.5rem;
-
 }
-
-
 
 .update-content {
     color: var(--mountain-charcoal);
     line-height: 1.6;
-
 }
-
-
 
 /* Sidebar Widgets */
 
@@ -784,73 +600,50 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
 }
-
-
 
 .widget {
     background-color: var(--alpine-white);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
-
 }
-
-
 
 .widget h4 {
     color: var(--patagonian-navy);
     margin-bottom: 1rem;
     font-size: 1.2rem;
-
 }
-
-
 
 /* Weather Widget */
 
 .weather-info {
     text-align: center;
-
 }
-
-
 
 .weather-location {
     font-weight: 600;
     color: var(--glacier-blue);
     margin-bottom: 0.5rem;
-
 }
 
-
-
 .weather-temp {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--alpine-white);
     margin-bottom: 0.5rem;
-
+    font-family: Montserrat, sans-serif;
 }
-
-
 
 .weather-condition {
     color: var(--mountain-charcoal);
     margin-bottom: 0.5rem;
-
 }
-
-
 
 .weather-wind {
     font-size: 0.9rem;
     color: var(--glacier-blue);
-
 }
-
-
 
 /* Conditions Widget */
 
@@ -858,10 +651,7 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-
 }
-
-
 
 .condition-item {
     display: flex;
@@ -869,25 +659,16 @@ h4 {
     align-items: center;
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--medium-gray);
-
 }
-
-
 
 .condition-item:last-child {
     border-bottom: none;
-
 }
-
-
 
 .condition-trail {
     font-weight: 600;
     color: var(--mountain-charcoal);
-
 }
-
-
 
 .condition-status {
     padding: 2px 8px;
@@ -895,34 +676,22 @@ h4 {
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-
 }
-
-
 
 .condition-status.good {
     background-color: var(--success-green);
     color: var(--alpine-white);
-
 }
-
-
 
 .condition-status.caution {
     background-color: var(--warning-orange);
     color: var(--alpine-white);
-
 }
-
-
 
 .condition-status.excellent {
     background-color: var(--accent-teal);
     color: var(--alpine-white);
-
 }
-
-
 
 /* Planning Widget */
 
@@ -930,10 +699,7 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-
 }
-
-
 
 .tool-link {
     display: flex;
@@ -945,19 +711,13 @@ h4 {
     border-radius: 6px;
     transition: all 0.3s ease;
     font-weight: 600;
-
 }
-
-
 
 .tool-link:hover {
     background-color: var(--glacier-blue);
     color: var(--alpine-white);
     transform: translateX(5px);
-
 }
-
-
 
 /* Modal Styles */
 
@@ -971,19 +731,13 @@ h4 {
     height: 100%;
     background-color: rgb(0 0 0 / 50%);
     backdrop-filter: blur(5px);
-
 }
-
-
 
 .modal.active {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-
-
 
 .modal-content {
     background-color: var(--alpine-white);
@@ -994,23 +748,18 @@ h4 {
     overflow-y: auto;
     box-shadow: 0 20px 60px rgb(0 0 0 / 30%);
     animation: modalSlideIn 0.3s ease;
-
 }
-
-
 
 @keyframes modalSlideIn {
     from {
         opacity: 0;
-        transform: translateY(-50px) scale(0.95);
+    transform: translateY(-50px) scale(0.95);
+}
 
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-
-    }
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 }
 
@@ -1022,18 +771,12 @@ h4 {
     align-items: center;
     padding: 1.5rem;
     border-bottom: 1px solid var(--medium-gray);
-
 }
-
-
 
 .modal-header h3 {
     margin: 0;
     color: var(--patagonian-navy);
-
 }
-
-
 
 .modal-close {
     background: none;
@@ -1049,24 +792,15 @@ h4 {
     justify-content: center;
     border-radius: 50%;
     transition: background-color 0.3s ease;
-
 }
-
-
 
 .modal-close:hover {
     background-color: var(--medium-gray);
-
 }
-
-
 
 .modal-body {
     padding: 1.5rem;
-
 }
-
-
 
 .modal-footer {
     display: flex;
@@ -1074,27 +808,18 @@ h4 {
     gap: 1rem;
     padding: 1.5rem;
     border-top: 1px solid var(--medium-gray);
-
 }
-
-
 
 /* Image Lazy Loading */
 
 .lazy-load {
     opacity: 0;
     transition: opacity 0.3s ease;
-
 }
-
-
 
 .lazy-load.loaded {
     opacity: 1;
-
 }
-
-
 
 /* Footer */
 
@@ -1102,68 +827,44 @@ h4 {
     background-color: var(--mountain-charcoal);
     color: var(--alpine-white);
     padding: 3rem 0 1rem;
-
 }
-
-
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
-
 }
-
-
 
 .footer-section h4 {
     color: var(--alpine-white);
     margin-bottom: 1rem;
-
 }
-
-
 
 .footer-links {
     list-style: none;
-
 }
-
-
 
 .footer-links li {
     margin-bottom: 0.5rem;
-
 }
-
-
 
 .footer-links a {
     color: #e2e8f0;
     text-decoration: none;
     transition: color 0.3s ease;
-
 }
-
-
 
 .footer-links a:hover {
     color: var(--alpine-white);
-
 }
-
-
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid #4a5568;
     color: #e2e8f0;
-
 }
-
-
 
 /* Scroll to Top Button */
 
@@ -1183,25 +884,16 @@ h4 {
     z-index: 1000;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
-
 }
-
-
 
 .scroll-to-top:hover {
     background-color: var(--glacier-blue);
     transform: scale(1.1);
-
 }
-
-
 
 .scroll-to-top.visible {
     display: block;
-
 }
-
-
 
 /* Animation Classes */
 
@@ -1209,26 +901,17 @@ h4 {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
-
 }
-
-
 
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-
 }
-
-
 
 .loading {
     opacity: 0.6;
     pointer-events: none;
-
 }
-
-
 
 /* Responsive Design */
 
@@ -1655,7 +1338,11 @@ h4 {
     margin-bottom: 0.8rem;
 }
 
-.duration,
+.duration {
+    color: var(--mountain-charcoal);
+    font-weight: 600;
+}
+
 .distance {
     color: var(--mountain-charcoal);
     font-weight: 600;
@@ -1837,7 +1524,13 @@ h4 {
     margin-bottom: 1.5rem;
 }
 
-.trail-description-full h4,
+.trail-description-full h4 {
+    color: var(--patagonian-navy);
+    border-bottom: 2px solid var(--glacier-blue);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 .trail-highlights-full h4 {
     color: var(--patagonian-navy);
     border-bottom: 2px solid var(--glacier-blue);
@@ -2012,7 +1705,7 @@ h4 {
 }
 
 .checkmark {
-    display: none; /* Hide custom checkmark for now, using native */
+    display: none;
 }
 
 .item-text {
@@ -2060,8 +1753,14 @@ h4 {
 }
 
 @keyframes progressShine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% { transform: translateX(-100%);
+}
+
+100% {
+    transform: scale(1.4);
+    opacity: 0;
+}
+
 }
 
 .progress-text {
@@ -2090,7 +1789,15 @@ h4 {
     font-size: 0.95rem;
 }
 
-.calculator-form input,
+.calculator-form input {
+    padding: 12px 16px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--alpine-white);
+}
+
 .calculator-form select {
     padding: 12px 16px;
     border: 2px solid var(--medium-gray);
@@ -2100,7 +1807,12 @@ h4 {
     background: var(--alpine-white);
 }
 
-.calculator-form input:focus,
+.calculator-form input:focus {
+    border-color: var(--glacier-blue);
+    box-shadow: 0 0 0 3px rgb(44 82 130 / 10%);
+    outline: none;
+}
+
 .calculator-form select:focus {
     border-color: var(--glacier-blue);
     box-shadow: 0 0 0 3px rgb(44 82 130 / 10%);
@@ -2195,16 +1907,13 @@ h4 {
     margin: 0;
 }
 
-.weather-temp {
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-family: Montserrat, sans-serif;
-}
-
 .weather-details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
+    background: rgb(255 255 255 / 10%);
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 .weather-detail {
@@ -2537,8 +2246,9 @@ h4 {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg);
+}
+
 }
 
 .error {
@@ -2592,7 +2302,6 @@ h4 {
 
 /* Remove the old trail-preview-card styles and use trail-card styles for consistency */
 .featured-trail-card {
-    
     /* Inherit all the trail-card styles from the existing CSS */
     background-color: var(--alpine-white);
     border-radius: 12px;
@@ -2603,7 +2312,7 @@ h4 {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure equal height */
+    height: 100%;
 }
 
 .featured-trail-card:hover {
@@ -2614,7 +2323,8 @@ h4 {
 /* Featured trail image container - consistent with trails page */
 .featured-trail-card .trail-image-container {
     position: relative;
-    height: 220px; /* Fixed height for alignment */
+    height: 220px;
+    /* Fixed height for alignment */
     overflow: hidden;
 }
 
@@ -2777,7 +2487,11 @@ h4 {
 }
 
 /* Duration and distance styling */
-.featured-trail-card .duration,
+.featured-trail-card .duration {
+    color: var(--mountain-charcoal);
+    font-weight: 600;
+}
+
 .featured-trail-card .distance {
     color: var(--mountain-charcoal);
     font-weight: 600;
@@ -2826,7 +2540,9 @@ h4 {
 }
 
 @keyframes formHeaderSlide {
-    to { transform: scaleX(1); }
+    to { transform: scaleX(1);
+}
+
 }
 
 .contact-form-section h3 {
@@ -2861,33 +2577,56 @@ h4 {
     gap: 1rem;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
+.form-group:nth-child(1) {
+    animation-delay: 0.6s;
 }
 
-.form-group:nth-child(1) { animation-delay: 0.6s; }
-.form-group:nth-child(2) { animation-delay: 0.7s; }
-.form-group:nth-child(3) { animation-delay: 0.8s; }
-.form-group:nth-child(4) { animation-delay: 0.9s; }
-.form-group:nth-child(5) { animation-delay: 1.0s; }
-.form-group:nth-child(6) { animation-delay: 1.1s; }
-.form-group:nth-child(7) { animation-delay: 1.2s; }
-.form-group:nth-child(8) { animation-delay: 1.3s; }
-.form-group:nth-child(9) { animation-delay: 1.4s; }
+.form-group:nth-child(2) {
+    animation-delay: 0.7s;
+}
 
-.form-row .form-group:first-child { animation-delay: 0.6s; }
-.form-row .form-group:last-child { animation-delay: 0.65s; }
+.form-group:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.form-group:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.form-group:nth-child(5) {
+    animation-delay: 1.0s;
+}
+
+.form-group:nth-child(6) {
+    animation-delay: 1.1s;
+}
+
+.form-group:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.form-group:nth-child(8) {
+    animation-delay: 1.3s;
+}
+
+.form-group:nth-child(9) {
+    animation-delay: 1.4s;
+}
+
+.form-row .form-group:first-child {
+    animation-delay: 0.6s;
+}
+
+.form-row .form-group:last-child {
+    animation-delay: 0.65s;
+}
 
 @keyframes fadeInUp {
     to {
         opacity: 1;
-        transform: translateY(0);
-    }
+    transform: translateY(0);
+}
+
 }
 
 .contact-form label {
@@ -2897,9 +2636,7 @@ h4 {
     margin-bottom: 0.3rem;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.contact-form input {
     padding: 14px 18px;
     border: 2px solid var(--medium-gray);
     border-radius: 12px;
@@ -2909,19 +2646,47 @@ h4 {
     font-family: inherit;
 }
 
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
+.contact-form select {
+    padding: 14px 18px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--alpine-white);
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    padding: 14px 18px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--alpine-white);
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form input:focus {
     border-color: var(--glacier-blue);
     box-shadow: 0 0 0 4px rgb(44 82 130 / 10%);
     outline: none;
     transform: translateY(-2px);
 }
 
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-    font-family: inherit;
+.contact-form select:focus {
+    border-color: var(--glacier-blue);
+    box-shadow: 0 0 0 4px rgb(44 82 130 / 10%);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.contact-form textarea:focus {
+    border-color: var(--glacier-blue);
+    box-shadow: 0 0 0 4px rgb(44 82 130 / 10%);
+    outline: none;
+    transform: translateY(-2px);
 }
 
 .contact-form input[type="checkbox"] {
@@ -2990,16 +2755,28 @@ h4 {
     animation: slideInRight 0.6s ease forwards;
 }
 
-.contact-card:nth-child(1) { animation-delay: 0.3s; }
-.contact-card:nth-child(2) { animation-delay: 0.5s; }
-.contact-card:nth-child(3) { animation-delay: 0.7s; }
-.contact-card:nth-child(4) { animation-delay: 0.9s; }
+.contact-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.contact-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.contact-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.contact-card:nth-child(4) {
+    animation-delay: 0.9s;
+}
 
 @keyframes slideInRight {
     to {
         opacity: 1;
-        transform: translateX(0);
-    }
+    transform: translateX(0);
+}
+
 }
 
 .contact-card:hover {
@@ -3100,15 +2877,6 @@ h4 {
     display: block;
     font-size: 0.9rem;
     opacity: 0.8;
-}
-
-.weather-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
-    background: rgb(255 255 255 / 10%);
-    padding: 1rem;
-    border-radius: 8px;
 }
 
 .weather-item {
@@ -3228,10 +2996,21 @@ h4 {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-.community-card:nth-child(1) { animation-delay: 0.2s; }
-.community-card:nth-child(2) { animation-delay: 0.4s; }
-.community-card:nth-child(3) { animation-delay: 0.6s; }
-.community-card:nth-child(4) { animation-delay: 0.8s; }
+.community-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.community-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.community-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.community-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
 
 .community-card:hover {
     transform: translateY(-8px);
@@ -3275,11 +3054,25 @@ h4 {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-.faq-item:nth-child(1) { animation-delay: 0.2s; }
-.faq-item:nth-child(2) { animation-delay: 0.4s; }
-.faq-item:nth-child(3) { animation-delay: 0.6s; }
-.faq-item:nth-child(4) { animation-delay: 0.8s; }
-.faq-item:nth-child(5) { animation-delay: 1.0s; }
+.faq-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.faq-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.faq-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.faq-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.faq-item:nth-child(5) {
+    animation-delay: 1.0s;
+}
 
 .faq-item:hover {
     box-shadow: 0 4px 20px rgb(0 0 0 / 8%);
@@ -3337,8 +3130,13 @@ h4 {
 
 /* ==== FLOATING ELEMENTS ANIMATION ==== */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-5px);
+}
+
 }
 
 .contact-card:nth-child(even) {
@@ -3353,15 +3151,31 @@ h4 {
 
 
 /* ==== FORM VALIDATION STATES ==== */
-.form-group.error input,
-.form-group.error select,
+.form-group.error input {
+    border-color: var(--danger-red);
+    box-shadow: 0 0 0 4px rgb(229 62 62 / 10%);
+}
+
+.form-group.error select {
+    border-color: var(--danger-red);
+    box-shadow: 0 0 0 4px rgb(229 62 62 / 10%);
+}
+
 .form-group.error textarea {
     border-color: var(--danger-red);
     box-shadow: 0 0 0 4px rgb(229 62 62 / 10%);
 }
 
-.form-group.success input,
-.form-group.success select,
+.form-group.success input {
+    border-color: var(--success-green);
+    box-shadow: 0 0 0 4px rgb(56 161 105 / 10%);
+}
+
+.form-group.success select {
+    border-color: var(--success-green);
+    box-shadow: 0 0 0 4px rgb(56 161 105 / 10%);
+}
+
 .form-group.success textarea {
     border-color: var(--success-green);
     box-shadow: 0 0 0 4px rgb(56 161 105 / 10%);
@@ -3401,10 +3215,7 @@ h4 {
     animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
 
 /* ==== FORM CONFIRMATION PAGE STYLES ==== */
 
@@ -3437,18 +3248,14 @@ h4 {
 @keyframes successIconPop {
     0% {
         opacity: 0;
-        transform: scale(0.5);
-    }
+    transform: scale(0.5);
+}
 
-    70% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
+70% {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 .checkmark-circle {
@@ -3476,13 +3283,9 @@ h4 {
 @keyframes pulse {
     0% {
         transform: scale(1);
-        opacity: 1;
-    }
+    opacity: 1;
+}
 
-    100% {
-        transform: scale(1.4);
-        opacity: 0;
-    }
 }
 
 .checkmark {
@@ -3507,7 +3310,8 @@ h4 {
 @keyframes checkmarkAppear {
     to {
         opacity: 1;
-    }
+}
+
 }
 
 .confirmation-title {
@@ -3674,12 +3478,9 @@ h4 {
 
 @keyframes float {
     0%, 100% { 
-        transform: translateY(0); 
-    }
+        transform: translateY(0);
+}
 
-    50% { 
-        transform: translateY(-5px); 
-    }
 }
 
 .step-card h3 {
@@ -3760,11 +3561,8 @@ h4 {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-/* ==== RESPONSIVE DESIGN ==== */
