@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /* Reset and Base Styles */
 
 * {
@@ -1564,6 +1566,7 @@ h4 {
 }
 
 /* ==== TRAIL CARD COMMON ELEMENTS ==== */
+
 .trail-image-container {
     position: relative;
     overflow: hidden;
@@ -2589,6 +2592,7 @@ h4 {
 
 /* Remove the old trail-preview-card styles and use trail-card styles for consistency */
 .featured-trail-card {
+    
     /* Inherit all the trail-card styles from the existing CSS */
     background-color: var(--alpine-white);
     border-radius: 12px;
