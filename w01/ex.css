@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -15,8 +16,9 @@ body {
 h1 {
 	margin: 0.5rem;
 }
+
 main {
-	border: 1px solid rgb(0 0 0 / 0.1);
+	border: 1px solid rgb(0 0 0 / 10%);
 	padding: 1rem;
 	background-color: #ffc328;
 	box-shadow: 0 0 20px #aaa;
@@ -26,7 +28,7 @@ main {
 
 div {
 	margin: 1rem;
-	border: 1px solid rgb(0 0 0 / 0.1);
+	border: 1px solid rgb(0 0 0 / 10%);
 	padding: 0.5rem;
 	background-color: #eee;
 	font-size: smaller;
@@ -35,9 +37,11 @@ div {
 .step-reset {
 	counter-reset: step + 3;
 }
+
 .step {
 	counter-increment: step;
 }
+
 .step::before {
 	content: "#" counter(step) ":  ";
 	color: green;
@@ -62,9 +66,9 @@ input:focus {
 
 aside {
 	margin: 1rem;
-	border: 1px solid rgb(0 0 0 / 0.1);
+	border: 1px solid rgb(0 0 0 / 10%);
 	padding: 0.5rem;
-	background-color: #ffeebb;
+	background-color: #feb;
 	color: #000;
 }
 

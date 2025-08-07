@@ -1,5 +1,5 @@
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .header-content {
         flex-direction: row;
         justify-content: space-between;
@@ -47,7 +47,7 @@
     }
 
     .nav-list li {
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
     }
 
     .nav-list li:last-child {
@@ -65,7 +65,7 @@
     }
 
     .nav-list a.active {
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgb(255 255 255 / 10%);
     }
 
     .page-header h2 {
@@ -102,7 +102,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .container {
         padding: 0 1rem;
     }
@@ -145,7 +145,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .hero-image {
         min-height: 250px; /* Reduce from 400px */
     }

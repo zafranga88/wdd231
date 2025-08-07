@@ -11,7 +11,7 @@
     --patagonian-navy: #1a365d;
     --glacier-blue: #2c5282;
     --mountain-charcoal: #1a202c;
-    --alpine-white: #ffffff;
+    --alpine-white: #fff;
     --light-gray: #f7fafc;
     --medium-gray: #e2e8f0;
     --success-green: #38a169;
@@ -35,7 +35,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 600;
     color: var(--patagonian-navy);
 }

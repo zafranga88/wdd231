@@ -10,16 +10,16 @@ body {
     color: #1a202c;
     line-height: 1.7;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
 }
 
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
     overflow: hidden;
 }
 
@@ -31,11 +31,11 @@ header {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgb(0 0 0 / 30%);
 }
 
 .subtitle {
@@ -60,7 +60,7 @@ section:last-child {
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: #1a365d;
@@ -70,7 +70,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     color: #1a365d;
@@ -139,8 +139,8 @@ p {
     height: 80px;
     border-radius: 8px;
     flex-shrink: 0;
-    border: 2px solid #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
 .primary-color .color-swatch {
@@ -156,7 +156,7 @@ p {
 }
 
 .background-color .color-swatch {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 2px solid #1a202c;
 }
 
@@ -183,7 +183,7 @@ p {
 }
 
 .font-display {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     color: #1e3a5f;
 }
 
@@ -195,13 +195,13 @@ p {
 .font-example {
     margin-top: 15px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 6px;
     border: 1px solid #e2e8f0;
 }
 
 .montserrat-example .large-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: #1e3a5f;
@@ -229,7 +229,7 @@ p {
 .wireframe {
     border: 2px solid #4a90a4;
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: #fff;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -256,7 +256,7 @@ p {
 }
 
 .logo-area {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
 }
 
@@ -310,7 +310,7 @@ p {
 
 .wire-search {
     padding: 20px 15px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-bottom: 1px solid #e2e8f0;
 }
 
@@ -441,7 +441,7 @@ footer p {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .container {
         margin: 10px;
         border-radius: 8px;
@@ -482,7 +482,7 @@ footer p {
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     body {
         padding: 10px;
     }

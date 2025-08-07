@@ -1,11 +1,8 @@
 
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
 
 }
@@ -13,41 +10,26 @@
 
 
 :root {
-
     --primary-color: #2563eb;
-
     --secondary-color: #1e40af;
-
     --accent-color: #f59e0b;
-
     --text-primary: #1f2937;
-
     --text-secondary: #6b7280;
-
     --background-light: #f9fafb;
-
-    --background-white: #ffffff;
-
+    --background-white: #fff;
     --border-color: #e5e7eb;
-
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
 
 }
 
 
 
 body {
-
-    font-family: 'Inter', sans-serif;
-
+    font-family: Inter, sans-serif;
     line-height: 1.6;
-
     color: var(--text-primary);
-
     background-color: var(--background-light);
 
 }
@@ -55,17 +37,11 @@ body {
 
 
 header {
-
     background: var(--background-white);
-
     box-shadow: var(--shadow-md);
-
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
-
     padding: 1rem 0;
 
 }
@@ -73,17 +49,11 @@ header {
 
 
 .header-container {
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 0 1rem;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
 }
@@ -91,11 +61,8 @@ header {
 
 
 .logo-container {
-
     display: flex;
-
     align-items: center;
-
     gap: 0.75rem;
 
 }
@@ -103,9 +70,7 @@ header {
 
 
 .logo {
-
     width: 40px;
-
     height: 40px;
 
 }
@@ -113,11 +78,8 @@ header {
 
 
 .logo-name {
-
     font-size: 1.5rem;
-
     font-weight: 700;
-
     color: var(--primary-color);
 
 }
@@ -125,21 +87,13 @@ header {
 
 
 .hamburger {
-
     display: none;
-
     flex-direction: column;
-
     cursor: pointer;
-
     padding: 0.5rem;
-
     border: none;
-
     background: none;
-
     gap: 4px;
-
     z-index: 1001;
 
 }
@@ -147,13 +101,9 @@ header {
 
 
 .hamburger span {
-
     width: 25px;
-
     height: 3px;
-
     background: var(--text-primary);
-
     transition: all 0.3s ease;
 
 }
@@ -161,7 +111,6 @@ header {
 
 
 .hamburger.active span:nth-child(1) {
-
     transform: rotate(45deg) translate(5px, 5px);
 
 }
@@ -169,7 +118,6 @@ header {
 
 
 .hamburger.active span:nth-child(2) {
-
     opacity: 0;
 
 }
@@ -177,7 +125,6 @@ header {
 
 
 .hamburger.active span:nth-child(3) {
-
     transform: rotate(-45deg) translate(7px, -6px);
 
 }
@@ -186,7 +133,6 @@ header {
 
 
 nav {
-
     display: flex;
 
 }
@@ -194,15 +140,10 @@ nav {
 
 
 .nav-menu {
-
     display: flex;
-
     list-style: none;
-
     gap: 2rem;
-
     margin: 0;
-
     padding: 0;
 
 }
@@ -210,19 +151,12 @@ nav {
 
 
 .nav-menu li a {
-
     text-decoration: none;
-
     color: var(--text-primary);
-
     font-weight: 500;
-
     padding: 0.5rem 1rem;
-
     border-radius: 0.5rem;
-
     transition: all 0.3s ease;
-
     position: relative;
 
 }
@@ -230,11 +164,8 @@ nav {
 
 
 .nav-menu li a:hover {
-
     background-color: var(--primary-color);
-
     color: white;
-
     transform: translateY(-2px);
 
 }
@@ -242,9 +173,7 @@ nav {
 
 
 .nav-menu li a.active {
-
     background-color: var(--primary-color);
-
     color: white;
 
 }
@@ -253,11 +182,8 @@ nav {
 
 
 main {
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 2rem 1rem;
 
 }
@@ -265,23 +191,14 @@ main {
 
 
 .about-container {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 4rem;
-
     align-items: center;
-
     background: var(--background-white);
-
     border-radius: 1rem;
-
     padding: 3rem;
-
     box-shadow: var(--shadow-lg);
-
     margin-top: 2rem;
 
 }
@@ -289,23 +206,14 @@ main {
 
 
 .about-content h1 {
-
     font-size: 3rem;
-
     font-weight: 700;
-
     margin-bottom: 2rem;
-
     color: var(--primary-color);
-
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
     background-clip: text;
-
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-align: left;
 
 }
@@ -313,13 +221,9 @@ main {
 
 
 .about-content p {
-
     color: var(--text-secondary);
-
     line-height: 1.7;
-
     margin-bottom: 1.5rem;
-
     font-size: 1.1rem;
 
 }
@@ -327,7 +231,6 @@ main {
 
 
 .about-content p:last-child {
-
     margin-bottom: 0;
 
 }
@@ -335,11 +238,8 @@ main {
 
 
 .about-image {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
 }
@@ -347,17 +247,11 @@ main {
 
 
 .profile-image {
-
     width: 100%;
-
     max-width: 400px;
-
     height: auto;
-
     border-radius: 1rem;
-
     box-shadow: var(--shadow-lg);
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
@@ -365,10 +259,8 @@ main {
 
 
 .profile-image:hover {
-
     transform: translateY(-5px);
-
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
 
 }
 
@@ -376,23 +268,14 @@ main {
 
 
 h1 {
-
     font-size: 3rem;
-
     font-weight: 700;
-
     text-align: center;
-
     margin-bottom: 3rem;
-
     color: var(--primary-color);
-
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-
-    -webkit-background-clip: text;
-
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-
     background-clip: text;
 
 }
@@ -400,13 +283,9 @@ h1 {
 
 
 .sections-grid {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
     gap: 2rem;
-
     margin-top: 2rem;
 
 }
@@ -414,15 +293,10 @@ h1 {
 
 
 section {
-
     background: var(--background-white);
-
     border-radius: 1rem;
-
     padding: 2rem;
-
     box-shadow: var(--shadow-lg);
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
@@ -430,29 +304,20 @@ section {
 
 
 section:hover {
-
     transform: translateY(-5px);
-
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
 
 }
 
 
 
 h2 {
-
     font-size: 1.75rem;
-
     font-weight: 600;
-
     color: var(--primary-color);
-
     margin-bottom: 1rem;
-
     display: flex;
-
     align-items: center;
-
     gap: 0.5rem;
 
 }
@@ -460,11 +325,8 @@ h2 {
 
 
 .section-icon {
-
     width: 32px;
-
     height: 32px;
-
     fill: var(--primary-color);
 
 }
@@ -472,11 +334,8 @@ h2 {
 
 
 section p {
-
     color: var(--text-secondary);
-
     line-height: 1.7;
-
     margin-bottom: 1rem;
 
 }
@@ -484,9 +343,7 @@ section p {
 
 
 .feature-list {
-
     list-style: none;
-
     margin-top: 1rem;
 
 }
@@ -494,13 +351,9 @@ section p {
 
 
 .feature-list li {
-
     padding: 0.5rem 0;
-
     color: var(--text-secondary);
-
     position: relative;
-
     padding-left: 1.5rem;
 
 }
@@ -508,15 +361,10 @@ section p {
 
 
 .feature-list li::before {
-
     content: "✓";
-
     color: var(--accent-color);
-
     font-weight: bold;
-
     position: absolute;
-
     left: 0;
 
 }
@@ -525,13 +373,9 @@ section p {
 
 
 footer {
-
     background: var(--text-primary);
-
     color: white;
-
     padding: 3rem 0 1rem;
-
     margin-top: 4rem;
 
 }
@@ -540,15 +384,10 @@ footer {
 
 
 .courses-section {
-
     background: var(--background-white);
-
     border-radius: 1rem;
-
     padding: 2rem;
-
     box-shadow: var(--shadow-lg);
-
     margin-top: 3rem;
 
 }
@@ -556,15 +395,10 @@ footer {
 
 
 .course-filters {
-
     display: flex;
-
     gap: 1rem;
-
     margin-bottom: 2rem;
-
     flex-wrap: wrap;
-
     justify-content: center;
 
 }
@@ -572,21 +406,13 @@ footer {
 
 
 .filter-btn {
-
     padding: 0.75rem 1.5rem;
-
     border: 2px solid var(--primary-color);
-
     background: transparent;
-
     color: var(--primary-color);
-
     border-radius: 0.5rem;
-
     cursor: pointer;
-
     font-weight: 500;
-
     transition: all 0.3s ease;
 
 }
@@ -594,11 +420,8 @@ footer {
 
 
 .filter-btn:hover {
-
     background: var(--primary-color);
-
     color: white;
-
     transform: translateY(-2px);
 
 }
@@ -606,9 +429,7 @@ footer {
 
 
 .filter-btn.active {
-
     background: var(--primary-color);
-
     color: white;
 
 }
@@ -616,21 +437,13 @@ footer {
 
 
 .credits-display {
-
     text-align: center;
-
     margin-bottom: 2rem;
-
     padding: 1rem;
-
     background: var(--background-light);
-
     border-radius: 0.5rem;
-
     font-size: 1.1rem;
-
     font-weight: 600;
-
     color: var(--primary-color);
 
 }
@@ -638,11 +451,8 @@ footer {
 
 
 .courses-grid {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
     gap: 1.5rem;
 
 }
@@ -650,21 +460,13 @@ footer {
 
 
 .course-card {
-
     background: var(--background-white);
-
     border: 2px solid var(--border-color);
-
     border-radius: 0.75rem;
-
     padding: 1.5rem;
-
     transition: all 0.3s ease;
-
     position: relative;
-
     overflow: hidden;
-
     cursor: pointer;
 
 }
@@ -672,9 +474,7 @@ footer {
 
 
 .course-card:hover {
-
     transform: translateY(-3px);
-
     box-shadow: var(--shadow-md);
 
 }
@@ -682,9 +482,7 @@ footer {
 
 
 .course-card.completed {
-
     background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
-
     border-color: #22c55e;
 
 }
@@ -692,33 +490,19 @@ footer {
 
 
 .course-card.completed::before {
-
     content: "✓";
-
     position: absolute;
-
     top: 1rem;
-
     right: 1rem;
-
     background: #22c55e;
-
     color: white;
-
     width: 32px;
-
     height: 32px;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-weight: bold;
-
     font-size: 1.2rem;
 
 }
@@ -726,21 +510,13 @@ footer {
 
 
 .course-subject {
-
     font-size: 0.85rem;
-
     font-weight: 600;
-
     color: var(--primary-color);
-
     background: var(--background-light);
-
     padding: 0.25rem 0.75rem;
-
     border-radius: 1rem;
-
     display: inline-block;
-
     margin-bottom: 0.75rem;
 
 }
@@ -748,13 +524,9 @@ footer {
 
 
 .course-number {
-
     font-size: 1.25rem;
-
     font-weight: 700;
-
     color: var(--text-primary);
-
     margin-bottom: 0.5rem;
 
 }
@@ -762,15 +534,10 @@ footer {
 
 
 .course-title {
-
     font-size: 1rem;
-
     font-weight: 500;
-
     color: var(--text-secondary);
-
     margin-bottom: 1rem;
-
     line-height: 1.4;
 
 }
@@ -778,11 +545,8 @@ footer {
 
 
 .course-credits {
-
     font-size: 0.9rem;
-
     color: var(--accent-color);
-
     font-weight: 600;
 
 }
@@ -790,9 +554,7 @@ footer {
 
 
 .course-card.completed .course-subject {
-
     background: #22c55e;
-
     color: white;
 
 }
@@ -800,7 +562,6 @@ footer {
 
 
 .course-card.completed .course-number {
-
     color: #15803d;
 
 }
@@ -808,7 +569,6 @@ footer {
 
 
 .course-card.completed .course-title {
-
     color: #166534;
 
 }
@@ -817,33 +577,22 @@ footer {
 
 
 dialog {
-
     border: 1px solid rgb(0 0 0 / 10%);
-
     border-radius: 1rem;
-
     padding: 2rem;
-
     background: var(--background-white);
-
     box-shadow: var(--shadow-lg);
-
     width: 90%;
-
     max-width: 600px;
-
     position: relative;
-
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
 
 }
 
 
 
 dialog::backdrop {
-
     background-color: rgb(0 0 0 / 50%);
-
     backdrop-filter: blur(4px);
 
 }
@@ -851,25 +600,15 @@ dialog::backdrop {
 
 
 dialog button {
-
     position: absolute;
-
     top: 1rem;
-
     right: 1rem;
-
     padding: 0.5rem 0.75rem;
-
     border: 1px solid var(--border-color);
-
     background: var(--background-light);
-
     border-radius: 0.5rem;
-
     cursor: pointer;
-
     font-size: 1.2rem;
-
     transition: all 0.3s ease;
 
 }
@@ -877,11 +616,8 @@ dialog button {
 
 
 dialog button:hover {
-
     background: #ef4444;
-
     color: white;
-
     border-color: #ef4444;
 
 }
@@ -889,13 +625,9 @@ dialog button:hover {
 
 
 dialog h2 {
-
     color: var(--primary-color);
-
     font-size: 1.5rem;
-
     margin-bottom: 0.5rem;
-
     padding-right: 3rem;
 
 }
@@ -903,13 +635,9 @@ dialog h2 {
 
 
 dialog h3 {
-
     color: var(--text-primary);
-
     font-size: 1.25rem;
-
     margin-bottom: 1rem;
-
     font-weight: 500;
 
 }
@@ -917,11 +645,8 @@ dialog h3 {
 
 
 dialog p {
-
     color: var(--text-secondary);
-
     line-height: 1.6;
-
     margin-bottom: 1rem;
 
 }
@@ -929,9 +654,7 @@ dialog p {
 
 
 dialog p strong {
-
     color: var(--text-primary);
-
     font-weight: 600;
 
 }
@@ -939,13 +662,9 @@ dialog p strong {
 
 
 .footer-container {
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 0 1rem;
-
     text-align: center;
 
 }
@@ -953,13 +672,9 @@ dialog p strong {
 
 
 .social-links {
-
     display: flex;
-
     justify-content: center;
-
     gap: 1rem;
-
     margin-bottom: 2rem;
 
 }
@@ -967,23 +682,14 @@ dialog p strong {
 
 
 .social-links a {
-
     color: white;
-
     text-decoration: none;
-
     padding: 0.75rem;
-
     border-radius: 50%;
-
     background: var(--primary-color);
-
     transition: all 0.3s ease;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
 }
@@ -991,9 +697,7 @@ dialog p strong {
 
 
 .social-links a:hover {
-
     background: var(--accent-color);
-
     transform: translateY(-3px);
 
 }
@@ -1001,11 +705,8 @@ dialog p strong {
 
 
 .social-icon {
-
     width: 24px;
-
     height: 24px;
-
     filter: brightness(0) invert(1); 
 
 }
@@ -1013,9 +714,7 @@ dialog p strong {
 
 
 .footer-info {
-
     margin-bottom: 1rem;
-
     font-size: 0.9rem;
 
 }
@@ -1023,9 +722,7 @@ dialog p strong {
 
 
 #lastModified {
-
     font-size: 0.8rem;
-
     color: #9ca3af;
 
 }
@@ -1033,10 +730,8 @@ dialog p strong {
 
 
 
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
     .hamburger {
-
         display: flex;
 
     }
@@ -1044,27 +739,16 @@ dialog p strong {
 
 
     .nav-menu {
-
         position: fixed;
-
         top: 70px; 
-
         left: -100%; 
-
         width: 100%;
-
         height: calc(100vh - 70px); 
-
         background: var(--background-white);
-
         flex-direction: column;
-
         padding: 2rem 1rem;
-
         box-shadow: var(--shadow-lg);
-
         transition: left 0.3s ease;
-
         z-index: 999;
 
     }
@@ -1072,7 +756,6 @@ dialog p strong {
 
 
     .nav-menu.active {
-
         left: 0; 
 
     }
@@ -1080,9 +763,7 @@ dialog p strong {
 
 
     .nav-menu li {
-
         width: 100%;
-
         margin-bottom: 1rem;
 
     }
@@ -1090,15 +771,10 @@ dialog p strong {
 
 
     .nav-menu li a {
-
         display: block;
-
         width: 100%;
-
         padding: 1rem;
-
         text-align: center;
-
         font-size: 1.1rem;
 
     }
@@ -1107,11 +783,8 @@ dialog p strong {
 
 
     .about-container {
-
         grid-template-columns: 1fr;
-
         gap: 2rem;
-
         padding: 2rem;
 
     }
@@ -1119,9 +792,7 @@ dialog p strong {
 
 
     .about-content h1 {
-
         font-size: 2.5rem;
-
         text-align: center;
 
     }
@@ -1129,7 +800,6 @@ dialog p strong {
 
 
     .about-content p {
-
         font-size: 1rem;
 
     }
@@ -1137,7 +807,6 @@ dialog p strong {
 
 
     .profile-image {
-
         max-width: 300px;
 
     }
@@ -1145,7 +814,6 @@ dialog p strong {
 
 
     h1 {
-
         font-size: 2rem;
 
     }
@@ -1153,9 +821,7 @@ dialog p strong {
 
 
     .sections-grid {
-
         grid-template-columns: 1fr;
-
         gap: 1.5rem;
 
     }
@@ -1163,7 +829,6 @@ dialog p strong {
 
 
     section {
-
         padding: 1.5rem;
 
     }
@@ -1171,9 +836,7 @@ dialog p strong {
 
 
     .social-links {
-
         flex-wrap: wrap;
-
         gap: 0.75rem;
 
     }
@@ -1181,9 +844,7 @@ dialog p strong {
 
 
     .course-filters {
-
         flex-direction: column;
-
         align-items: stretch;
 
     }
@@ -1191,9 +852,7 @@ dialog p strong {
 
 
     .filter-btn {
-
         width: 100%;
-
         margin-bottom: 0.5rem;
 
     }
@@ -1201,7 +860,6 @@ dialog p strong {
 
 
     .courses-grid {
-
         grid-template-columns: 1fr;
 
     }
@@ -1210,13 +868,9 @@ dialog p strong {
 
 
     dialog {
-
         width: 95%;
-
         padding: 1.5rem;
-
         max-height: 90vh;
-
         overflow-y: auto;
 
     }
@@ -1224,7 +878,6 @@ dialog p strong {
     
 
     dialog h2 {
-
         font-size: 1.25rem;
 
     }
@@ -1232,7 +885,6 @@ dialog p strong {
     
 
     dialog h3 {
-
         font-size: 1.1rem;
 
     }
@@ -1241,10 +893,8 @@ dialog p strong {
 
 
 
-@media (max-width: 480px) {
-
+@media (width <= 480px) {
     .header-container {
-
         padding: 0 0.5rem;
 
     }
@@ -1252,7 +902,6 @@ dialog p strong {
 
 
     main {
-
         padding: 1rem 0.5rem;
 
     }
@@ -1260,9 +909,7 @@ dialog p strong {
 
 
     .about-container {
-
         padding: 1.5rem;
-
         margin-top: 1rem;
 
     }
@@ -1270,7 +917,6 @@ dialog p strong {
 
 
     .about-content h1 {
-
         font-size: 2rem;
 
     }
@@ -1278,7 +924,6 @@ dialog p strong {
 
 
     .profile-image {
-
         max-width: 250px;
 
     }
@@ -1286,7 +931,6 @@ dialog p strong {
 
 
     h1 {
-
         font-size: 1.75rem;
 
     }
@@ -1294,7 +938,6 @@ dialog p strong {
 
 
     section {
-
         padding: 1rem;
 
     }
@@ -1302,7 +945,6 @@ dialog p strong {
 
 
     .logo-name {
-
         font-size: 1.25rem;
 
     }
@@ -1310,9 +952,7 @@ dialog p strong {
 
 
     .nav-menu {
-
         top: 60px; 
-
         height: calc(100vh - 60px);
 
     }
@@ -1321,9 +961,7 @@ dialog p strong {
 
 
     dialog {
-
         padding: 1rem;
-
         margin: 1rem;
 
     }

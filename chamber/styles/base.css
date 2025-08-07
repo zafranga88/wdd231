@@ -4,8 +4,8 @@
     --background-color: #f5f5dc;
     --text-color: #333;
     --accent-color: #b8860b;
-    --card-background: #ffffff;
-    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --card-background: #fff;
+    --shadow: 0 2px 8px rgb(0 0 0 / 10%);
     --border-radius: 8px;
     --transition: all 0.3s ease;
     --accent-text-light: #f4e4a6;
@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Inter', 'Arial', sans-serif;
+    font-family: Inter, Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -195,7 +195,7 @@ main h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(44, 85, 48, 0.8), rgba(139, 69, 19, 0.8));
+    background: linear-gradient(135deg, rgb(44 85 48 / 80%), rgb(139 69 19 / 80%));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,7 +292,7 @@ main h1 {
 
 .event-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
 }
 
 .featured-event {
@@ -453,7 +453,7 @@ main h1 {
 
 .spotlight-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
 }
 
 .spotlight-image {
@@ -619,7 +619,7 @@ main h1 {
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
 }
 
 .service-icon {
@@ -750,7 +750,7 @@ main h1 {
 
 .member-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
 }
 
 .member-image {
@@ -880,7 +880,7 @@ main h1 {
 .social-icon {
     width: 24px;
     height: 24px;
-    fill: currentColor;
+    fill: currentcolor;
 }
 
 footer {
@@ -927,7 +927,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 2rem 0;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgb(255 255 255 / 20%);
     margin-top: 2rem;
     text-align: center;
 }
@@ -1056,7 +1056,7 @@ footer {
 
 .featured-member-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
 }
 
 .featured-member-image {
@@ -1105,7 +1105,7 @@ footer {
     text-align: center;
 }
 
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (width >= 769px) and (width <= 1199px) {
     .news-events-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1177,7 +1177,7 @@ input[type="tel"]:focus,
 textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
+    box-shadow: 0 0 0 3px rgb(44 85 48 / 10%);
 }
 
 textarea {
@@ -1236,7 +1236,6 @@ textarea {
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
-    
     opacity: 0;
     transform: translateY(30px) scale(0.95);
     animation: slideInUp 0.8s ease-out forwards;
@@ -1263,6 +1262,7 @@ textarea {
         opacity: 0;
         transform: translateY(30px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -1334,7 +1334,7 @@ textarea {
     font-weight: bold;
     margin-bottom: 1rem;
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
@@ -1346,7 +1346,7 @@ textarea {
 
 .membership-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgb(0 0 0 / 15%);
 }
 
 .membership-card[data-level="gold"] {
@@ -1357,8 +1357,9 @@ textarea {
     0%, 100% {
         box-shadow: var(--shadow);
     }
+
     50% {
-        box-shadow: 0 0 20px rgba(184, 134, 11, 0.3), var(--shadow);
+        box-shadow: 0 0 20px rgb(184 134 11 / 30%), var(--shadow);
         border-color: #d4af37;
     }
 }
@@ -1390,7 +1391,7 @@ textarea {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgb(0 0 0 / 50%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1406,7 +1407,7 @@ textarea {
     background-color: var(--card-background);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 30%);
     max-width: 500px;
     width: 90%;
     max-height: 80vh;
@@ -1439,7 +1440,7 @@ textarea {
     padding-left: 1.5rem;
 }
 
-.modal-content li:before {
+.modal-content li::before {
     content: '✓';
     position: absolute;
     left: 0;
@@ -1466,7 +1467,7 @@ textarea {
     color: var(--primary-color);
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .join-content {
         grid-template-columns: 2fr 1fr;
         gap: 4rem;
@@ -1477,7 +1478,7 @@ textarea {
     }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
     .membership-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
@@ -1522,13 +1523,16 @@ textarea:focus {
         opacity: 0;
         transform: scale(0.3);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
     }
+
     70% {
         transform: scale(0.9);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -1549,6 +1553,7 @@ textarea:focus {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1568,6 +1573,7 @@ textarea:focus {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1588,6 +1594,7 @@ textarea:focus {
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -1648,6 +1655,7 @@ textarea:focus {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1686,7 +1694,7 @@ textarea:focus {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(184, 134, 11, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgb(184 134 11 / 10%), transparent);
     transition: left 0.6s ease;
 }
 
@@ -1696,7 +1704,7 @@ textarea:focus {
 
 .step-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
 }
 
 .step-number {
@@ -1743,6 +1751,7 @@ textarea:focus {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1763,6 +1772,7 @@ textarea:focus {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -1786,7 +1796,7 @@ textarea:focus {
 }
 
 /* Responsive Design for Thank You Page */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .thankyou-section {
         padding: 2rem 0;
     }
@@ -1845,7 +1855,7 @@ textarea:focus {
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .thankyou-header h1 {
         font-size: 2rem;
     }
@@ -1911,6 +1921,7 @@ textarea:focus {
     0%, 100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -1949,7 +1960,7 @@ textarea:focus {
 
     .step-card {
         margin-bottom: 1rem;
-        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }
 
@@ -1981,7 +1992,7 @@ textarea:focus {
 
     .step-card {
         margin-bottom: 1rem;
-        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }
 
@@ -2014,7 +2025,7 @@ textarea:focus {
 
     .step-card {
         margin-bottom: 1rem;
-        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }
 
@@ -2089,7 +2100,7 @@ textarea:focus {
 }
 
 .discover-figure {
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1.5rem;
     position: relative;
     overflow: hidden;
     border-radius: var(--border-radius);
@@ -2249,7 +2260,7 @@ textarea:focus {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (width >= 641px) and (width <= 1024px) {
     .discover-container {
         grid-template-columns: 2fr 1fr;
         grid-template-areas: 
@@ -2316,16 +2327,16 @@ textarea:focus {
     .discover-image:hover {
         transform: scale(1.05);
         filter: brightness(1.1) saturate(1.2);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 25px rgb(0 0 0 / 20%);
     }
     
     .discover-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        box-shadow: 0 6px 20px rgb(0 0 0 / 12%);
     }
 }
 
-@media (min-width: 1025px) {
+@media (width >= 1025px) {
     .discover-container {
         grid-template-columns: 2fr 1fr;
         grid-template-areas: 
@@ -2392,16 +2403,16 @@ textarea:focus {
     .discover-image:hover {
         transform: scale(1.05);
         filter: brightness(1.1) saturate(1.2);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 25px rgb(0 0 0 / 20%);
     }
     
     .discover-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        box-shadow: 0 8px 25px rgb(0 0 0 / 15%);
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1199px) {
+@media (width >= 1025px) and (width <= 1199px) {
     .discover-container {
         grid-template-columns: 2fr 1fr;
         grid-template-areas: 
@@ -2466,7 +2477,7 @@ textarea:focus {
     }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
     .discover-container {
         grid-template-columns: 3fr 1fr;
         grid-template-areas: 
@@ -2497,7 +2508,7 @@ textarea:focus {
     }
     
     .discover-figure {
-        margin: 0 0 1rem 0;
+        margin: 0 0 1rem;
         flex-shrink: 0;
     }
     
@@ -2565,16 +2576,16 @@ textarea:focus {
     }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
     .discover-image:hover {
         transform: scale(1.05);
         filter: brightness(1.1) saturate(1.2);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 25px rgb(0 0 0 / 20%);
     }
     
     .discover-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        box-shadow: 0 8px 25px rgb(0 0 0 / 15%);
     }
     
     .discover-btn:hover {
