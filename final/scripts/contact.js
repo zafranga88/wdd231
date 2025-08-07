@@ -276,6 +276,9 @@ const ContactEventHandlers = {
         ContactState.userPreferences[key] = value;
         ContactUtils.saveToStorage('patagonia-preferences', ContactState.userPreferences);
         ContactUtils.showNotification('Preferences updated!', 'success');
+    },
+    handleScrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 };
 
@@ -577,6 +580,7 @@ const ContactExtensions = {
         
         updateProgress();
     }
+
 };
 
 // Initialize extensions when the main app is ready
