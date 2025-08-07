@@ -3215,7 +3215,7 @@ to {
     animation: spin 1s linear infinite;
 }
 
-
+}
 
 /* ==== FORM CONFIRMATION PAGE STYLES ==== */
 
@@ -3559,10 +3559,6 @@ to {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    transform: translateY(30px);
+}
 }
