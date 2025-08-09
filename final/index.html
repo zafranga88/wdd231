@@ -27,7 +27,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     
-    <title>Patagonia Trail Explorers - Your Gateway to Patagonian Adventures</title>
+    <title>Patagonia Trail Explorers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
             <div class="container">
                 <div class="nav-content">
                     <div class="logo">
-                        <h1>Patagonia Trail Explorers</h1>
+                        <div class="site-name">Patagonia Trail Explorers</div>
                     </div>
                     <div class="nav-menu" id="navMenu">
                         <a href="index.html" class="nav-link active">Home</a>
@@ -60,96 +60,98 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-left">
-                <h2 class="hero-title">Explore Patagonia's Greatest Trails</h2>
-                <p class="hero-subtitle">Discover comprehensive trail information, weather updates, and planning tools for your ultimate Patagonian hiking adventure. From beginner-friendly paths to challenging multi-day treks.</p>
-                <div class="hero-buttons">
-                    <a href="trails.html" class="btn btn-primary">Explore Trails</a>
-                    <a href="planning.html" class="btn btn-secondary">Planning Tools</a>
-                </div>
-            </div>
-            <div class="hero-right">
-                <div class="hero-image">
-                    <img src="images/fitz-roy.jpg" 
-                         loading="lazy"
-                         alt="Stunning Patagonian mountain landscape with granite spires"
-                         class="hero-img"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Featured Trails Preview -->
-    <section class="featured-preview">
-        <div class="container">
-            <h3 class="section-title">Featured Trails</h3>
-            <p class="section-subtitle">Get a taste of what Patagonia has to offer with these popular trails</p>
-            <div class="trail-preview-grid" id="featuredTrailsGrid">
-                <!-- Featured trails will be populated by JavaScript -->
-                <div class="loading">Loading featured trails...</div>
-            </div>
-            <div class="preview-action">
-                <a href="trails.html" class="btn btn-outline">View All Trails</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Signup Section -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h3>Stay Updated on Trail Conditions</h3>
-                <p>Get the latest trail conditions, weather updates, and hiking tips delivered to your inbox.</p>
-                <form class="newsletter-form" id="newsletterForm" action="form-confirmation.html" method="get">
-                    <div class="form-group">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="experience">Hiking Experience</label>
-                        <select id="experience" name="experience">
-                            <option value="beginner">Beginner</option>
-                            <option value="intermediate">Intermediate</option>
-                            <option value="advanced">Advanced</option>
-                            <option value="expert">Expert</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Trail Interests (Check all that apply)</label>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="interests" value="day-hikes"> Day Hikes</label>
-                            <label><input type="checkbox" name="interests" value="multi-day"> Multi-day Treks</label>
-                            <label><input type="checkbox" name="interests" value="glaciers"> Glacier Tours</label>
-                            <label><input type="checkbox" name="interests" value="wildlife"> Wildlife Viewing</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Newsletter Frequency</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="frequency" value="weekly" checked> Weekly</label>
-                            <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
-                            <label><input type="radio" name="frequency" value="seasonal"> Seasonal</label>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Subscribe to Updates</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- Main Content -->
     <main class="main-content">
+        <h1 class="visually-hidden">Patagonia Trail Explorers</h1>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <h2 class="hero-title">Explore Patagonia's Greatest Trails</h2>
+                        <p class="hero-subtitle">Discover comprehensive trail information, weather updates, and planning tools for your ultimate Patagonian hiking adventure. From beginner-friendly paths to challenging multi-day treks.</p>
+                        <div class="hero-buttons">
+                            <a href="trails.html" class="btn btn-primary">Explore Trails</a>
+                            <a href="planning.html" class="btn btn-secondary">Planning Tools</a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="hero-image">
+                            <img src="images/fitz-roy.jpg" 
+                                 loading="lazy"
+                                 alt="Stunning Patagonian mountain landscape with granite spires"
+                                 class="hero-img"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Trails Preview -->
+        <section class="featured-preview">
+            <div class="container">
+                <h3 class="section-title">Featured Trails</h3>
+                <p class="section-subtitle">Get a taste of what Patagonia has to offer with these popular trails</p>
+                <div class="trail-preview-grid" id="featuredTrailsGrid">
+                    <!-- Featured trails will be populated by JavaScript -->
+                    <div class="loading">Loading featured trails...</div>
+                </div>
+                <div class="preview-action">
+                    <a href="trails.html" class="btn btn-outline">View All Trails</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3>Stay Updated on Trail Conditions</h3>
+                    <p>Get the latest trail conditions, weather updates, and hiking tips delivered to your inbox.</p>
+                    <form class="newsletter-form" id="newsletterForm" action="form-confirmation.html" method="get">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Hiking Experience</label>
+                            <select id="experience" name="experience">
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                                <option value="expert">Expert</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Trail Interests (Check all that apply)</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="interests" value="day-hikes"> Day Hikes</label>
+                                <label><input type="checkbox" name="interests" value="multi-day"> Multi-day Treks</label>
+                                <label><input type="checkbox" name="interests" value="glaciers"> Glacier Tours</label>
+                                <label><input type="checkbox" name="interests" value="wildlife"> Wildlife Viewing</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Newsletter Frequency</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="frequency" value="weekly" checked> Weekly</label>
+                                <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
+                                <label><input type="radio" name="frequency" value="seasonal"> Seasonal</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe to Updates</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
             <div class="content-grid">
                 <!-- Recent Updates -->
