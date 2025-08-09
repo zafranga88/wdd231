@@ -14,14 +14,14 @@ const ContactState = {
 
 // Utility functions
 const ContactUtils = {
-    // Local storage utilities (memory-based for Claude artifacts)
+    
     saveToStorage: (key, data) => {
         try {
             // In a real environment, this would use localStorage
             if (typeof window !== 'undefined' && window.localStorage) {
                 localStorage.setItem(key, JSON.stringify(data));
             } else {
-                // Store in memory for Claude artifacts
+                
                 window.memoryStorage = window.memoryStorage || {};
                 window.memoryStorage[key] = JSON.stringify(data);
             }
@@ -36,7 +36,7 @@ const ContactUtils = {
                 const stored = localStorage.getItem(key);
                 return stored ? JSON.parse(stored) : defaultValue;
             } else {
-                // Use memory storage for Claude artifacts
+                
                 window.memoryStorage = window.memoryStorage || {};
                 const stored = window.memoryStorage[key];
                 return stored ? JSON.parse(stored) : defaultValue;
