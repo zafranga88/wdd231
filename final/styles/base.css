@@ -1,689 +1,179 @@
 /* Reset and Base Styles */
 
-
-
 * {
-
-
-
     margin: 0;
-
-
-
     padding: 0;
-
-
-
     box-sizing: border-box;
-
-
-
 }
-
-
-
-
-
-
 
 :root {
-
-
-
     --patagonian-navy: #1a365d;
-
-
-
     --glacier-blue: #2c5282;
-
-
-
     --mountain-charcoal: #1a202c;
-
-
-
     --alpine-white: #ffffff;
-
-
-
     --light-gray: #f7fafc;
-
-
-
     --medium-gray: #e2e8f0;
-
-
-
     --success-green: #38a169;
-
-
-
     --warning-orange: #dd6b20;
-
-
-
     --danger-red: #e53e3e;
-
-
-
     --accent-teal: #319795;
-
-
-
 }
-
-
-
-
-
-
 
 body {
-
-
-
     font-family: 'Open Sans', Arial, sans-serif;
-
-
-
     color: var(--mountain-charcoal);
-
-
-
     line-height: 1.7;
-
-
-
     background-color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .container {
-
-
-
     max-width: 1200px;
-
-
-
     margin: 0 auto;
-
-
-
     padding: 0 20px;
-
-
-
 }
-
-
-
-
-
-
 
 /* Typography */
 
-
-
 h1, h2, h3, h4, h5, h6 {
-
-
-
     font-family: 'Montserrat', sans-serif;
-
-
-
     font-weight: 600;
-
-
-
     color: var(--patagonian-navy);
-
-
-
 }
-
-
-
-
-
-
 
 h1 {
-
-
-
     font-size: 2.5rem;
-
-
-
     font-weight: 700;
-
-
-
 }
-
-
-
-
-
-
 
 h2 {
-
-
-
     font-size: 2rem;
-
-
-
 }
-
-
-
-
-
-
 
 h3 {
-
-
-
     font-size: 1.5rem;
-
-
-
     margin-bottom: 1rem;
-
-
-
 }
-
-
-
-
-
-
 
 h4 {
-
-
-
     font-size: 1.2rem;
-
-
-
     margin-bottom: 0.8rem;
-
-
-
 }
-
-
-
-
-
-
 
 /* Button Styles */
 
-
-
 .btn {
-
-
-
     display: inline-block;
-
-
-
     padding: 12px 24px;
-
-
-
     border: none;
-
-
-
     border-radius: 6px;
-
-
-
     font-family: 'Montserrat', sans-serif;
-
-
-
     font-weight: 600;
-
-
-
     font-size: 1rem;
-
-
-
     text-decoration: none;
-
-
-
     cursor: pointer;
-
-
-
     transition: all 0.3s ease;
-
-
-
     text-align: center;
-
-
-
 }
-
-
-
-
-
-
 
 .btn-primary {
-
-
-
     background-color: var(--patagonian-navy);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .btn-primary:hover {
-
-
-
     background-color: var(--glacier-blue);
-
-
-
     transform: translateY(-2px);
-
-
-
     box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
-
-
-
 }
-
-
-
-
-
-
 
 .btn-secondary {
-
-
-
     background-color: transparent;
-
-
-
     color: var(--patagonian-navy);
-
-
-
     border: 2px solid var(--patagonian-navy);
-
-
-
 }
-
-
-
-
-
-
 
 .btn-secondary:hover {
-
-
-
     background-color: var(--patagonian-navy);
-
-
-
     color: var(--alpine-white);
-
-
-
     transform: translateY(-2px);
-
-
-
 }
-
-
-
-
-
-
 
 .btn-outline {
-
-
-
     background-color: transparent;
-
-
-
     color: var(--glacier-blue);
-
-
-
     border: 2px solid var(--glacier-blue);
-
-
-
     margin-top: 2rem;
-
-
-
 }
-
-
-
-
-
-
 
 .btn-outline:hover {
-
-
-
     background-color: var(--glacier-blue);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 /* Header Styles */
 
-
-
 .header {
-
-
-
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
-
-
-
     color: var(--alpine-white);
-
-
-
     position: sticky;
-
-
-
     top: 0;
-
-
-
     z-index: 1000;
-
-
-
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-
-
 }
-
-
-
-
-
-
 
 .navbar {
-
-
-
     padding: 1rem 0;
-
-
-
 }
-
-
-
-
-
-
 
 .nav-content {
-
-
-
     display: flex;
-
-
-
     justify-content: space-between;
-
-
-
     align-items: center;
-
-
-
 }
-
-
-
-
-
-
 
 .logo h1 {
-
-
-
     color: var(--alpine-white);
-
-
-
     font-size: 1.8rem;
-
-
-
     font-weight: 700;
-
-
-
 }
-
-
-
-
-
-
 
 .nav-menu {
-
-
-
     display: flex;
-
-
-
     gap: 2rem;
-
-
-
     align-items: center;
-
-
-
 }
-
-
-
-
-
-
 
 .nav-link {
-
-
-
     color: var(--alpine-white);
-
-
-
     text-decoration: none;
-
-
-
     font-weight: 600;
-
-
-
     transition: color 0.3s ease;
-
-
-
     position: relative;
-
-
-
 }
-
-
-
-
-
-
 
 .nav-link:hover {
-
-
-
     color: #e2e8f0;
-
-
-
 }
-
-
-
-
-
-
 
 .nav-link.active {
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .nav-link::after {
-
-
-
     content: '';
-
-
-
     position: absolute;
-
-
-
     bottom: -5px;
-
-
-
     left: 0;
-
-
-
     width: 0;
-
-
-
     height: 2px;
-
-
-
     background-color: var(--alpine-white);
-
-
-
     transition: width 0.3s ease;
-
-
-
 }
-
-
-
-
-
-
 
 .nav-link:hover::after,
-
-
-
 .nav-link.active::after {
-
-
-
     width: 100%;
-
-
-
 }
-
 
 .visually-hidden {
     position: absolute;
@@ -697,1157 +187,297 @@ h4 {
     border: 0;
 }
 
-
-
-
 .hamburger {
-
-
-
     display: none;
-
-
-
     flex-direction: column;
-
-
-
     cursor: pointer;
-
-
-
     gap: 4px;
-
-
-
 }
-
-
-
-
-
-
 
 .hamburger span {
-
-
-
     width: 25px;
-
-
-
     height: 3px;
-
-
-
     background-color: var(--alpine-white);
-
-
-
     transition: all 0.3s ease;
-
-
-
 }
-
-
-
-
-
-
 
 /* Hero Section */
 
-
-
 .hero {
-
-
-
     background: linear-gradient(rgba(26, 54, 93, 0.1), rgba(44, 82, 130, 0.1)), var(--light-gray);
-
-
-
     padding: 4rem 0;
-
-
-
 }
-
-
-
-
-
-
 
 .hero-content {
-
-
-
     display: flex;
-
-
-
     align-items: center;
-
-
-
     gap: 3rem;
-
-
-
     min-height: 60vh;
-
-
-
 }
-
-
-
-
-
-
 
 .hero-left {
-
-
-
     flex: 1;
-
-
-
 }
-
-
-
-
-
-
 
 .hero-title {
-
-
-
     font-size: 3rem;
-
-
-
     font-weight: 700;
-
-
-
     margin-bottom: 1.5rem;
-
-
-
     line-height: 1.2;
-
-
-
 }
-
-
-
-
-
-
 
 .hero-subtitle {
-
-
-
     font-size: 1.2rem;
-
-
-
     margin-bottom: 2rem;
-
-
-
     color: var(--glacier-blue);
-
-
-
 }
-
-
-
-
-
-
 
 .hero-buttons {
-
-
-
     display: flex;
-
-
-
     gap: 1rem;
-
-
-
 }
-
-
-
-
-
-
 
 .hero-right {
-
-
-
     flex: 1;
-
-
-
 }
-
-
-
-
-
-
 
 .hero-image {
-
-
-
     background: linear-gradient(45deg, var(--glacier-blue), var(--patagonian-navy));
-
-
-
     border-radius: 12px;
-
-
-
     overflow: hidden;
-
-
-
     height: 400px;
-
-
-
     display: flex;
-
-
-
     align-items: center;
-
-
-
     justify-content: center;
-
-
-
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-
-
-
 }
-
-
-
-
-
-
 
 .hero-img {
-
-
-
     width: 100%;
-
-
-
     height: 100%;
-
-
-
     object-fit: cover;
-
-
-
     border-radius: 12px;
-
-
-
 }
-
-
-
-
-
-
 
 /* Featured Trails Preview */
 
-
-
 .featured-preview {
-
-
-
     padding: 4rem 0;
-
-
-
     background-color: var(--light-gray);
-
-
-
 }
-
-
-
-
-
-
 
 .section-title {
-
-
-
     color: var(--patagonian-navy);
-
-
-
     text-align: center;
-
-
-
     margin-bottom: 1rem;
-
-
-
     font-size: 2rem;
-
-
-
 }
-
-
-
-
-
-
 
 .section-subtitle {
-
-
-
     text-align: center;
-
-
-
     color: var(--glacier-blue);
-
-
-
     margin-bottom: 3rem;
-
-
-
     font-size: 1.1rem;
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-grid {
-
-
-
     display: grid;
-
-
-
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-
-
     gap: 2rem;
-
-
-
     margin-bottom: 2rem;
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-card {
-
-
-
     background-color: var(--alpine-white);
-
-
-
     border-radius: 12px;
-
-
-
     overflow: hidden;
-
-
-
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-
-
     cursor: pointer;
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-card:hover {
-
-
-
     transform: translateY(-5px);
-
-
-
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-image {
-
-
-
     height: 200px;
-
-
-
     background: linear-gradient(45deg, var(--glacier-blue), var(--patagonian-navy));
-
-
-
     display: flex;
-
-
-
     align-items: center;
-
-
-
     justify-content: center;
-
-
-
     color: var(--alpine-white);
-
-
-
     font-size: 3rem;
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-info {
-
-
-
     padding: 1.5rem;
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-title {
-
-
-
     font-size: 1.3rem;
-
-
-
     font-weight: 700;
-
-
-
     margin-bottom: 0.5rem;
-
-
-
     color: var(--patagonian-navy);
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-description {
-
-
-
     color: var(--mountain-charcoal);
-
-
-
     margin-bottom: 1rem;
-
-
-
     font-size: 0.95rem;
-
-
-
     display: -webkit-box;
-
-
-
     -webkit-line-clamp: 3;
-
-
-
     -webkit-box-orient: vertical;
-
-
-
     overflow: hidden;
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-meta {
-
-
-
     display: flex;
-
-
-
     justify-content: space-between;
-
-
-
     align-items: center;
-
-
-
 }
-
-
-
-
-
-
 
 .difficulty {
-
-
-
     padding: 4px 12px;
-
-
-
     border-radius: 20px;
-
-
-
     font-size: 0.8rem;
-
-
-
     font-weight: 600;
-
-
-
     text-transform: uppercase;
-
-
-
 }
-
-
-
-
-
-
 
 .difficulty.beginner {
-
-
-
     background-color: var(--success-green);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .difficulty.intermediate {
-
-
-
     background-color: var(--warning-orange);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .difficulty.advanced {
-
-
-
     background-color: var(--danger-red);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .trail-preview-duration {
-
-
-
     color: var(--glacier-blue);
-
-
-
     font-weight: 600;
-
-
-
     font-size: 0.9rem;
-
-
-
 }
-
-
-
-
-
-
 
 .preview-action {
-
-
-
     text-align: center;
-
-
-
 }
-
-
-
-
-
-
 
 /* Stats Section */
 
-
-
 .stats-section {
-
-
-
     padding: 4rem 0;
-
-
-
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .stats-grid {
-
-
-
     display: grid;
-
-
-
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-
-
     gap: 2rem;
-
-
-
     max-width: 800px;
-
-
-
     margin: 0 auto;
-
-
-
 }
-
-
-
-
-
-
 
 .stat-item {
-
-
-
     text-align: center;
-
-
-
     padding: 1rem;
-
-
-
 }
-
-
-
-
-
-
 
 .stat-number {
-
-
-
     font-size: 3rem;
-
-
-
     font-weight: 700;
-
-
-
     color: var(--alpine-white);
-
-
-
     margin-bottom: 0.5rem;
-
-
-
     font-family: 'Montserrat', sans-serif;
-
-
-
 }
-
-
-
-
-
-
 
 .stat-label {
-
-
-
     font-size: 1.1rem;
-
-
-
     color: rgba(255, 255, 255, 0.9);
-
-
-
     text-transform: uppercase;
-
-
-
     letter-spacing: 1px;
-
-
-
 }
-
-
-
-
-
-
 
 /* Newsletter Section */
 
-
-
 .newsletter-section {
-
-
-
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
-
-
-
     color: var(--alpine-white);
-
-
-
     padding: 4rem 0;
-
-
-
 }
-
-
-
-
-
-
 
 .newsletter-content {
-
-
-
     max-width: 600px;
-
-
-
     margin: 0 auto;
-
-
-
     text-align: center;
-
-
-
 }
-
-
-
-
-
-
 
 .newsletter-content h3 {
-
-
-
     color: var(--alpine-white);
-
-
-
     margin-bottom: 1rem;
-
-
-
     font-size: 2rem;
-
-
-
 }
-
-
-
-
-
-
 
 .newsletter-content p {
-
-
-
     margin-bottom: 2rem;
-
-
-
     font-size: 1.1rem;
-
-
-
     opacity: 0.9;
-
-
-
 }
-
-
-
-
-
-
 
 .newsletter-form {
-
-
-
     background-color: var(--alpine-white);
-
-
-
     padding: 2rem;
-
-
-
     border-radius: 12px;
-
-
-
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-
-
-
 }
-
-
-
-
-
-
 
 .form-group {
-
-
-
     margin-bottom: 1.5rem;
-
-
-
     text-align: left;
-
-
-
 }
-
-
-
-
-
-
 
 .form-group label {
-
-
-
     display: block;
-
-
-
     margin-bottom: 0.5rem;
-
-
-
     font-weight: 600;
-
-
-
     color: var(--mountain-charcoal);
-
-
-
 }
-
-
-
-
-
-
 
 .form-group input,
-
-
-
 .form-group select {
-
-
-
     width: 100%;
-
-
-
     padding: 12px;
-
-
-
     border: 2px solid var(--medium-gray);
-
-
-
     border-radius: 6px;
-
-
-
     font-size: 1rem;
-
-
-
     transition: border-color 0.3s ease;
-
-
-
 }
-
-
-
-
-
-
 
 .form-group input:focus,
-
-
-
 .form-group select:focus {
-
-
-
     outline: none;
-
-
-
     border-color: var(--glacier-blue);
-
-
-
 }
-
-
-
-
-
-
 
 .checkbox-group,
-
-
-
 .radio-group {
-
-
-
     display: flex;
-
-
-
     flex-wrap: wrap;
-
-
-
     gap: 1rem;
-
-
-
     margin-top: 0.5rem;
-
-
-
 }
 
-
-
-
-
-
-
 .checkbox-group label,
-
-
-
 .radio-group label {
-
-
-
     display: flex;
 
 
