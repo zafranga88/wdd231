@@ -1,3539 +1,9229 @@
-/* stylelint-disable no-descending-specificity */
-
 /* Reset and Base Styles */
 
+
+
 * {
+
+
+
     margin: 0;
+
+
+
     padding: 0;
+
+
+
     box-sizing: border-box;
+
+
+
 }
+
+
+
+
+
+
 
 :root {
+
+
+
     --patagonian-navy: #1a365d;
+
+
+
     --glacier-blue: #2c5282;
+
+
+
     --mountain-charcoal: #1a202c;
-    --alpine-white: #fff;
+
+
+
+    --alpine-white: #ffffff;
+
+
+
     --light-gray: #f7fafc;
+
+
+
     --medium-gray: #e2e8f0;
+
+
+
     --success-green: #38a169;
+
+
+
     --warning-orange: #dd6b20;
+
+
+
     --danger-red: #e53e3e;
+
+
+
     --accent-teal: #319795;
+
+
+
 }
+
+
+
+
+
+
 
 body {
+
+
+
     font-family: 'Open Sans', Arial, sans-serif;
+
+
+
     color: var(--mountain-charcoal);
+
+
+
     line-height: 1.7;
+
+
+
     background-color: var(--alpine-white);
+
+
+
 }
 
+
+
+
+
+
+
 .container {
+
+
+
     max-width: 1200px;
+
+
+
     margin: 0 auto;
+
+
+
     padding: 0 20px;
+
+
+
 }
+
+
+
+
+
+
 
 /* Typography */
 
-h1 {
-    font-family: Montserrat, sans-serif;
+
+
+h1, h2, h3, h4, h5, h6 {
+
+
+
+    font-family: 'Montserrat', sans-serif;
+
+
+
     font-weight: 600;
+
+
+
     color: var(--patagonian-navy);
+
+
+
 }
+
+
+
+
+
+
+
+h1 {
+
+
+
+    font-size: 2.5rem;
+
+
+
+    font-weight: 700;
+
+
+
+}
+
+
+
+
+
+
 
 h2 {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    color: var(--patagonian-navy);
+
+
+
     font-size: 2rem;
+
+
+
 }
+
+
+
+
+
+
 
 h3 {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    color: var(--patagonian-navy);
+
+
+
     font-size: 1.5rem;
+
+
+
     margin-bottom: 1rem;
+
+
+
 }
+
+
+
+
+
+
 
 h4 {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    color: var(--patagonian-navy);
+
+
+
     font-size: 1.2rem;
+
+
+
     margin-bottom: 0.8rem;
+
+
+
 }
 
-h5 {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    color: var(--patagonian-navy);
-}
 
-h6 {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    color: var(--patagonian-navy);
-}
 
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
+
+
+
 
 /* Button Styles */
 
+
+
 .btn {
+
+
+
     display: inline-block;
+
+
+
     padding: 12px 24px;
+
+
+
     border: none;
+
+
+
     border-radius: 6px;
-    font-family: Montserrat, sans-serif;
+
+
+
+    font-family: 'Montserrat', sans-serif;
+
+
+
     font-weight: 600;
+
+
+
     font-size: 1rem;
+
+
+
     text-decoration: none;
+
+
+
     cursor: pointer;
+
+
+
     transition: all 0.3s ease;
+
+
+
     text-align: center;
+
+
+
 }
+
+
+
+
+
+
 
 .btn-primary {
+
+
+
     background-color: var(--patagonian-navy);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 .btn-primary:hover {
+
+
+
     background-color: var(--glacier-blue);
+
+
+
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgb(26 54 93 / 30%);
+
+
+
+    box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+
+
+
 }
+
+
+
+
+
+
 
 .btn-secondary {
+
+
+
     background-color: transparent;
+
+
+
     color: var(--patagonian-navy);
+
+
+
     border: 2px solid var(--patagonian-navy);
+
+
+
 }
+
+
+
+
+
+
 
 .btn-secondary:hover {
+
+
+
     background-color: var(--patagonian-navy);
+
+
+
     color: var(--alpine-white);
+
+
+
     transform: translateY(-2px);
+
+
+
 }
+
+
+
+
+
+
 
 .btn-outline {
+
+
+
     background-color: transparent;
+
+
+
     color: var(--glacier-blue);
+
+
+
     border: 2px solid var(--glacier-blue);
+
+
+
     margin-top: 2rem;
+
+
+
 }
 
+
+
+
+
+
+
 .btn-outline:hover {
+
+
+
     background-color: var(--glacier-blue);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 /* Header Styles */
 
+
+
 .header {
+
+
+
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
+
+
+
     color: var(--alpine-white);
+
+
+
     position: sticky;
+
+
+
     top: 0;
+
+
+
     z-index: 1000;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+
+
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+
+
 }
+
+
+
+
+
+
 
 .navbar {
+
+
+
     padding: 1rem 0;
+
+
+
 }
+
+
+
+
+
+
 
 .nav-content {
+
+
+
     display: flex;
+
+
+
     justify-content: space-between;
+
+
+
     align-items: center;
+
+
+
 }
+
+
+
+
+
+
 
 .logo h1 {
+
+
+
     color: var(--alpine-white);
+
+
+
     font-size: 1.8rem;
+
+
+
     font-weight: 700;
+
+
+
 }
+
+
+
+
+
+
 
 .nav-menu {
+
+
+
     display: flex;
+
+
+
     gap: 2rem;
+
+
+
     align-items: center;
+
+
+
 }
+
+
+
+
+
+
 
 .nav-link {
+
+
+
     color: var(--alpine-white);
+
+
+
     text-decoration: none;
+
+
+
     font-weight: 600;
+
+
+
     transition: color 0.3s ease;
+
+
+
     position: relative;
+
+
+
 }
+
+
+
+
+
+
 
 .nav-link:hover {
+
+
+
     color: #e2e8f0;
+
+
+
 }
+
+
+
+
+
+
 
 .nav-link.active {
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 .nav-link::after {
+
+
+
     content: '';
+
+
+
     position: absolute;
+
+
+
     bottom: -5px;
+
+
+
     left: 0;
+
+
+
     width: 0;
+
+
+
     height: 2px;
+
+
+
     background-color: var(--alpine-white);
+
+
+
     transition: width 0.3s ease;
+
+
+
 }
 
-.nav-link:hover::after {
-    width: 100%;
-}
+
+
+
+
+
+
+.nav-link:hover::after,
+
+
 
 .nav-link.active::after {
+
+
+
     width: 100%;
+
+
+
 }
+
+
+
+
+
+
 
 .hamburger {
+
+
+
     display: none;
+
+
+
     flex-direction: column;
+
+
+
     cursor: pointer;
+
+
+
     gap: 4px;
+
+
+
 }
 
+
+
+
+
+
+
 .hamburger span {
+
+
+
     width: 25px;
+
+
+
     height: 3px;
+
+
+
     background-color: var(--alpine-white);
+
+
+
     transition: all 0.3s ease;
+
+
+
 }
+
+
+
+
+
+
 
 /* Hero Section */
 
+
+
 .hero {
-    background: linear-gradient(rgb(26 54 93 / 10%), rgb(44 82 130 / 10%)), var(--light-gray);
+
+
+
+    background: linear-gradient(rgba(26, 54, 93, 0.1), rgba(44, 82, 130, 0.1)), var(--light-gray);
+
+
+
     padding: 4rem 0;
+
+
+
 }
+
+
+
+
+
+
 
 .hero-content {
+
+
+
     display: flex;
+
+
+
     align-items: center;
+
+
+
     gap: 3rem;
+
+
+
     min-height: 60vh;
+
+
+
 }
+
+
+
+
+
+
 
 .hero-left {
+
+
+
     flex: 1;
+
+
+
 }
+
+
+
+
+
+
 
 .hero-title {
+
+
+
     font-size: 3rem;
+
+
+
     font-weight: 700;
+
+
+
     margin-bottom: 1.5rem;
+
+
+
     line-height: 1.2;
+
+
+
 }
+
+
+
+
+
+
 
 .hero-subtitle {
+
+
+
     font-size: 1.2rem;
+
+
+
     margin-bottom: 2rem;
+
+
+
     color: var(--glacier-blue);
+
+
+
 }
+
+
+
+
+
+
 
 .hero-buttons {
+
+
+
     display: flex;
+
+
+
     gap: 1rem;
+
+
+
 }
+
+
+
+
+
+
 
 .hero-right {
+
+
+
     flex: 1;
+
+
+
 }
+
+
+
+
+
+
 
 .hero-image {
+
+
+
     background: linear-gradient(45deg, var(--glacier-blue), var(--patagonian-navy));
+
+
+
     border-radius: 12px;
+
+
+
     overflow: hidden;
+
+
+
     height: 400px;
+
+
+
     display: flex;
+
+
+
     align-items: center;
+
+
+
     justify-content: center;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
+
+
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+
+
 }
 
+
+
+
+
+
+
 .hero-img {
+
+
+
     width: 100%;
+
+
+
     height: 100%;
+
+
+
     object-fit: cover;
+
+
+
     border-radius: 12px;
+
+
+
 }
+
+
+
+
+
+
 
 /* Featured Trails Preview */
 
+
+
 .featured-preview {
+
+
+
     padding: 4rem 0;
+
+
+
     background-color: var(--light-gray);
+
+
+
 }
+
+
+
+
+
+
 
 .section-title {
+
+
+
     color: var(--patagonian-navy);
+
+
+
     text-align: center;
+
+
+
     margin-bottom: 1rem;
+
+
+
     font-size: 2rem;
+
+
+
 }
+
+
+
+
+
+
 
 .section-subtitle {
+
+
+
     text-align: center;
+
+
+
     color: var(--glacier-blue);
+
+
+
     margin-bottom: 3rem;
+
+
+
     font-size: 1.1rem;
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-grid {
+
+
+
     display: grid;
+
+
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+
+
     gap: 2rem;
+
+
+
     margin-bottom: 2rem;
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-card {
+
+
+
     background-color: var(--alpine-white);
+
+
+
     border-radius: 12px;
+
+
+
     overflow: hidden;
-    box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+
+
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+
     cursor: pointer;
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-card:hover {
+
+
+
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgb(0 0 0 / 15%);
+
+
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-image {
+
+
+
     height: 200px;
+
+
+
     background: linear-gradient(45deg, var(--glacier-blue), var(--patagonian-navy));
+
+
+
     display: flex;
+
+
+
     align-items: center;
+
+
+
     justify-content: center;
+
+
+
     color: var(--alpine-white);
+
+
+
     font-size: 3rem;
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-info {
+
+
+
     padding: 1.5rem;
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-title {
+
+
+
     font-size: 1.3rem;
+
+
+
     font-weight: 700;
+
+
+
     margin-bottom: 0.5rem;
+
+
+
     color: var(--patagonian-navy);
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-description {
+
+
+
     color: var(--mountain-charcoal);
+
+
+
     margin-bottom: 1rem;
+
+
+
     font-size: 0.95rem;
+
+
+
     display: -webkit-box;
+
+
+
     -webkit-line-clamp: 3;
+
+
+
     -webkit-box-orient: vertical;
+
+
+
     overflow: hidden;
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-meta {
+
+
+
     display: flex;
+
+
+
     justify-content: space-between;
+
+
+
     align-items: center;
+
+
+
 }
+
+
+
+
+
+
 
 .difficulty {
+
+
+
     padding: 4px 12px;
+
+
+
     border-radius: 20px;
+
+
+
     font-size: 0.8rem;
+
+
+
     font-weight: 600;
+
+
+
     text-transform: uppercase;
+
+
+
 }
+
+
+
+
+
+
 
 .difficulty.beginner {
+
+
+
     background-color: var(--success-green);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 .difficulty.intermediate {
+
+
+
     background-color: var(--warning-orange);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 .difficulty.advanced {
+
+
+
     background-color: var(--danger-red);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 .trail-preview-duration {
+
+
+
     color: var(--glacier-blue);
+
+
+
     font-weight: 600;
+
+
+
     font-size: 0.9rem;
+
+
+
 }
 
+
+
+
+
+
+
 .preview-action {
+
+
+
     text-align: center;
+
+
+
 }
+
+
+
+
+
+
 
 /* Stats Section */
 
+
+
 .stats-section {
+
+
+
     padding: 4rem 0;
+
+
+
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 .stats-grid {
+
+
+
     display: grid;
+
+
+
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+
+
     gap: 2rem;
+
+
+
     max-width: 800px;
+
+
+
     margin: 0 auto;
+
+
+
 }
+
+
+
+
+
+
 
 .stat-item {
+
+
+
     text-align: center;
+
+
+
     padding: 1rem;
+
+
+
 }
+
+
+
+
+
+
 
 .stat-number {
+
+
+
     font-size: 3rem;
+
+
+
     font-weight: 700;
+
+
+
     color: var(--alpine-white);
+
+
+
     margin-bottom: 0.5rem;
-    font-family: Montserrat, sans-serif;
+
+
+
+    font-family: 'Montserrat', sans-serif;
+
+
+
 }
 
+
+
+
+
+
+
 .stat-label {
+
+
+
     font-size: 1.1rem;
-    color: rgb(255 255 255 / 90%);
+
+
+
+    color: rgba(255, 255, 255, 0.9);
+
+
+
     text-transform: uppercase;
+
+
+
     letter-spacing: 1px;
+
+
+
 }
+
+
+
+
+
+
 
 /* Newsletter Section */
 
+
+
 .newsletter-section {
+
+
+
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
+
+
+
     color: var(--alpine-white);
+
+
+
     padding: 4rem 0;
+
+
+
 }
+
+
+
+
+
+
 
 .newsletter-content {
+
+
+
     max-width: 600px;
+
+
+
     margin: 0 auto;
+
+
+
     text-align: center;
+
+
+
 }
+
+
+
+
+
+
 
 .newsletter-content h3 {
+
+
+
     color: var(--alpine-white);
+
+
+
     margin-bottom: 1rem;
+
+
+
     font-size: 2rem;
+
+
+
 }
+
+
+
+
+
+
 
 .newsletter-content p {
+
+
+
     margin-bottom: 2rem;
+
+
+
     font-size: 1.1rem;
+
+
+
     opacity: 0.9;
+
+
+
 }
+
+
+
+
+
+
 
 .newsletter-form {
+
+
+
     background-color: var(--alpine-white);
+
+
+
     padding: 2rem;
+
+
+
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
+
+
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+
+
 }
+
+
+
+
+
+
 
 .form-group {
+
+
+
     margin-bottom: 1.5rem;
+
+
+
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
+
+
+
 }
+
+
+
+
+
+
 
 .form-group label {
+
+
+
     display: block;
+
+
+
     margin-bottom: 0.5rem;
+
+
+
     font-weight: 600;
+
+
+
     color: var(--mountain-charcoal);
+
+
+
 }
 
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid var(--medium-gray);
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
+
+
+
+
+
+
+.form-group input,
+
+
 
 .form-group select {
+
+
+
     width: 100%;
+
+
+
     padding: 12px;
+
+
+
     border: 2px solid var(--medium-gray);
+
+
+
     border-radius: 6px;
+
+
+
     font-size: 1rem;
+
+
+
     transition: border-color 0.3s ease;
+
+
+
 }
 
-.form-group input:focus {
-    outline: none;
-    border-color: var(--glacier-blue);
-}
+
+
+
+
+
+
+.form-group input:focus,
+
+
 
 .form-group select:focus {
+
+
+
     outline: none;
+
+
+
     border-color: var(--glacier-blue);
+
+
+
 }
 
-.checkbox-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
+
+
+
+
+
+
+.checkbox-group,
+
+
 
 .radio-group {
+
+
+
     display: flex;
+
+
+
     flex-wrap: wrap;
+
+
+
     gap: 1rem;
+
+
+
     margin-top: 0.5rem;
+
+
+
 }
 
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0;
-    font-weight: 400;
-    cursor: pointer;
-}
+
+
+
+
+
+
+.checkbox-group label,
+
+
 
 .radio-group label {
+
+
+
     display: flex;
+
+
+
     align-items: center;
+
+
+
     margin-bottom: 0;
+
+
+
     font-weight: 400;
+
+
+
     cursor: pointer;
+
+
+
 }
 
-.checkbox-group input {
-    width: auto;
-    margin-right: 0.5rem;
-}
+
+
+
+
+
+
+.checkbox-group input,
+
+
 
 .radio-group input {
+
+
+
     width: auto;
+
+
+
     margin-right: 0.5rem;
+
+
+
 }
+
+
+
+
+
+
 
 /* Main Content */
 
+
+
 .main-content {
+
+
+
     padding: 3rem 0;
+
+
+
     background-color: var(--alpine-white);
+
+
+
 }
 
+
+
+
+
+
+
 .content-grid {
+
+
+
     display: grid;
+
+
+
     grid-template-columns: 2fr 1fr;
+
+
+
     gap: 3rem;
+
+
+
 }
+
+
+
+
+
+
 
 /* Updates Section */
 
+
+
 .updates-section {
+
+
+
     background-color: var(--light-gray);
+
+
+
     padding: 2rem;
+
+
+
     border-radius: 12px;
+
+
+
 }
+
+
+
+
+
+
 
 .updates-list {
+
+
+
     display: flex;
+
+
+
     flex-direction: column;
+
+
+
     gap: 1rem;
+
+
+
 }
+
+
+
+
+
+
 
 .update-item {
+
+
+
     background-color: var(--alpine-white);
+
+
+
     padding: 1.5rem;
+
+
+
     border-radius: 8px;
+
+
+
     border-left: 4px solid var(--glacier-blue);
-    box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
+
+
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+
+
 }
+
+
+
+
+
+
 
 .update-date {
+
+
+
     font-size: 0.9rem;
+
+
+
     color: var(--glacier-blue);
+
+
+
     font-weight: 600;
+
+
+
     margin-bottom: 0.5rem;
+
+
+
 }
+
+
+
+
+
+
 
 .update-title {
+
+
+
     font-size: 1.1rem;
+
+
+
     font-weight: 600;
+
+
+
     color: var(--patagonian-navy);
+
+
+
     margin-bottom: 0.5rem;
+
+
+
 }
 
+
+
+
+
+
+
 .update-content {
+
+
+
     color: var(--mountain-charcoal);
+
+
+
     line-height: 1.6;
+
+
+
 }
+
+
+
+
+
+
 
 /* Sidebar Widgets */
 
+
+
 .sidebar {
+
+
+
     display: flex;
+
+
+
     flex-direction: column;
+
+
+
     gap: 2rem;
+
+
+
 }
+
+
+
+
+
+
 
 .widget {
+
+
+
     background-color: var(--alpine-white);
+
+
+
     border-radius: 12px;
+
+
+
     padding: 1.5rem;
-    box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+
+
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+
+
 }
 
+
+
+
+
+
+
 .widget h4 {
+
+
+
     color: var(--patagonian-navy);
+
+
+
     margin-bottom: 1rem;
+
+
+
     font-size: 1.2rem;
+
+
+
 }
+
+
+
+
+
+
 
 /* Weather Widget */
 
+
+
 .weather-info {
+
+
+
     text-align: center;
+
+
+
 }
+
+
+
+
+
+
 
 .weather-location {
+
+
+
     font-weight: 600;
+
+
+
     color: var(--glacier-blue);
+
+
+
     margin-bottom: 0.5rem;
+
+
+
 }
+
+
+
+
+
+
 
 .weather-temp {
-    font-size: 2.5rem;
+
+
+
+    font-size: 2rem;
+
+
+
     font-weight: 700;
+
+
+
     color: var(--alpine-white);
+
+
+
     margin-bottom: 0.5rem;
-    font-family: Montserrat, sans-serif;
+
+
+
 }
+
+
+
+
+
+
 
 .weather-condition {
+
+
+
     color: var(--mountain-charcoal);
+
+
+
     margin-bottom: 0.5rem;
+
+
+
 }
 
+
+
+
+
+
+
 .weather-wind {
+
+
+
     font-size: 0.9rem;
+
+
+
     color: var(--glacier-blue);
+
+
+
 }
+
+
+
+
+
+
 
 /* Conditions Widget */
 
+
+
 .condition-list {
+
+
+
     display: flex;
+
+
+
     flex-direction: column;
+
+
+
     gap: 0.8rem;
+
+
+
 }
+
+
+
+
+
+
 
 .condition-item {
+
+
+
     display: flex;
+
+
+
     justify-content: space-between;
+
+
+
     align-items: center;
+
+
+
     padding: 0.5rem 0;
+
+
+
     border-bottom: 1px solid var(--medium-gray);
+
+
+
 }
+
+
+
+
+
+
 
 .condition-item:last-child {
+
+
+
     border-bottom: none;
+
+
+
 }
+
+
+
+
+
+
 
 .condition-trail {
+
+
+
     font-weight: 600;
+
+
+
     color: var(--mountain-charcoal);
+
+
+
 }
+
+
+
+
+
+
 
 .condition-status {
+
+
+
     padding: 2px 8px;
+
+
+
     border-radius: 12px;
+
+
+
     font-size: 0.8rem;
+
+
+
     font-weight: 600;
+
+
+
     text-transform: uppercase;
+
+
+
 }
+
+
+
+
+
+
 
 .condition-status.good {
+
+
+
     background-color: var(--success-green);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 .condition-status.caution {
+
+
+
     background-color: var(--warning-orange);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
 
+
+
+
+
+
+
 .condition-status.excellent {
+
+
+
     background-color: var(--accent-teal);
+
+
+
     color: var(--alpine-white);
+
+
+
 }
+
+
+
+
+
+
 
 /* Planning Widget */
 
+
+
 .tool-list {
+
+
+
     display: flex;
+
+
+
     flex-direction: column;
+
+
+
     gap: 0.8rem;
+
+
+
 }
+
+
+
+
+
+
 
 .tool-link {
+
+
+
     display: flex;
+
+
+
     align-items: center;
+
+
+
     padding: 0.8rem;
+
+
+
     background-color: var(--light-gray);
+
+
+
     color: var(--mountain-charcoal);
+
+
+
     text-decoration: none;
+
+
+
     border-radius: 6px;
+
+
+
     transition: all 0.3s ease;
+
+
+
     font-weight: 600;
+
+
+
 }
 
+
+
+
+
+
+
 .tool-link:hover {
+
+
+
     background-color: var(--glacier-blue);
+
+
+
     color: var(--alpine-white);
+
+
+
     transform: translateX(5px);
+
+
+
 }
+
+
+
+
+
+
 
 /* Modal Styles */
 
+
+
 .modal {
+
+
+
     display: none;
+
+
+
     position: fixed;
+
+
+
     z-index: 2000;
+
+
+
     left: 0;
+
+
+
     top: 0;
+
+
+
     width: 100%;
+
+
+
     height: 100%;
-    background-color: rgb(0 0 0 / 50%);
+
+
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+
     backdrop-filter: blur(5px);
+
+
+
 }
+
+
+
+
+
+
 
 .modal.active {
+
+
+
     display: flex;
+
+
+
     align-items: center;
+
+
+
     justify-content: center;
+
+
+
 }
+
+
+
+
+
+
 
 .modal-content {
+
+
+
     background-color: var(--alpine-white);
+
+
+
     border-radius: 12px;
+
+
+
     max-width: 600px;
+
+
+
     width: 90%;
+
+
+
     max-height: 80vh;
+
+
+
     overflow-y: auto;
-    box-shadow: 0 20px 60px rgb(0 0 0 / 30%);
+
+
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+
+
     animation: modalSlideIn 0.3s ease;
+
+
+
 }
+
+
+
+
+
+
 
 @keyframes modalSlideIn {
+
+
+
     from {
+
+
+
         opacity: 0;
-    transform: translateY(-50px) scale(0.95);
+
+
+
+        transform: translateY(-50px) scale(0.95);
+
+
+
+    }
+
+
+
+    to {
+
+
+
+        opacity: 1;
+
+
+
+        transform: translateY(0) scale(1);
+
+
+
+    }
+
+
+
 }
 
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-}
+
+
 
 
 
 .modal-header {
+
+
+
     display: flex;
+
+
+
     justify-content: space-between;
+
+
+
     align-items: center;
+
+
+
     padding: 1.5rem;
+
+
+
     border-bottom: 1px solid var(--medium-gray);
+
+
+
 }
+
+
+
+
+
+
 
 .modal-header h3 {
+
+
+
     margin: 0;
+
+
+
     color: var(--patagonian-navy);
+
+
+
 }
+
+
+
+
+
+
 
 .modal-close {
+
+
+
     background: none;
+
+
+
     border: none;
+
+
+
     font-size: 2rem;
+
+
+
     color: var(--mountain-charcoal);
+
+
+
     cursor: pointer;
+
+
+
     padding: 0;
+
+
+
     width: 30px;
+
+
+
     height: 30px;
+
+
+
     display: flex;
+
+
+
     align-items: center;
+
+
+
     justify-content: center;
+
+
+
     border-radius: 50%;
+
+
+
     transition: background-color 0.3s ease;
+
+
+
 }
+
+
+
+
+
+
 
 .modal-close:hover {
+
+
+
     background-color: var(--medium-gray);
+
+
+
 }
+
+
+
+
+
+
 
 .modal-body {
+
+
+
     padding: 1.5rem;
+
+
+
 }
 
+
+
+
+
+
+
 .modal-footer {
+
+
+
     display: flex;
+
+
+
     justify-content: flex-end;
+
+
+
     gap: 1rem;
+
+
+
     padding: 1.5rem;
+
+
+
     border-top: 1px solid var(--medium-gray);
+
+
+
 }
+
+
+
+
+
+
 
 /* Image Lazy Loading */
 
+
+
 .lazy-load {
+
+
+
     opacity: 0;
+
+
+
     transition: opacity 0.3s ease;
+
+
+
 }
 
+
+
+
+
+
+
 .lazy-load.loaded {
+
+
+
     opacity: 1;
+
+
+
 }
+
+
+
+
+
+
 
 /* Footer */
 
+
+
 .footer {
+
+
+
     background-color: var(--mountain-charcoal);
+
+
+
     color: var(--alpine-white);
+
+
+
     padding: 3rem 0 1rem;
+
+
+
 }
+
+
+
+
+
+
 
 .footer-content {
+
+
+
     display: grid;
+
+
+
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+
     gap: 2rem;
+
+
+
     margin-bottom: 2rem;
+
+
+
 }
+
+
+
+
+
+
 
 .footer-section h4 {
+
+
+
     color: var(--alpine-white);
+
+
+
     margin-bottom: 1rem;
+
+
+
 }
+
+
+
+
+
+
 
 .footer-links {
+
+
+
     list-style: none;
+
+
+
 }
+
+
+
+
+
+
 
 .footer-links li {
+
+
+
     margin-bottom: 0.5rem;
+
+
+
 }
+
+
+
+
+
+
 
 .footer-links a {
+
+
+
     color: #e2e8f0;
+
+
+
     text-decoration: none;
+
+
+
     transition: color 0.3s ease;
+
+
+
 }
+
+
+
+
+
+
 
 .footer-links a:hover {
+
+
+
     color: var(--alpine-white);
+
+
+
 }
 
+
+
+
+
+
+
 .footer-bottom {
+
+
+
     text-align: center;
+
+
+
     padding-top: 2rem;
+
+
+
     border-top: 1px solid #4a5568;
+
+
+
     color: #e2e8f0;
+
+
+
 }
+
+
+
+
+
+
 
 /* Scroll to Top Button */
 
+
+
 .scroll-to-top {
+
+
+
     position: fixed;
+
+
+
     bottom: 20px;
+
+
+
     right: 20px;
+
+
+
     background-color: var(--patagonian-navy);
+
+
+
     color: var(--alpine-white);
+
+
+
     border: none;
+
+
+
     border-radius: 50%;
+
+
+
     width: 50px;
+
+
+
     height: 50px;
+
+
+
     font-size: 20px;
+
+
+
     cursor: pointer;
+
+
+
     display: none;
+
+
+
     z-index: 1000;
+
+
+
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
+
+
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+
+
 }
+
+
+
+
+
+
 
 .scroll-to-top:hover {
+
+
+
     background-color: var(--glacier-blue);
+
+
+
     transform: scale(1.1);
+
+
+
 }
 
+
+
+
+
+
+
 .scroll-to-top.visible {
+
+
+
     display: block;
+
+
+
 }
+
+
+
+
+
+
 
 /* Animation Classes */
 
+
+
 .fade-in {
+
+
+
     opacity: 0;
+
+
+
     transform: translateY(20px);
+
+
+
     transition: opacity 0.6s ease, transform 0.6s ease;
+
+
+
 }
+
+
+
+
+
+
 
 .fade-in.visible {
+
+
+
     opacity: 1;
+
+
+
     transform: translateY(0);
+
+
+
 }
 
+
+
+
+
+
+
 .loading {
+
+
+
     opacity: 0.6;
+
+
+
     pointer-events: none;
+
+
+
 }
+
+
+
+
+
+
 
 /* Responsive Design */
 
 
 
+@media (max-width: 768px) {
+
+
+
+    .container {
+
+
+
+        padding: 0 15px;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .nav-menu {
+
+
+
+        position: fixed;
+
+
+
+        top: 80px;
+
+
+
+        left: -100%;
+
+
+
+        width: 100%;
+
+
+
+        height: calc(100vh - 80px);
+
+
+
+        background-color: var(--patagonian-navy);
+
+
+
+        flex-direction: column;
+
+
+
+        justify-content: flex-start;
+
+
+
+        padding-top: 2rem;
+
+
+
+        transition: left 0.3s ease;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .nav-menu.active {
+
+
+
+        left: 0;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hamburger {
+
+
+
+        display: flex;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hamburger.active span:nth-child(1) {
+
+
+
+        transform: rotate(45deg) translate(5px, 5px);
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hamburger.active span:nth-child(2) {
+
+
+
+        opacity: 0;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hamburger.active span:nth-child(3) {
+
+
+
+        transform: rotate(-45deg) translate(7px, -6px);
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hero-content {
+
+
+
+        flex-direction: column;
+
+
+
+        text-align: center;
+
+
+
+        gap: 2rem;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hero-title {
+
+
+
+        font-size: 2.2rem;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hero-buttons {
+
+
+
+        justify-content: center;
+
+
+
+        flex-wrap: wrap;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .content-grid {
+
+
+
+        grid-template-columns: 1fr;
+
+
+
+        gap: 2rem;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .trail-preview-grid {
+
+
+
+        grid-template-columns: 1fr;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .stats-grid {
+
+
+
+        grid-template-columns: repeat(2, 1fr);
+
+
+
+        gap: 1rem;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .footer-content {
+
+
+
+        grid-template-columns: 1fr;
+
+
+
+        text-align: center;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+
+
+    .hero {
+
+
+
+        padding: 2rem 0;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hero-title {
+
+
+
+        font-size: 1.8rem;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hero-subtitle {
+
+
+
+        font-size: 1rem;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .hero-buttons {
+
+
+
+        flex-direction: column;
+
+
+
+        align-items: center;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .btn {
+
+
+
+        width: 100%;
+
+
+
+        max-width: 300px;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .section-title {
+
+
+
+        font-size: 1.5rem;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .stats-grid {
+
+
+
+        grid-template-columns: 1fr;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .stat-number {
+
+
+
+        font-size: 2rem;
+
+
+
+    }
+
+
+
+}
+
 
 
 /* ==== TRAIL FILTERS SECTION IMPROVEMENTS ==== */
+
 .trail-filters-section {
+
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+
     padding: 2rem 0;
+
     border-bottom: 1px solid var(--medium-gray);
+
 }
+
+
 
 .filters-container {
+
     background-color: var(--alpine-white);
+
     border-radius: 16px;
+
     padding: 2rem;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
     border: 1px solid var(--medium-gray);
+
 }
+
+
 
 .search-section {
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .search-bar {
+
     display: flex;
+
     max-width: 600px;
+
     margin: 0 auto;
-    box-shadow: 0 4px 20px rgb(0 0 0 / 8%);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
     border-radius: 12px;
+
     overflow: hidden;
+
     border: 2px solid var(--medium-gray);
+
     transition: border-color 0.3s ease;
+
 }
+
+
 
 .search-bar:focus-within {
+
     border-color: var(--glacier-blue);
-    box-shadow: 0 4px 20px rgb(44 82 130 / 15%);
+
+    box-shadow: 0 4px 20px rgba(44, 82, 130, 0.15);
+
 }
+
+
 
 .search-input {
+
     flex: 1;
+
     padding: 16px 20px;
+
     border: none;
+
     font-size: 1rem;
+
     outline: none;
+
     background-color: var(--alpine-white);
+
 }
+
+
 
 .search-input::placeholder {
+
     color: #a0aec0;
+
 }
+
+
 
 .search-btn {
+
     background-color: var(--glacier-blue);
+
     color: var(--alpine-white);
+
     border: none;
+
     padding: 16px 20px;
+
     cursor: pointer;
+
     font-size: 1.2rem;
+
     transition: background-color 0.3s ease;
+
     min-width: 60px;
+
 }
+
+
 
 .search-btn:hover {
+
     background-color: var(--patagonian-navy);
+
 }
+
+
 
 .filters-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
     gap: 1.5rem;
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .filter-group {
+
     display: flex;
+
     flex-direction: column;
+
 }
+
+
 
 .filter-group label {
+
     font-weight: 600;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.5rem;
+
     font-size: 0.9rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
 }
+
+
 
 .filter-select {
+
     padding: 12px 16px;
+
     border: 2px solid var(--medium-gray);
+
     border-radius: 8px;
+
     font-size: 1rem;
+
     background-color: var(--alpine-white);
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .filter-select:focus {
+
     outline: none;
+
     border-color: var(--glacier-blue);
-    box-shadow: 0 0 0 3px rgb(44 82 130 / 10%);
+
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+
 }
+
+
 
 .filter-select:hover {
+
     border-color: var(--glacier-blue);
+
 }
+
+
 
 .filter-actions {
+
     display: flex;
+
     justify-content: center;
+
     gap: 1rem;
+
     flex-wrap: wrap;
+
 }
+
+
 
 .filter-actions .btn {
+
     min-width: 150px;
+
 }
+
+
 
 /* ==== PAGE HEADER STYLES ==== */
+
 .page-header {
+
     background: linear-gradient(135deg, var(--patagonian-navy) 0%, var(--glacier-blue) 100%);
+
     color: var(--alpine-white);
+
     padding: 3rem 0;
+
     text-align: center;
+
 }
+
+
 
 .page-title {
+
     color: var(--alpine-white);
+
     font-size: 2.5rem;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .page-subtitle {
+
     font-size: 1.2rem;
+
     opacity: 0.9;
+
     max-width: 600px;
+
     margin: 0 auto;
+
 }
+
+
 
 /* ==== TRAILS MAIN SECTION ==== */
+
 .trails-main {
+
     padding: 3rem 0;
+
     background-color: var(--alpine-white);
+
 }
+
+
 
 .trails-header {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 2rem;
+
     padding-bottom: 1rem;
+
     border-bottom: 2px solid var(--medium-gray);
+
 }
+
+
 
 .results-info {
+
     font-size: 1.1rem;
+
     color: var(--glacier-blue);
+
     font-weight: 600;
+
 }
+
+
 
 .view-controls {
+
     display: flex;
+
     gap: 0.5rem;
+
     background-color: var(--light-gray);
+
     padding: 4px;
+
     border-radius: 8px;
+
 }
+
+
 
 .view-btn {
+
     background-color: transparent;
+
     border: none;
+
     padding: 12px 16px;
+
     border-radius: 6px;
+
     cursor: pointer;
+
     font-size: 1.2rem;
+
     color: var(--mountain-charcoal);
+
     transition: all 0.3s ease;
+
     min-width: 50px;
+
 }
+
+
 
 .view-btn:hover {
+
     background-color: var(--medium-gray);
+
 }
+
+
 
 .view-btn.active {
+
     background-color: var(--glacier-blue);
+
     color: var(--alpine-white);
+
     transform: scale(1.05);
+
 }
+
+
 
 /* ==== TRAILS CONTAINER - GRID AND LIST LAYOUTS ==== */
+
 .trails-container {
+
     min-height: 400px;
+
 }
+
+
 
 /* Grid Layout */
+
 .trails-container.grid-layout {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
     gap: 2rem;
+
 }
+
+
 
 /* List Layout */
+
 .trails-container.list-layout {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
+
 }
+
+
 
 /* ==== TRAIL CARD STYLES ==== */
+
 .trail-card {
+
     background-color: var(--alpine-white);
+
     border-radius: 12px;
+
     overflow: hidden;
-    box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
     transition: all 0.3s ease;
+
     border: 1px solid var(--medium-gray);
+
     position: relative;
+
 }
+
+
 
 .trail-card:hover {
+
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgb(0 0 0 / 15%);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
 }
+
+
 
 /* Grid View Card */
+
 .trail-card.grid-view {
+
     display: flex;
+
     flex-direction: column;
+
     height: 100%;
+
 }
+
+
 
 .trail-card.grid-view .trail-image-container {
+
     position: relative;
+
     height: 220px;
+
     overflow: hidden;
+
 }
+
+
 
 .trail-card.grid-view .trail-image {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     object-position: center;
+
 }
+
+
 
 .trail-card.grid-view .trail-info {
+
     padding: 1.5rem;
+
     flex: 1;
+
     display: flex;
+
     flex-direction: column;
+
 }
+
+
 
 .trail-card.grid-view .trail-name {
+
     font-size: 1.3rem;
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.8rem;
+
     line-height: 1.3;
+
 }
+
+
 
 .trail-card.grid-view .trail-description {
+
     color: var(--mountain-charcoal);
+
     font-size: 0.95rem;
+
     line-height: 1.5;
+
     margin-bottom: 1rem;
+
     flex: 1;
+
 }
+
+
 
 .trail-card.grid-view .view-details {
+
     margin-top: auto;
+
     width: 100%;
+
 }
+
+
 
 /* List View Card */
+
 .trail-card.list-view {
+
     display: flex;
+
     align-items: stretch;
+
     height: 200px;
+
 }
+
+
 
 .trail-card.list-view .trail-image {
+
     width: 280px;
+
     height: 100%;
+
     object-fit: cover;
+
     object-position: center;
+
     flex-shrink: 0;
+
 }
+
+
 
 .trail-card.list-view .trail-info {
+
     padding: 1.5rem;
+
     flex: 1;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
 }
+
+
 
 .trail-card.list-view .trail-header {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: flex-start;
+
     margin-bottom: 0.8rem;
+
 }
+
+
 
 .trail-card.list-view .trail-name {
+
     font-size: 1.4rem;
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin: 0;
+
     flex: 1;
+
     margin-right: 1rem;
+
 }
+
+
 
 .trail-card.list-view .trail-description {
+
     color: var(--mountain-charcoal);
+
     font-size: 0.95rem;
+
     line-height: 1.5;
+
     margin-bottom: 1rem;
+
     display: -webkit-box;
+
     -webkit-line-clamp: 2;
+
     -webkit-box-orient: vertical;
+
     overflow: hidden;
+
 }
+
+
 
 .trail-card.list-view .trail-highlights {
+
     margin-bottom: 1rem;
+
 }
 
+
+
 .trail-card.list-view .view-details {
+
     align-self: flex-start;
+
     min-width: 120px;
+
 }
+
+
 
 /* ==== TRAIL CARD COMMON ELEMENTS ==== */
 
 .trail-image-container {
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 .trail-image {
+
     transition: transform 0.3s ease;
+
 }
+
+
 
 .trail-card:hover .trail-image {
+
     transform: scale(1.05);
+
 }
+
+
 
 .favorite-btn {
+
     position: absolute;
+
     top: 12px;
+
     right: 12px;
-    background-color: rgb(255 255 255 / 90%);
+
+    background-color: rgba(255, 255, 255, 0.9);
+
     border: none;
+
     border-radius: 50%;
+
     width: 40px;
+
     height: 40px;
+
     font-size: 1.2rem;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     backdrop-filter: blur(10px);
+
     z-index: 10;
+
 }
+
+
 
 .favorite-btn:hover {
+
     background-color: var(--alpine-white);
+
     transform: scale(1.1);
+
 }
+
+
 
 .favorite-btn.favorite {
-    background-color: rgb(229 62 62 / 90%);
+
+    background-color: rgba(229, 62, 62, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .trail-status {
+
     position: absolute;
+
     top: 12px;
+
     left: 12px;
+
     padding: 4px 12px;
+
     border-radius: 16px;
+
     font-size: 0.8rem;
+
     font-weight: 600;
+
     text-transform: uppercase;
+
     backdrop-filter: blur(10px);
+
 }
+
+
 
 .trail-status.excellent {
-    background-color: rgb(56 161 105 / 90%);
+
+    background-color: rgba(56, 161, 105, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .trail-status.good {
-    background-color: rgb(49 151 149 / 90%);
+
+    background-color: rgba(49, 151, 149, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .trail-status.caution {
-    background-color: rgb(221 107 32 / 90%);
+
+    background-color: rgba(221, 107, 32, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .trail-meta {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 0.8rem;
+
     margin-bottom: 1rem;
+
     align-items: center;
+
 }
+
+
 
 .trail-meta span {
+
     font-size: 0.9rem;
+
 }
+
+
 
 .trail-location {
+
     color: var(--glacier-blue);
+
     font-weight: 600;
+
     font-size: 0.95rem;
+
     margin-bottom: 0.8rem;
+
 }
 
-.duration {
-    color: var(--mountain-charcoal);
-    font-weight: 600;
-}
+
+
+.duration,
 
 .distance {
+
     color: var(--mountain-charcoal);
+
     font-weight: 600;
+
 }
+
+
 
 .trail-highlights {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 0.5rem;
+
 }
+
+
 
 .highlight-tag {
+
     background-color: var(--light-gray);
+
     color: var(--glacier-blue);
+
     padding: 2px 8px;
+
     border-radius: 12px;
+
     font-size: 0.8rem;
+
     font-weight: 600;
+
 }
+
+
 
 /* ==== NO RESULTS STATE ==== */
+
 .no-results {
+
     text-align: center;
+
     padding: 4rem 2rem;
+
     color: var(--mountain-charcoal);
+
 }
+
+
 
 .no-results h3 {
+
     color: var(--patagonian-navy);
+
     font-size: 1.8rem;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .no-results p {
+
     font-size: 1.1rem;
+
     color: var(--glacier-blue);
+
 }
+
+
 
 /* ==== PAGINATION STYLES ==== */
+
 .pagination {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 0.5rem;
+
     margin-top: 3rem;
+
     flex-wrap: wrap;
+
 }
+
+
 
 .page-btn {
+
     background-color: var(--alpine-white);
+
     border: 2px solid var(--medium-gray);
+
     color: var(--mountain-charcoal);
+
     padding: 10px 16px;
+
     border-radius: 8px;
+
     cursor: pointer;
+
     font-weight: 600;
+
     transition: all 0.3s ease;
+
     min-width: 44px;
+
 }
+
+
 
 .page-btn:hover {
+
     background-color: var(--light-gray);
+
     border-color: var(--glacier-blue);
+
 }
+
+
 
 .page-btn.active {
+
     background-color: var(--glacier-blue);
+
     color: var(--alpine-white);
+
     border-color: var(--glacier-blue);
+
 }
+
+
 
 /* ==== MAP SECTION ==== */
+
 .map-section {
+
     background-color: var(--light-gray);
+
     padding: 3rem 0;
+
 }
+
+
 
 .map-container {
+
     background-color: var(--alpine-white);
+
     border-radius: 12px;
+
     overflow: hidden;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
 }
+
+
 
 .interactive-map {
+
     height: 400px;
+
     position: relative;
+
 }
+
+
 
 .map-placeholder {
+
     height: 100%;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+
     color: var(--mountain-charcoal);
+
     text-align: center;
+
     padding: 2rem;
+
 }
+
+
 
 .map-placeholder h4 {
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.5rem;
+
 }
+
+
 
 .map-legend {
+
     display: flex;
+
     gap: 1.5rem;
+
     margin-top: 1.5rem;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
 }
+
+
 
 .legend-item {
+
     display: flex;
+
     align-items: center;
+
     gap: 0.5rem;
+
 }
+
+
 
 .legend-marker {
+
     width: 12px;
+
     height: 12px;
+
     border-radius: 50%;
+
 }
+
+
 
 .legend-marker.beginner {
+
     background-color: var(--success-green);
+
 }
+
+
 
 .legend-marker.intermediate {
+
     background-color: var(--warning-orange);
+
 }
+
+
 
 .legend-marker.advanced {
+
     background-color: var(--danger-red);
+
 }
+
+
 
 /* ==== MODAL TRAIL DETAILS ==== */
+
 .modal-trail-details {
+
     max-width: 100%;
+
 }
+
+
 
 .modal-trail-image {
+
     width: 100%;
+
     height: 200px;
+
     object-fit: cover;
+
     object-position: center;
+
     border-radius: 8px;
+
     margin-bottom: 1.5rem;
+
 }
+
+
 
 .trail-details-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
     gap: 1rem;
+
     margin-bottom: 1.5rem;
+
 }
+
+
 
 .detail-item {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.3rem;
+
 }
+
+
 
 .detail-item strong {
+
     color: var(--patagonian-navy);
+
     font-size: 0.9rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
 }
+
+
 
 .detail-item span {
+
     font-weight: 600;
+
     color: var(--mountain-charcoal);
+
 }
+
+
 
 .trail-description-full {
+
     margin-bottom: 1.5rem;
+
 }
 
-.trail-description-full h4 {
-    color: var(--patagonian-navy);
-    border-bottom: 2px solid var(--glacier-blue);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
+
+
+.trail-description-full h4,
 
 .trail-highlights-full h4 {
+
     color: var(--patagonian-navy);
+
     border-bottom: 2px solid var(--glacier-blue);
+
     padding-bottom: 0.5rem;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .trail-highlights-full ul {
+
     list-style: none;
+
     padding-left: 0;
+
 }
+
+
 
 .trail-highlights-full li {
+
     padding: 0.5rem 0;
+
     padding-left: 1.5rem;
+
     position: relative;
+
     color: var(--mountain-charcoal);
+
 }
+
+
 
 .trail-highlights-full li::before {
+
     content: "▲";
+
     position: absolute;
+
     left: 0;
+
     color: var(--glacier-blue);
+
     font-weight: bold;
+
 }
 
+
+
 /* ==== RESPONSIVE IMPROVEMENTS ==== */
+
+@media (max-width: 768px) {
+
+    .filters-container {
+
+        padding: 1.5rem;
+
+    }
+
+    
+
+    .filters-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+    }
+
+    
+
+    .filter-actions {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    
+
+    .filter-actions .btn {
+
+        width: 100%;
+
+        max-width: 300px;
+
+    }
+
+    
+
+    .trails-header {
+
+        flex-direction: column;
+
+        gap: 1rem;
+
+        align-items: stretch;
+
+    }
+
+    
+
+    .results-info {
+
+        text-align: center;
+
+    }
+
+    
+
+    .view-controls {
+
+        align-self: center;
+
+    }
+
+    
+
+    .trails-container.grid-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
+
+    .trail-card.list-view {
+
+        flex-direction: column;
+
+        height: auto;
+
+    }
+
+    
+
+    .trail-card.list-view .trail-image {
+
+        width: 100%;
+
+        height: 200px;
+
+    }
+
+    
+
+    .map-legend {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 1rem;
+
+    }
+
+    
+
+    .trail-details-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .page-title {
+
+        font-size: 2rem;
+
+    }
+
+    
+
+    .search-bar {
+
+        flex-direction: column;
+
+        border-radius: 12px;
+
+    }
+
+    
+
+    .search-input {
+
+        border-bottom: 1px solid var(--medium-gray);
+
+    }
+
+    
+
+    .search-btn {
+
+        border-radius: 0 0 10px 10px;
+
+    }
+
+    
+
+    .pagination {
+
+        gap: 0.3rem;
+
+    }
+
+    
+
+    .page-btn {
+
+        padding: 8px 12px;
+
+        font-size: 0.9rem;
+
+        min-width: 40px;
+
+    }
+
+}
+
 
 
 /* ==== PLANNING PAGE SPECIFIC STYLES ==== */
 
+
+
 /* Planning Main Layout */
+
 .planning-main {
+
     padding: 3rem 0;
+
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 20%, #f8fafc 100%);
+
     min-height: 100vh;
+
 }
+
+
 
 .planning-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
     gap: 2.5rem;
+
     max-width: 1400px;
+
     margin: 0 auto;
+
 }
+
+
 
 /* ==== PLANNING CARD IMPROVEMENTS ==== */
+
 .planning-card {
+
     background: var(--alpine-white);
+
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgb(26 54 93 / 10%);
-    border: 1px solid rgb(44 82 130 / 10%);
+
+    box-shadow: 0 10px 40px rgba(26, 54, 93, 0.1);
+
+    border: 1px solid rgba(44, 82, 130, 0.1);
+
     overflow: hidden;
+
     transition: all 0.4s ease;
+
     position: relative;
+
 }
+
+
 
 .planning-card::before {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     right: 0;
+
     height: 4px;
+
     background: linear-gradient(90deg, var(--glacier-blue), var(--accent-teal), var(--patagonian-navy));
+
     transform: scaleX(0);
+
     transform-origin: left;
+
     transition: transform 0.3s ease;
+
 }
+
+
 
 .planning-card:hover {
+
     transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgb(26 54 93 / 15%);
+
+    box-shadow: 0 20px 60px rgba(26, 54, 93, 0.15);
+
 }
+
+
 
 .planning-card:hover::before {
+
     transform: scaleX(1);
+
 }
+
+
 
 .card-header {
+
     padding: 2rem 2rem 1rem;
-    background: linear-gradient(135deg, rgb(248 250 252 / 80%), rgb(255 255 255 / 90%));
+
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(255, 255, 255, 0.9));
+
     border-bottom: 1px solid var(--medium-gray);
+
     position: relative;
+
 }
+
+
 
 .card-header h3 {
+
     font-size: 1.4rem;
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.5rem;
+
     display: flex;
+
     align-items: center;
+
     gap: 0.8rem;
+
 }
+
+
 
 .card-header p {
+
     color: var(--glacier-blue);
+
     font-size: 0.95rem;
+
     margin: 0;
+
     font-weight: 500;
+
 }
+
+
 
 .card-content {
+
     padding: 2rem;
+
 }
+
+
 
 /* ==== PACKING CHECKLIST STYLES ==== */
+
 .checklist-controls {
+
     display: flex;
+
     gap: 1rem;
+
     margin-bottom: 1.5rem;
+
     justify-content: flex-end;
+
 }
+
+
 
 .btn-sm {
+
     padding: 8px 16px;
+
     font-size: 0.9rem;
+
     border-radius: 8px;
+
 }
+
+
 
 .packing-checklist {
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .checklist-category {
+
     margin-bottom: 2rem;
+
     background: var(--light-gray);
+
     border-radius: 12px;
+
     padding: 1.5rem;
+
     border-left: 4px solid var(--glacier-blue);
+
 }
+
+
 
 .category-title {
+
     color: var(--patagonian-navy);
+
     font-size: 1.1rem;
+
     font-weight: 700;
+
     margin-bottom: 1rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
 }
+
+
 
 .checklist-items {
+
     display: grid;
+
     gap: 0.8rem;
+
 }
+
+
 
 .checklist-item {
+
     display: flex;
+
     align-items: center;
+
     gap: 0.8rem;
+
     padding: 0.8rem;
+
     background: var(--alpine-white);
+
     border-radius: 8px;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
     border: 1px solid transparent;
+
 }
+
+
 
 .checklist-item:hover {
-    background: rgb(44 82 130 / 5%);
+
+    background: rgba(44, 82, 130, 0.05);
+
     border-color: var(--glacier-blue);
+
     transform: translateX(4px);
+
 }
+
+
 
 .checklist-item input[type="checkbox"] {
+
     width: 18px;
+
     height: 18px;
+
     accent-color: var(--glacier-blue);
+
     cursor: pointer;
+
 }
+
+
 
 .checkmark {
-    display: none;
+
+    display: none; /* Hide custom checkmark for now, using native */
+
 }
+
+
 
 .item-text {
+
     font-size: 0.95rem;
+
     color: var(--mountain-charcoal);
+
     font-weight: 500;
+
     transition: color 0.3s ease;
+
 }
+
+
 
 .checklist-item input[type="checkbox"]:checked + .checkmark + .item-text {
+
     color: var(--glacier-blue);
+
     text-decoration: line-through;
+
     opacity: 0.8;
+
 }
+
+
 
 .checklist-progress {
+
     display: flex;
+
     align-items: center;
+
     gap: 1rem;
+
 }
+
+
 
 .progress-bar {
+
     flex: 1;
+
     height: 12px;
+
     background: var(--medium-gray);
+
     border-radius: 6px;
+
     overflow: hidden;
+
     position: relative;
+
 }
+
+
 
 .progress-fill {
+
     height: 100%;
+
     background: linear-gradient(90deg, var(--glacier-blue), var(--accent-teal));
+
     border-radius: 6px;
+
     transition: width 0.6s ease;
+
     position: relative;
+
 }
+
+
 
 .progress-fill::after {
+
     content: '';
+
     position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 30%), transparent);
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+
     animation: progressShine 2s infinite;
+
 }
+
+
 
 @keyframes progressShine {
-    0% { transform: translateX(-100%);
-}
 
-100% {
-    transform: scale(1.4);
-    opacity: 0;
-}
+    0% { transform: translateX(-100%); }
+
+    100% { transform: translateX(100%); }
 
 }
+
+
 
 .progress-text {
+
     font-weight: 700;
+
     color: var(--glacier-blue);
+
     font-size: 0.9rem;
+
     min-width: 90px;
+
 }
+
+
 
 /* ==== DURATION CALCULATOR STYLES ==== */
+
 .calculator-form {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
+
 }
+
+
 
 .calculator-form .form-group {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.5rem;
+
 }
+
+
 
 .calculator-form label {
+
     font-weight: 600;
+
     color: var(--patagonian-navy);
+
     font-size: 0.95rem;
+
 }
 
-.calculator-form input {
-    padding: 12px 16px;
-    border: 2px solid var(--medium-gray);
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background: var(--alpine-white);
-}
+
+
+.calculator-form input,
 
 .calculator-form select {
+
     padding: 12px 16px;
+
     border: 2px solid var(--medium-gray);
+
     border-radius: 10px;
+
     font-size: 1rem;
+
     transition: all 0.3s ease;
+
     background: var(--alpine-white);
+
 }
 
-.calculator-form input:focus {
-    border-color: var(--glacier-blue);
-    box-shadow: 0 0 0 3px rgb(44 82 130 / 10%);
-    outline: none;
-}
+
+
+.calculator-form input:focus,
 
 .calculator-form select:focus {
+
     border-color: var(--glacier-blue);
-    box-shadow: 0 0 0 3px rgb(44 82 130 / 10%);
+
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+
     outline: none;
+
 }
+
+
 
 .calculation-result {
+
     background: linear-gradient(135deg, var(--glacier-blue), var(--patagonian-navy));
+
     color: var(--alpine-white);
+
     padding: 2rem;
+
     border-radius: 16px;
+
     text-align: center;
+
     margin-top: 1rem;
+
 }
+
+
 
 .calculation-result h4 {
+
     color: var(--alpine-white);
+
     margin-bottom: 1rem;
+
     font-size: 1.2rem;
+
 }
+
+
 
 .time-display {
+
     display: flex;
+
     align-items: baseline;
+
     justify-content: center;
+
     gap: 0.5rem;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .time-value {
+
     font-size: 3rem;
+
     font-weight: 700;
-    font-family: Montserrat, sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
 }
+
+
 
 .time-unit {
+
     font-size: 1.2rem;
+
     opacity: 0.9;
+
 }
+
+
 
 .time-note {
+
     font-size: 0.9rem;
+
     opacity: 0.8;
+
     margin: 0;
+
 }
+
+
 
 /* ==== WEATHER FORECAST STYLES ==== */
+
 .weather-controls {
+
     margin-bottom: 1.5rem;
+
 }
+
+
 
 .weather-select {
+
     width: 100%;
+
     padding: 12px 16px;
+
     border: 2px solid var(--medium-gray);
+
     border-radius: 10px;
+
     font-size: 1rem;
+
     background: var(--alpine-white);
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .weather-select:focus {
+
     border-color: var(--glacier-blue);
-    box-shadow: 0 0 0 3px rgb(44 82 130 / 10%);
+
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+
     outline: none;
+
 }
+
+
 
 .weather-forecast {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
+
 }
+
+
 
 .current-weather {
+
     background: linear-gradient(135deg, var(--glacier-blue), var(--patagonian-navy));
+
     color: var(--alpine-white);
+
     padding: 1.5rem;
+
     border-radius: 16px;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .weather-header {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .weather-header h4 {
+
     color: var(--alpine-white);
+
     margin: 0;
+
 }
+
+
+
+.weather-temp {
+
+    font-size: 2.5rem;
+
+    font-weight: 700;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
 
 .weather-details {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
     gap: 1rem;
-    background: rgb(255 255 255 / 10%);
-    padding: 1rem;
-    border-radius: 8px;
+
 }
+
+
 
 .weather-detail {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.3rem;
+
 }
+
+
 
 .detail-label {
+
     font-size: 0.85rem;
+
     opacity: 0.8;
+
 }
+
+
 
 .detail-value {
+
     font-weight: 600;
+
     font-size: 0.95rem;
+
 }
+
+
 
 .forecast-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
     gap: 1rem;
+
 }
+
+
 
 .forecast-day {
+
     background: var(--light-gray);
+
     padding: 1rem;
+
     border-radius: 12px;
+
     text-align: center;
+
     transition: all 0.3s ease;
+
     border: 1px solid var(--medium-gray);
+
 }
+
+
 
 .forecast-day:hover {
+
     background: var(--alpine-white);
+
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
 }
+
+
 
 .day-name {
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.5rem;
+
     font-size: 0.9rem;
+
 }
+
+
 
 .day-temp {
+
     font-size: 1.5rem;
+
     font-weight: 700;
+
     color: var(--glacier-blue);
+
     margin-bottom: 0.5rem;
+
 }
+
+
 
 .day-desc {
+
     font-size: 0.85rem;
+
     color: var(--mountain-charcoal);
+
     margin-bottom: 0.3rem;
+
     text-transform: capitalize;
+
 }
+
+
 
 .day-wind {
+
     font-size: 0.8rem;
+
     color: var(--glacier-blue);
+
     font-weight: 600;
+
 }
+
+
 
 /* ==== MAP RESOURCES STYLES ==== */
+
 .map-resources {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 2rem;
+
 }
+
+
 
 .resource-item {
+
     padding: 1.5rem;
+
     background: var(--light-gray);
+
     border-radius: 12px;
+
     border-left: 4px solid var(--glacier-blue);
+
 }
+
+
 
 .resource-item h4 {
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.8rem;
+
 }
+
+
 
 .resource-item p {
+
     color: var(--mountain-charcoal);
+
     margin-bottom: 1rem;
+
     font-size: 0.95rem;
+
 }
+
+
 
 .resource-links {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 0.8rem;
+
 }
+
+
 
 .resource-link {
+
     background: var(--glacier-blue);
+
     color: var(--alpine-white);
+
     padding: 8px 16px;
+
     border-radius: 20px;
+
     text-decoration: none;
+
     font-size: 0.9rem;
+
     font-weight: 600;
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .resource-link:hover {
+
     background: var(--patagonian-navy);
+
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgb(26 54 93 / 30%);
+
+    box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+
 }
+
+
 
 .gps-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1rem;
+
 }
+
+
 
 .gps-item {
+
     background: var(--alpine-white);
+
     padding: 1rem;
+
     border-radius: 10px;
+
     border: 1px solid var(--medium-gray);
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .gps-item:hover {
-    box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
     transform: translateY(-2px);
+
 }
+
+
 
 .gps-name {
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.3rem;
+
 }
+
+
 
 .gps-coords {
+
     font-family: 'Courier New', monospace;
+
     color: var(--glacier-blue);
+
     font-weight: 600;
+
     margin-bottom: 0.3rem;
+
     font-size: 0.9rem;
+
 }
+
+
 
 .gps-desc {
+
     color: var(--mountain-charcoal);
+
     font-size: 0.85rem;
+
     margin-bottom: 0.8rem;
+
 }
+
+
 
 .copy-coords {
+
     background: var(--accent-teal);
+
     color: var(--alpine-white);
+
     border: none;
+
     padding: 6px 12px;
+
     border-radius: 6px;
+
     font-size: 0.8rem;
+
     font-weight: 600;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .copy-coords:hover {
+
     background: var(--glacier-blue);
+
     transform: scale(1.05);
+
 }
+
+
 
 .app-recommendations {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.8rem;
+
 }
+
+
 
 .app-item {
+
     background: var(--alpine-white);
+
     padding: 1rem;
+
     border-radius: 8px;
+
     border-left: 3px solid var(--accent-teal);
+
     font-size: 0.9rem;
+
 }
+
+
 
 .app-item strong {
+
     color: var(--patagonian-navy);
+
     display: block;
+
     margin-bottom: 0.3rem;
+
 }
+
+
 
 /* ==== SAFETY GUIDELINES STYLES ==== */
+
 .safety-sections {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 2rem;
+
 }
+
+
 
 .safety-section {
+
     background: var(--light-gray);
+
     padding: 1.5rem;
+
     border-radius: 12px;
+
     border-left: 4px solid var(--warning-orange);
+
 }
+
+
 
 .safety-section h4 {
+
     color: var(--patagonian-navy);
+
     margin-bottom: 1rem;
+
     display: flex;
+
     align-items: center;
+
     gap: 0.5rem;
+
 }
+
+
 
 .safety-section h4::before {
+
     content: "⚠️";
+
     font-size: 1.2rem;
+
 }
+
+
 
 .safety-list {
+
     list-style: none;
+
     padding: 0;
+
     margin: 0;
+
 }
+
+
 
 .safety-list li {
+
     padding: 0.8rem 0;
+
     padding-left: 1.5rem;
+
     position: relative;
+
     color: var(--mountain-charcoal);
+
     border-bottom: 1px solid var(--medium-gray);
+
     line-height: 1.5;
+
 }
+
+
 
 .safety-list li:last-child {
+
     border-bottom: none;
+
 }
+
+
 
 .safety-list li::before {
+
     content: "▸";
+
     position: absolute;
+
     left: 0;
+
     color: var(--warning-orange);
+
     font-weight: bold;
+
     font-size: 1.1rem;
+
 }
+
+
 
 /* ==== BUDGET PLANNER STYLES ==== */
+
 .budget-calculator {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 2rem;
+
 }
+
+
 
 .budget-section {
+
     background: var(--light-gray);
+
     padding: 1.5rem;
+
     border-radius: 12px;
+
     border-left: 4px solid var(--success-green);
+
 }
+
+
 
 .budget-section h4 {
+
     color: var(--patagonian-navy);
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .budget-result {
+
     margin-top: 1.5rem;
+
 }
+
+
 
 .budget-summary {
+
     background: var(--patagonian-navy);
+
     color: var(--alpine-white);
+
     padding: 2rem;
+
     border-radius: 16px;
+
     text-align: center;
+
 }
+
+
 
 .budget-summary h4 {
+
     color: var(--alpine-white);
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .budget-total {
+
     font-size: 2.5rem;
+
     font-weight: 700;
-    font-family: Montserrat, sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .budget-breakdown {
-    background: rgb(255 255 255 / 10%);
+
+    background: rgba(255, 255, 255, 0.1);
+
     padding: 1rem;
+
     border-radius: 10px;
+
     margin-top: 1rem;
+
 }
+
+
 
 .budget-item {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 0.5rem;
+
 }
+
+
 
 .budget-note {
+
     font-size: 0.9rem;
+
     opacity: 0.9;
+
     margin-top: 1rem;
+
     margin-bottom: 0;
+
     font-style: italic;
+
 }
+
+
 
 /* ==== LOADING AND ERROR STATES ==== */
+
 .loading {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 2rem;
+
     color: var(--glacier-blue);
+
     font-weight: 600;
+
 }
+
+
 
 .loading::after {
+
     content: '';
+
     width: 20px;
+
     height: 20px;
+
     border: 2px solid var(--medium-gray);
+
     border-top: 2px solid var(--glacier-blue);
+
     border-radius: 50%;
+
     animation: spin 1s linear infinite;
+
     margin-left: 1rem;
+
 }
+
+
 
 @keyframes spin {
-    0% { transform: rotate(0deg);
-}
+
+    0% { transform: rotate(0deg); }
+
+    100% { transform: rotate(360deg); }
 
 }
+
+
 
 .error {
-    background: rgb(229 62 62 / 10%);
+
+    background: rgba(229, 62, 62, 0.1);
+
     color: var(--danger-red);
+
     padding: 1rem;
+
     border-radius: 8px;
+
     border-left: 4px solid var(--danger-red);
+
     text-align: center;
+
 }
+
+
 
 .error-notification {
+
     position: fixed;
+
     top: 20px;
+
     right: 20px;
+
     background: var(--alpine-white);
+
     border: 1px solid var(--danger-red);
+
     border-radius: 12px;
+
     padding: 1rem;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 20%);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
     z-index: 2000;
+
     max-width: 300px;
+
 }
+
+
 
 .error-content h3 {
+
     color: var(--danger-red);
+
     font-size: 1.1rem;
+
     margin-bottom: 0.5rem;
+
 }
 
+
+
 .error-content button {
+
     background: var(--danger-red);
+
     color: var(--alpine-white);
+
     border: none;
+
     padding: 6px 12px;
+
     border-radius: 6px;
+
     cursor: pointer;
+
     margin-top: 0.5rem;
+
 }
+
+
 
 /* ==== RESPONSIVE ENHANCEMENTS ==== */
 
+@media (max-width: 768px) {
+
+    .planning-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        padding: 0 1rem;
+
+    }
+
+    
+
+    .planning-card {
+
+        border-radius: 16px;
+
+    }
+
+    
+
+    .card-header,
+
+    .card-content {
+
+        padding: 1.5rem;
+
+    }
+
+    
+
+    .weather-details {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    
+
+    .forecast-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    
+
+    .checklist-controls {
+
+        flex-direction: column;
+
+        gap: 0.8rem;
+
+    }
+
+    
+
+    .budget-total {
+
+        font-size: 2rem;
+
+    }
+
+    
+
+    .time-value {
+
+        font-size: 2.5rem;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .planning-main {
+
+        padding: 2rem 0;
+
+    }
+
+    
+
+    .card-header h3 {
+
+        font-size: 1.2rem;
+
+    }
+
+    
+
+    .weather-details,
+
+    .forecast-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
+
+    .resource-links,
+
+    .checklist-controls {
+
+        flex-direction: column;
+
+    }
+
+    
+
+    .weather-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0.5rem;
+
+    }
+
+    
+
+    .weather-temp {
+
+        font-size: 2rem;
+
+    }
+
+    
+
+    .budget-total {
+
+        font-size: 1.8rem;
+
+    }
+
+    
+
+    .time-display {
+
+        flex-direction: column;
+
+        gap: 0.2rem;
+
+    }
+
+    
+
+    .time-value {
+
+        font-size: 2rem;
+
+    }
+
+}
+
+
 
 /* Override the existing trail-preview-grid to use the same grid as trails page */
+
 .trail-preview-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
     gap: 2rem;
+
     margin-bottom: 2rem;
+
 }
+
+
 
 /* Remove the old trail-preview-card styles and use trail-card styles for consistency */
+
 .featured-trail-card {
+
     /* Inherit all the trail-card styles from the existing CSS */
+
     background-color: var(--alpine-white);
+
     border-radius: 12px;
+
     overflow: hidden;
-    box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
     transition: all 0.3s ease;
+
     border: 1px solid var(--medium-gray);
+
     position: relative;
+
     display: flex;
+
     flex-direction: column;
-    height: 100%;
+
+    height: 100%; /* Ensure equal height */
+
 }
+
+
 
 .featured-trail-card:hover {
+
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgb(0 0 0 / 15%);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
 }
+
+
 
 /* Featured trail image container - consistent with trails page */
+
 .featured-trail-card .trail-image-container {
+
     position: relative;
-    height: 220px;
-    /* Fixed height for alignment */
+
+    height: 220px; /* Fixed height for alignment */
+
     overflow: hidden;
+
 }
+
+
 
 .featured-trail-card .trail-image {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     object-position: center;
+
     transition: transform 0.3s ease;
+
 }
+
+
 
 .featured-trail-card:hover .trail-image {
+
     transform: scale(1.05);
+
 }
+
+
 
 /* Placeholder styling for missing images */
+
 .featured-trail-card .trail-image-placeholder {
+
     background: linear-gradient(45deg, var(--glacier-blue), var(--patagonian-navy));
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     color: var(--alpine-white);
+
     font-size: 3rem;
+
     width: 100%;
+
     height: 100%;
+
 }
+
+
 
 /* Trail info section */
+
 .featured-trail-card .trail-info {
+
     padding: 1.5rem;
+
     flex: 1;
+
     display: flex;
+
     flex-direction: column;
+
 }
+
+
 
 .featured-trail-card .trail-name {
+
     font-size: 1.3rem;
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 0.8rem;
+
     line-height: 1.3;
+
 }
+
+
 
 .featured-trail-card .trail-location {
+
     color: var(--glacier-blue);
+
     font-weight: 600;
+
     font-size: 0.95rem;
+
     margin-bottom: 0.8rem;
+
 }
+
+
 
 .featured-trail-card .trail-meta {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 0.8rem;
+
     margin-bottom: 1rem;
+
     align-items: center;
+
 }
+
+
 
 .featured-trail-card .trail-meta span {
+
     font-size: 0.9rem;
+
 }
+
+
 
 .featured-trail-card .trail-description {
+
     color: var(--mountain-charcoal);
+
     font-size: 0.95rem;
+
     line-height: 1.5;
+
     margin-bottom: 1rem;
+
     flex: 1;
+
     display: -webkit-box;
+
     -webkit-line-clamp: 3;
+
     -webkit-box-orient: vertical;
+
     overflow: hidden;
+
 }
+
+
 
 .featured-trail-card .view-details {
+
     margin-top: auto;
+
     width: 100%;
+
 }
+
+
 
 /* Favorite button */
+
 .featured-trail-card .favorite-btn {
+
     position: absolute;
+
     top: 12px;
+
     right: 12px;
-    background-color: rgb(255 255 255 / 90%);
+
+    background-color: rgba(255, 255, 255, 0.9);
+
     border: none;
+
     border-radius: 50%;
+
     width: 40px;
+
     height: 40px;
+
     font-size: 1.2rem;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     backdrop-filter: blur(10px);
+
     z-index: 10;
+
 }
+
+
 
 .featured-trail-card .favorite-btn:hover {
+
     background-color: var(--alpine-white);
+
     transform: scale(1.1);
+
 }
+
+
 
 .featured-trail-card .favorite-btn.favorite {
-    background-color: rgb(229 62 62 / 90%);
+
+    background-color: rgba(229, 62, 62, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 /* Trail status badge */
+
 .featured-trail-card .trail-status {
+
     position: absolute;
+
     top: 12px;
+
     left: 12px;
+
     padding: 4px 12px;
+
     border-radius: 16px;
+
     font-size: 0.8rem;
+
     font-weight: 600;
+
     text-transform: uppercase;
+
     backdrop-filter: blur(10px);
+
 }
+
+
 
 .featured-trail-card .trail-status.excellent {
-    background-color: rgb(56 161 105 / 90%);
+
+    background-color: rgba(56, 161, 105, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .featured-trail-card .trail-status.good {
-    background-color: rgb(49 151 149 / 90%);
+
+    background-color: rgba(49, 151, 149, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .featured-trail-card .trail-status.caution {
-    background-color: rgb(221 107 32 / 90%);
+
+    background-color: rgba(221, 107, 32, 0.9);
+
     color: var(--alpine-white);
+
 }
+
+
 
 /* Ensure difficulty badges work properly */
+
 .featured-trail-card .difficulty {
+
     padding: 4px 12px;
+
     border-radius: 20px;
+
     font-size: 0.8rem;
+
     font-weight: 600;
+
     text-transform: uppercase;
+
 }
+
+
 
 .featured-trail-card .difficulty.beginner {
+
     background-color: var(--success-green);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .featured-trail-card .difficulty.intermediate {
+
     background-color: var(--warning-orange);
+
     color: var(--alpine-white);
+
 }
+
+
 
 .featured-trail-card .difficulty.advanced {
+
     background-color: var(--danger-red);
+
     color: var(--alpine-white);
+
 }
+
+
 
 /* Duration and distance styling */
-.featured-trail-card .duration {
-    color: var(--mountain-charcoal);
-    font-weight: 600;
-}
+
+.featured-trail-card .duration,
 
 .featured-trail-card .distance {
+
     color: var(--mountain-charcoal);
+
     font-weight: 600;
+
 }
+
+
 
 /* ==== CONTACT PAGE SPECIFIC STYLES ==== */
 
+
+
 /* Contact Main Layout */
+
 .contact-main {
+
     padding: 3rem 0;
+
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 20%, #f8fafc 100%);
+
     min-height: 100vh;
+
 }
+
+
 
 .contact-grid {
+
     display: grid;
+
     grid-template-columns: 1.5fr 1fr;
+
     gap: 3rem;
+
     max-width: 1400px;
+
     margin: 0 auto;
+
 }
+
+
 
 /* ==== CONTACT FORM SECTION ==== */
+
 .contact-form-section {
+
     background: var(--alpine-white);
+
     border-radius: 20px;
+
     padding: 2.5rem;
-    box-shadow: 0 10px 40px rgb(26 54 93 / 10%);
-    border: 1px solid rgb(44 82 130 / 10%);
+
+    box-shadow: 0 10px 40px rgba(26, 54, 93, 0.1);
+
+    border: 1px solid rgba(44, 82, 130, 0.1);
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 .contact-form-section::before {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     right: 0;
+
     height: 4px;
+
     background: linear-gradient(90deg, var(--glacier-blue), var(--accent-teal), var(--patagonian-navy));
+
     transform: scaleX(0);
+
     transform-origin: left;
+
     transition: transform 0.6s ease;
+
     animation: formHeaderSlide 2s ease-in-out 0.5s forwards;
+
 }
+
+
 
 @keyframes formHeaderSlide {
-    to { transform: scaleX(1);
-}
+
+    to { transform: scaleX(1); }
 
 }
+
+
 
 .contact-form-section h3 {
+
     font-size: 1.8rem;
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 1rem;
+
     opacity: 0;
+
     transform: translateY(20px);
+
     animation: fadeInUp 0.6s ease forwards 0.2s;
+
 }
+
+
 
 .contact-form-section > p {
+
     color: var(--glacier-blue);
+
     font-size: 1.1rem;
+
     margin-bottom: 2rem;
+
     opacity: 0;
+
     transform: translateY(20px);
+
     animation: fadeInUp 0.6s ease forwards 0.4s;
+
 }
+
+
 
 /* ==== CONTACT FORM STYLES ==== */
+
 .contact-form {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
+
 }
+
+
 
 .form-row {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 1rem;
+
 }
 
-.form-group:nth-child(1) {
-    animation-delay: 0.6s;
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation: fadeInUp 0.6s ease forwards;
+
 }
 
-.form-group:nth-child(2) {
-    animation-delay: 0.7s;
-}
 
-.form-group:nth-child(3) {
-    animation-delay: 0.8s;
-}
 
-.form-group:nth-child(4) {
-    animation-delay: 0.9s;
-}
+.form-group:nth-child(1) { animation-delay: 0.6s; }
 
-.form-group:nth-child(5) {
-    animation-delay: 1.0s;
-}
+.form-group:nth-child(2) { animation-delay: 0.7s; }
 
-.form-group:nth-child(6) {
-    animation-delay: 1.1s;
-}
+.form-group:nth-child(3) { animation-delay: 0.8s; }
 
-.form-group:nth-child(7) {
-    animation-delay: 1.2s;
-}
+.form-group:nth-child(4) { animation-delay: 0.9s; }
 
-.form-group:nth-child(8) {
-    animation-delay: 1.3s;
-}
+.form-group:nth-child(5) { animation-delay: 1.0s; }
 
-.form-group:nth-child(9) {
-    animation-delay: 1.4s;
-}
+.form-group:nth-child(6) { animation-delay: 1.1s; }
 
-.form-row .form-group:first-child {
-    animation-delay: 0.6s;
-}
+.form-group:nth-child(7) { animation-delay: 1.2s; }
 
-.form-row .form-group:last-child {
-    animation-delay: 0.65s;
-}
+.form-group:nth-child(8) { animation-delay: 1.3s; }
+
+.form-group:nth-child(9) { animation-delay: 1.4s; }
+
+
+
+.form-row .form-group:first-child { animation-delay: 0.6s; }
+
+.form-row .form-group:last-child { animation-delay: 0.65s; }
+
+
 
 @keyframes fadeInUp {
+
     to {
+
         opacity: 1;
-    transform: translateY(0);
-}
+
+        transform: translateY(0);
+
+    }
 
 }
+
+
 
 .contact-form label {
+
     font-weight: 600;
+
     color: var(--patagonian-navy);
+
     font-size: 0.95rem;
+
     margin-bottom: 0.3rem;
+
 }
 
-.contact-form input {
-    padding: 14px 18px;
-    border: 2px solid var(--medium-gray);
-    border-radius: 12px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background: var(--alpine-white);
-    font-family: inherit;
-}
 
-.contact-form select {
-    padding: 14px 18px;
-    border: 2px solid var(--medium-gray);
-    border-radius: 12px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background: var(--alpine-white);
-    font-family: inherit;
-}
+
+.contact-form input,
+
+.contact-form select,
 
 .contact-form textarea {
+
     padding: 14px 18px;
+
     border: 2px solid var(--medium-gray);
+
     border-radius: 12px;
+
     font-size: 1rem;
+
     transition: all 0.3s ease;
+
     background: var(--alpine-white);
+
     font-family: inherit;
-    resize: vertical;
-    min-height: 120px;
+
 }
 
-.contact-form input:focus {
-    border-color: var(--glacier-blue);
-    box-shadow: 0 0 0 4px rgb(44 82 130 / 10%);
-    outline: none;
-    transform: translateY(-2px);
-}
 
-.contact-form select:focus {
-    border-color: var(--glacier-blue);
-    box-shadow: 0 0 0 4px rgb(44 82 130 / 10%);
-    outline: none;
-    transform: translateY(-2px);
-}
+
+.contact-form input:focus,
+
+.contact-form select:focus,
 
 .contact-form textarea:focus {
+
     border-color: var(--glacier-blue);
-    box-shadow: 0 0 0 4px rgb(44 82 130 / 10%);
+
+    box-shadow: 0 0 0 4px rgba(44, 82, 130, 0.1);
+
     outline: none;
+
     transform: translateY(-2px);
+
 }
+
+
+
+.contact-form textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+
+    font-family: inherit;
+
+}
+
+
 
 .contact-form input[type="checkbox"] {
+
     width: auto;
+
     margin-right: 0.8rem;
+
     accent-color: var(--glacier-blue);
+
     transform: scale(1.2);
+
 }
+
+
 
 .form-group label:has(input[type="checkbox"]) {
+
     flex-direction: row;
+
     align-items: center;
+
     cursor: pointer;
+
     padding: 0.5rem;
+
     border-radius: 8px;
+
     transition: background-color 0.3s ease;
+
 }
+
+
 
 .form-group label:has(input[type="checkbox"]):hover {
-    background-color: rgb(44 82 130 / 5%);
+
+    background-color: rgba(44, 82, 130, 0.05);
+
 }
+
+
 
 .btn-large {
+
     padding: 16px 32px;
+
     font-size: 1.1rem;
+
     border-radius: 12px;
+
     margin-top: 1rem;
+
     position: relative;
+
     overflow: hidden;
+
     opacity: 0;
+
     transform: translateY(20px);
+
     animation: fadeInUp 0.6s ease forwards 1.5s;
+
 }
+
+
 
 .btn-large::before {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     left: -100%;
+
     width: 100%;
+
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 20%), transparent);
+
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+
     transition: left 0.5s ease;
+
 }
+
+
 
 .btn-large:hover::before {
+
     left: 100%;
+
 }
+
+
 
 /* ==== CONTACT INFO SECTION ==== */
+
 .contact-info-section {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 2rem;
+
 }
+
+
 
 .contact-card {
+
     background: var(--alpine-white);
+
     border-radius: 16px;
+
     padding: 2rem;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 8%);
-    border: 1px solid rgb(44 82 130 / 10%);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid rgba(44, 82, 130, 0.1);
+
     transition: all 0.4s ease;
+
     opacity: 0;
+
     transform: translateX(30px);
+
     animation: slideInRight 0.6s ease forwards;
+
 }
 
-.contact-card:nth-child(1) {
-    animation-delay: 0.3s;
-}
 
-.contact-card:nth-child(2) {
-    animation-delay: 0.5s;
-}
 
-.contact-card:nth-child(3) {
-    animation-delay: 0.7s;
-}
+.contact-card:nth-child(1) { animation-delay: 0.3s; }
 
-.contact-card:nth-child(4) {
-    animation-delay: 0.9s;
-}
+.contact-card:nth-child(2) { animation-delay: 0.5s; }
+
+.contact-card:nth-child(3) { animation-delay: 0.7s; }
+
+.contact-card:nth-child(4) { animation-delay: 0.9s; }
+
+
 
 @keyframes slideInRight {
+
     to {
+
         opacity: 1;
-    transform: translateX(0);
-}
+
+        transform: translateX(0);
+
+    }
 
 }
+
+
 
 .contact-card:hover {
+
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgb(0 0 0 / 12%);
+
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+
 }
+
+
 
 .contact-card h4 {
+
     font-size: 1.3rem;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 1.2rem;
+
     display: flex;
+
     align-items: center;
+
     gap: 0.8rem;
+
 }
+
+
 
 /* ==== EMERGENCY CONTACTS STYLES ==== */
+
 .emergency-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
+
 }
+
+
 
 .emergency-item {
-    background: linear-gradient(135deg, rgb(229 62 62 / 5%), rgb(221 107 32 / 5%));
+
+    background: linear-gradient(135deg, rgba(229, 62, 62, 0.05), rgba(221, 107, 32, 0.05));
+
     padding: 1.5rem;
+
     border-radius: 12px;
+
     border-left: 4px solid var(--danger-red);
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .emergency-item:hover {
+
     transform: translateX(5px);
-    box-shadow: 0 4px 20px rgb(229 62 62 / 10%);
+
+    box-shadow: 0 4px 20px rgba(229, 62, 62, 0.1);
+
 }
+
+
 
 .emergency-item h5 {
+
     color: var(--danger-red);
+
     font-size: 1.1rem;
+
     font-weight: 700;
+
     margin-bottom: 0.8rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
 }
+
+
 
 .emergency-item p {
+
     margin-bottom: 0.5rem;
+
     color: var(--mountain-charcoal);
+
     font-weight: 500;
+
 }
+
+
 
 .emergency-item strong {
+
     color: var(--patagonian-navy);
+
     font-weight: 700;
+
 }
+
+
 
 /* ==== WEATHER WIDGET STYLES ==== */
+
 .weather-locations {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1rem;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .weather-current {
+
     background: linear-gradient(135deg, var(--glacier-blue), var(--patagonian-navy));
+
     color: var(--alpine-white);
+
     padding: 1.5rem;
+
     border-radius: 12px;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .weather-main {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .temperature {
+
     font-size: 2.5rem;
+
     font-weight: 700;
-    font-family: Montserrat, sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
 }
+
+
 
 .weather-desc {
+
     text-align: right;
+
 }
+
+
 
 .condition {
+
     display: block;
+
     font-size: 1.1rem;
+
     font-weight: 600;
+
     text-transform: capitalize;
+
 }
+
+
 
 .location {
+
     display: block;
+
     font-size: 0.9rem;
+
     opacity: 0.8;
+
 }
+
+
+
+.weather-details {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    gap: 1rem;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 1rem;
+
+    border-radius: 8px;
+
+}
+
+
 
 .weather-item {
+
     text-align: center;
+
 }
+
+
 
 .weather-item .label {
+
     display: block;
+
     font-size: 0.8rem;
+
     opacity: 0.8;
+
     margin-bottom: 0.3rem;
+
 }
+
+
 
 .weather-item .value {
+
     display: block;
+
     font-weight: 700;
+
     font-size: 1rem;
+
 }
+
+
 
 .weather-note {
+
     font-size: 0.9rem;
+
     color: var(--glacier-blue);
+
     font-style: italic;
+
     margin: 0;
+
     text-align: center;
+
 }
+
+
 
 /* ==== CONTACT DETAILS STYLES ==== */
+
 .contact-details {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1rem;
+
 }
+
+
 
 .contact-item {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.3rem;
+
     padding: 0.8rem 0;
+
     border-bottom: 1px solid var(--medium-gray);
+
 }
+
+
 
 .contact-item:last-child {
+
     border-bottom: none;
+
 }
+
+
 
 .contact-item strong {
+
     color: var(--patagonian-navy);
+
     font-weight: 700;
+
     font-size: 0.9rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
 }
+
+
 
 .contact-item a {
+
     color: var(--glacier-blue);
+
     text-decoration: none;
+
     font-weight: 600;
+
     transition: color 0.3s ease;
+
 }
+
+
 
 .contact-item a:hover {
+
     color: var(--patagonian-navy);
+
     text-decoration: underline;
+
 }
+
+
 
 /* ==== SOCIAL LINKS STYLES ==== */
+
 .social-links {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 0.8rem;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .social-link {
+
     background: var(--light-gray);
+
     color: var(--glacier-blue);
+
     padding: 0.8rem 1rem;
+
     border-radius: 20px;
+
     text-decoration: none;
+
     font-weight: 600;
+
     font-size: 0.9rem;
+
     transition: all 0.3s ease;
+
     border: 1px solid var(--medium-gray);
+
 }
+
+
 
 .social-link:hover {
+
     background: var(--glacier-blue);
+
     color: var(--alpine-white);
+
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgb(44 82 130 / 30%);
+
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+
 }
+
+
 
 /* ==== COMMUNITY SECTION ==== */
+
 .community-section {
+
     padding: 4rem 0;
+
     background: var(--light-gray);
+
 }
+
+
 
 .community-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
     gap: 2rem;
+
     margin-top: 2rem;
+
 }
+
+
 
 .community-card {
+
     background: var(--alpine-white);
+
     padding: 2rem;
+
     border-radius: 16px;
+
     text-align: center;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 8%);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
     border: 1px solid var(--medium-gray);
+
     transition: all 0.4s ease;
+
     opacity: 0;
+
     transform: translateY(30px);
+
     animation: fadeInUp 0.6s ease forwards;
+
 }
 
-.community-card:nth-child(1) {
-    animation-delay: 0.2s;
-}
 
-.community-card:nth-child(2) {
-    animation-delay: 0.4s;
-}
 
-.community-card:nth-child(3) {
-    animation-delay: 0.6s;
-}
+.community-card:nth-child(1) { animation-delay: 0.2s; }
 
-.community-card:nth-child(4) {
-    animation-delay: 0.8s;
-}
+.community-card:nth-child(2) { animation-delay: 0.4s; }
+
+.community-card:nth-child(3) { animation-delay: 0.6s; }
+
+.community-card:nth-child(4) { animation-delay: 0.8s; }
+
+
 
 .community-card:hover {
+
     transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgb(0 0 0 / 12%);
+
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+
 }
+
+
 
 .community-card h4 {
+
     font-size: 1.2rem;
+
     margin-bottom: 1rem;
+
     color: var(--patagonian-navy);
+
 }
+
+
 
 .community-card p {
+
     color: var(--mountain-charcoal);
+
     margin-bottom: 1.5rem;
+
     line-height: 1.6;
+
 }
+
+
 
 /* ==== FAQ SECTION ==== */
+
 .faq-section {
+
     padding: 4rem 0;
+
     background: var(--alpine-white);
+
 }
+
+
 
 .faq-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1rem;
+
     max-width: 800px;
+
     margin: 0 auto;
+
 }
+
+
 
 .faq-item {
+
     background: var(--light-gray);
+
     border-radius: 12px;
+
     overflow: hidden;
+
     border: 1px solid var(--medium-gray);
+
     transition: all 0.3s ease;
+
     opacity: 0;
+
     transform: translateY(20px);
+
     animation: fadeInUp 0.6s ease forwards;
+
 }
 
-.faq-item:nth-child(1) {
-    animation-delay: 0.2s;
-}
 
-.faq-item:nth-child(2) {
-    animation-delay: 0.4s;
-}
 
-.faq-item:nth-child(3) {
-    animation-delay: 0.6s;
-}
+.faq-item:nth-child(1) { animation-delay: 0.2s; }
 
-.faq-item:nth-child(4) {
-    animation-delay: 0.8s;
-}
+.faq-item:nth-child(2) { animation-delay: 0.4s; }
 
-.faq-item:nth-child(5) {
-    animation-delay: 1.0s;
-}
+.faq-item:nth-child(3) { animation-delay: 0.6s; }
+
+.faq-item:nth-child(4) { animation-delay: 0.8s; }
+
+.faq-item:nth-child(5) { animation-delay: 1.0s; }
+
+
 
 .faq-item:hover {
-    box-shadow: 0 4px 20px rgb(0 0 0 / 8%);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
 }
+
+
 
 .faq-question {
+
     width: 100%;
+
     background: none;
+
     border: none;
+
     padding: 1.5rem;
+
     text-align: left;
+
     font-size: 1.1rem;
+
     font-weight: 600;
+
     color: var(--patagonian-navy);
+
     cursor: pointer;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .faq-question:hover {
-    background: rgb(44 82 130 / 5%);
+
+    background: rgba(44, 82, 130, 0.05);
+
 }
+
+
 
 .faq-toggle {
+
     font-size: 1.5rem;
+
     font-weight: 700;
+
     color: var(--glacier-blue);
+
     transition: transform 0.3s ease;
+
 }
+
+
 
 .faq-item.active .faq-toggle {
+
     transform: rotate(45deg);
+
 }
+
+
 
 .faq-answer {
+
     max-height: 0;
+
     overflow: hidden;
+
     transition: all 0.3s ease;
+
     background: var(--alpine-white);
+
 }
+
+
 
 .faq-item.active .faq-answer {
+
     max-height: 200px;
+
     padding: 1.5rem;
+
     border-top: 1px solid var(--medium-gray);
+
 }
+
+
 
 .faq-answer p {
+
     color: var(--mountain-charcoal);
+
     line-height: 1.6;
+
     margin: 0;
+
 }
+
+
 
 /* ==== FLOATING ELEMENTS ANIMATION ==== */
+
 @keyframes float {
-    0%, 100% { transform: translateY(0);
-}
 
-50% {
-    transform: translateY(-5px);
-}
+    0%, 100% { transform: translateY(0px); }
+
+    50% { transform: translateY(-10px); }
 
 }
+
+
 
 .contact-card:nth-child(even) {
+
     animation: fadeInUp 0.6s ease forwards, float 6s ease-in-out infinite;
+
 }
 
+
+
 .contact-card:nth-child(odd) {
+
     animation: fadeInUp 0.6s ease forwards, float 6s ease-in-out infinite 3s;
+
 }
+
+
 
 /* ==== RESPONSIVE DESIGN ==== */
 
+@media (max-width: 768px) {
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        padding: 0 1rem;
+
+    }
+
+    
+
+    .contact-form-section,
+
+    .contact-card {
+
+        padding: 1.5rem;
+
+        border-radius: 16px;
+
+    }
+
+    
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
+
+    .weather-main {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1rem;
+
+    }
+
+    
+
+    .weather-desc {
+
+        text-align: left;
+
+    }
+
+    
+
+    .weather-details {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    
+
+    .community-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
+
+    .social-links {
+
+        flex-direction: column;
+
+    }
+
+    
+
+    .social-link {
+
+        text-align: center;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .contact-main {
+
+        padding: 2rem 0;
+
+    }
+
+    
+
+    .contact-form-section h3 {
+
+        font-size: 1.5rem;
+
+    }
+
+    
+
+    .temperature {
+
+        font-size: 2rem;
+
+    }
+
+    
+
+    .weather-details {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
+
+    .emergency-item {
+
+        padding: 1rem;
+
+    }
+
+    
+
+    .faq-question {
+
+        padding: 1rem;
+
+        font-size: 1rem;
+
+    }
+
+    
+
+    .faq-item.active .faq-answer {
+
+        padding: 1rem;
+
+    }
+
+}
+
+
 
 /* ==== FORM VALIDATION STATES ==== */
-.form-group.error input {
-    border-color: var(--danger-red);
-    box-shadow: 0 0 0 4px rgb(229 62 62 / 10%);
-}
 
-.form-group.error select {
-    border-color: var(--danger-red);
-    box-shadow: 0 0 0 4px rgb(229 62 62 / 10%);
-}
+.form-group.error input,
+
+.form-group.error select,
 
 .form-group.error textarea {
+
     border-color: var(--danger-red);
-    box-shadow: 0 0 0 4px rgb(229 62 62 / 10%);
+
+    box-shadow: 0 0 0 4px rgba(229, 62, 62, 0.1);
+
 }
 
-.form-group.success input {
-    border-color: var(--success-green);
-    box-shadow: 0 0 0 4px rgb(56 161 105 / 10%);
-}
 
-.form-group.success select {
-    border-color: var(--success-green);
-    box-shadow: 0 0 0 4px rgb(56 161 105 / 10%);
-}
+
+.form-group.success input,
+
+.form-group.success select,
 
 .form-group.success textarea {
+
     border-color: var(--success-green);
-    box-shadow: 0 0 0 4px rgb(56 161 105 / 10%);
+
+    box-shadow: 0 0 0 4px rgba(56, 161, 105, 0.1);
+
 }
+
+
 
 .error-message {
+
     color: var(--danger-red);
+
     font-size: 0.85rem;
+
     margin-top: 0.3rem;
+
     font-weight: 600;
+
 }
+
+
 
 .success-message {
+
     color: var(--success-green);
+
     font-size: 0.85rem;
+
     margin-top: 0.3rem;
+
     font-weight: 600;
+
 }
+
+
 
 /* ==== LOADING STATES ==== */
+
 .btn.loading {
+
     position: relative;
+
     color: transparent;
+
 }
+
+
 
 .btn.loading::after {
+
     content: '';
+
     position: absolute;
+
     top: 50%;
+
     left: 50%;
+
     width: 20px;
+
     height: 20px;
+
     margin: -10px 0 0 -10px;
-    border: 2px solid rgb(255 255 255 / 30%);
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
+
     border-top: 2px solid var(--alpine-white);
+
     border-radius: 50%;
+
     animation: spin 1s linear infinite;
-}
 
 }
+
+
+
+@keyframes spin {
+
+    0% { transform: rotate(0deg); }
+
+    100% { transform: rotate(360deg); }
+
+}
+
+
 
 /* ==== FORM CONFIRMATION PAGE STYLES ==== */
 
+
+
 /* Confirmation Main Layout */
+
 .confirmation-main {
+
     padding: 4rem 0;
+
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 20%, #f8fafc 100%);
+
     min-height: 100vh;
+
 }
+
+
 
 /* ==== CONFIRMATION HERO SECTION ==== */
+
 .confirmation-hero {
+
     text-align: center;
+
     padding: 3rem 0;
+
     margin-bottom: 3rem;
+
     opacity: 0;
+
     transform: translateY(30px);
+
     animation: fadeInUp 0.8s ease forwards 0.2s;
+
 }
+
+
 
 /* Success Icon Animation */
+
 .success-icon {
+
     margin: 0 auto 2rem;
+
     display: inline-block;
+
     opacity: 0;
+
     transform: scale(0.5);
+
     animation: successIconPop 0.6s ease forwards 0.5s;
+
 }
+
+
 
 @keyframes successIconPop {
+
     0% {
+
         opacity: 0;
-    transform: scale(0.5);
+
+        transform: scale(0.5);
+
+    }
+
+    70% {
+
+        opacity: 1;
+
+        transform: scale(1.1);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
 }
 
-70% {
-    opacity: 1;
-    transform: scale(1.1);
-}
 
-}
 
 .checkmark-circle {
+
     width: 80px;
+
     height: 80px;
+
     background: linear-gradient(135deg, var(--success-green), #48bb78);
+
     border-radius: 50%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    box-shadow: 0 8px 32px rgb(56 161 105 / 30%);
+
+    box-shadow: 0 8px 32px rgba(56, 161, 105, 0.3);
+
     position: relative;
+
 }
+
+
 
 .checkmark-circle::after {
+
     content: '';
+
     position: absolute;
-    inset: -4px;
+
+    top: -4px;
+
+    left: -4px;
+
+    right: -4px;
+
+    bottom: -4px;
+
     border-radius: 50%;
-    background: linear-gradient(135deg, rgb(56 161 105 / 30%), rgb(72 187 120 / 30%));
+
+    background: linear-gradient(135deg, rgba(56, 161, 105, 0.3), rgba(72, 187, 120, 0.3));
+
     z-index: -1;
+
     animation: pulse 2s infinite;
+
 }
+
+
 
 @keyframes pulse {
+
     0% {
+
         transform: scale(1);
-    opacity: 1;
-}
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: scale(1.4);
+
+        opacity: 0;
+
+    }
 
 }
+
+
 
 .checkmark {
+
     width: 24px;
+
     height: 24px;
+
     position: relative;
+
 }
+
+
 
 .checkmark::before {
+
     content: '✓';
+
     color: var(--alpine-white);
+
     font-size: 2rem;
+
     font-weight: bold;
+
     position: absolute;
+
     top: 50%;
+
     left: 50%;
+
     transform: translate(-50%, -50%);
+
     opacity: 0;
+
     animation: checkmarkAppear 0.4s ease forwards 0.8s;
+
 }
+
+
 
 @keyframes checkmarkAppear {
+
     to {
+
         opacity: 1;
-}
+
+    }
 
 }
+
+
 
 .confirmation-title {
+
     font-size: 2.5rem;
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 1rem;
+
     opacity: 0;
+
     transform: translateY(20px);
+
     animation: fadeInUp 0.6s ease forwards 0.8s;
+
 }
+
+
 
 .confirmation-subtitle {
+
     font-size: 1.2rem;
+
     color: var(--glacier-blue);
+
     max-width: 600px;
+
     margin: 0 auto;
+
     line-height: 1.6;
+
     opacity: 0;
+
     transform: translateY(20px);
+
     animation: fadeInUp 0.6s ease forwards 1s;
+
 }
+
+
 
 /* ==== FORM DATA DISPLAY SECTION ==== */
+
 .form-data-section {
+
     margin-bottom: 3rem;
+
     opacity: 0;
+
     transform: translateY(30px);
+
     animation: fadeInUp 0.6s ease forwards 1.2s;
+
 }
+
+
 
 .confirmation-card {
+
     background: var(--alpine-white);
+
     border-radius: 16px;
+
     padding: 2.5rem;
-    box-shadow: 0 10px 40px rgb(26 54 93 / 10%);
-    border: 1px solid rgb(44 82 130 / 10%);
+
+    box-shadow: 0 10px 40px rgba(26, 54, 93, 0.1);
+
+    border: 1px solid rgba(44, 82, 130, 0.1);
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 .confirmation-card::before {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     right: 0;
+
     height: 4px;
+
     background: linear-gradient(90deg, var(--glacier-blue), var(--accent-teal), var(--success-green));
+
 }
+
+
 
 .confirmation-card h2 {
+
     font-size: 1.6rem;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 2rem;
+
     display: flex;
+
     align-items: center;
+
     gap: 0.8rem;
+
 }
+
+
 
 .confirmation-card h2::before {
+
     content: '📋';
+
     font-size: 1.4rem;
+
 }
+
+
 
 .message-summary {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
+
 }
+
+
 
 .summary-item {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.5rem;
+
     padding: 1rem 0;
+
     border-bottom: 1px solid var(--medium-gray);
+
 }
+
+
 
 .summary-item:last-child {
+
     border-bottom: none;
+
 }
+
+
 
 .summary-label {
+
     font-weight: 700;
+
     color: var(--patagonian-navy);
+
     font-size: 0.9rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
 }
+
+
 
 .summary-value {
+
     color: var(--mountain-charcoal);
+
     font-size: 1rem;
+
     line-height: 1.5;
+
     padding: 0.5rem;
+
     background: var(--light-gray);
+
     border-radius: 8px;
+
     border-left: 3px solid var(--glacier-blue);
+
 }
+
+
 
 /* ==== NEXT STEPS SECTION ==== */
+
 .next-steps-section {
+
     margin-bottom: 3rem;
+
     opacity: 0;
+
     transform: translateY(30px);
+
     animation: fadeInUp 0.6s ease forwards 1.4s;
+
 }
+
+
 
 .steps-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
     gap: 2rem;
+
 }
+
+
 
 .step-card {
+
     background: var(--alpine-white);
+
     border-radius: 16px;
+
     padding: 2rem;
-    box-shadow: 0 8px 32px rgb(0 0 0 / 8%);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
     border: 1px solid var(--medium-gray);
+
     transition: all 0.4s ease;
+
     text-align: center;
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 .step-card:hover {
+
     transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgb(0 0 0 / 12%);
+
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+
 }
+
+
 
 .step-card::before {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     right: 0;
+
     height: 3px;
+
     background: var(--glacier-blue);
+
     transform: scaleX(0);
+
     transform-origin: left;
+
     transition: transform 0.4s ease;
+
 }
+
+
 
 .step-card:hover::before {
+
     transform: scaleX(1);
+
 }
+
+
 
 .step-icon {
+
     font-size: 3rem;
+
     margin-bottom: 1rem;
+
     display: block;
+
     animation: float 3s ease-in-out infinite;
+
 }
+
+
 
 .step-card:nth-child(2) .step-icon {
+
     animation-delay: 1s;
+
 }
+
+
 
 .step-card:nth-child(3) .step-icon {
+
     animation-delay: 2s;
+
 }
+
+
 
 @keyframes float {
+
     0%, 100% { 
-        transform: translateY(0);
-}
+
+        transform: translateY(0px); 
+
+    }
+
+    50% { 
+
+        transform: translateY(-5px); 
+
+    }
 
 }
+
+
 
 .step-card h3 {
+
     font-size: 1.4rem;
+
     color: var(--patagonian-navy);
+
     margin-bottom: 1rem;
+
     font-weight: 700;
+
 }
+
+
 
 .step-card p {
+
     color: var(--mountain-charcoal);
+
     line-height: 1.6;
+
     margin-bottom: 1.5rem;
+
     font-size: 0.95rem;
+
 }
+
+
 
 /* ==== CONFIRMATION ACTIONS SECTION ==== */
+
 .confirmation-actions {
+
     text-align: center;
+
     opacity: 0;
+
     transform: translateY(30px);
+
     animation: fadeInUp 0.6s ease forwards 1.6s;
+
 }
+
+
 
 .action-buttons {
+
     display: flex;
+
     justify-content: center;
+
     gap: 1.5rem;
+
     flex-wrap: wrap;
+
 }
+
+
 
 .action-buttons .btn {
+
     min-width: 200px;
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 .action-buttons .btn::before {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     left: -100%;
+
     width: 100%;
+
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 20%), transparent);
+
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+
     transition: left 0.5s ease;
+
 }
+
+
 
 .action-buttons .btn:hover::before {
+
     left: 100%;
+
 }
 
+
+
 /* ==== SOCIAL ICONS IN FOOTER ==== */
+
 .social-icon {
     width: 24px;
     height: 24px;
@@ -3555,10 +9245,120 @@ to {
     margin-bottom: 0;
 }
 
+
 /* ==== ANIMATION UTILITIES ==== */
+
 @keyframes fadeInUp {
+
     from {
         opacity: 0;
-    transform: translateY(30px);
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
+
+
+/* ==== RESPONSIVE DESIGN ==== */
+
+@media (max-width: 768px) {
+
+    .confirmation-main {
+        padding: 2rem 0;
+    }
+
+    .confirmation-hero {
+        padding: 2rem 0;
+    }
+
+    .confirmation-title {
+        font-size: 2rem;
+    }
+
+    .confirmation-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .confirmation-card {
+        padding: 2rem;
+        border-radius: 12px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .step-card {
+        padding: 1.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column
+        align-items: center;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .checkmark-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .step-icon {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .confirmation-hero {
+        padding: 1.5rem 0;
+    }
+
+    .confirmation-title {
+        font-size: 1.8rem;
+    }
+
+    .confirmation-subtitle {
+        font-size: 1rem;
+    }
+
+    .confirmation-card {
+        padding: 1.5rem;
+    }
+
+    .confirmation-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .step-card {
+        padding: 1.2rem;
+    }
+
+    .step-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .checkmark-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .checkmark::before {
+        font-size: 1.5rem;
+    }
+
+    .step-icon {
+        font-size: 2rem;
+    }
+
 }
