@@ -126,7 +126,7 @@ const IndexUtils = {
                 localStorage.setItem(key, JSON.stringify(data));
             }
         } catch (error) {
-            console.error('Storage not available:', error);
+            //console.error('Storage not available:', error);
         }
     },
 
@@ -140,7 +140,7 @@ const IndexUtils = {
             }
             return defaultValue;
         } catch (error) {
-            console.error('Storage not available:', error);
+           // console.error('Storage not available:', error);
             return defaultValue;
         }
     }
@@ -158,7 +158,7 @@ const IndexDataManager = {
                     const data = JSON.parse(fileContent);
                     return data;
                 } catch (fileError) {
-                    console.log('Could not read uploaded file, trying fetch...');
+                    //console.log('Could not read uploaded file, trying fetch...');
                 }
             }
             
@@ -170,7 +170,7 @@ const IndexDataManager = {
             const data = await response.json();
             return data;
         } catch (error) {
-            console.error('Error fetching trail data:', error);
+           // console.error('Error fetching trail data:', error);
             // Return sample data as fallback
             return {
                 trails: [
@@ -260,7 +260,7 @@ const IndexDataManager = {
                 icon: data.weather[0].icon
             };
         } catch (error) {
-            console.error('Error fetching weather data:', error);
+            //console.error('Error fetching weather data:', error);
             // Return fallback data
             return {
                 location: 'El Calafate',
@@ -292,12 +292,12 @@ const IndexDataManager = {
             // Load favorites from storage
             IndexState.favorites = IndexUtils.loadFromStorage('patagonia-favorites', []);
             
-            console.log('Loaded trails:', IndexState.trails.length);
-            console.log('Featured trails:', IndexState.featuredTrails.length);
+            //console.log('Loaded trails:', IndexState.trails.length);
+            //console.log('Featured trails:', IndexState.featuredTrails.length);
             
             return true;
         } catch (error) {
-            console.error('Failed to initialize index data:', error);
+            //console.error('Failed to initialize index data:', error);
             IndexUI.showError('Failed to load data. Please refresh the page.');
             return false;
         }
@@ -310,7 +310,7 @@ const IndexUI = {
     renderFeaturedTrails() {
         const container = document.getElementById('featuredTrailsGrid');
         if (!container) {
-            console.error('Featured trails container not found');
+            //console.error('Featured trails container not found');
             return;
         }
         
@@ -326,7 +326,7 @@ const IndexUI = {
             .join('');
         
         container.innerHTML = trailsHTML;
-        console.log('Rendered featured trails:', IndexState.featuredTrails.length);
+        //console.log('Rendered featured trails:', IndexState.featuredTrails.length);
     },
 
     // Render weather widget
@@ -540,7 +540,7 @@ const IndexNavigation = {
 const IndexApp = {
     async init() {
         try {
-            console.log('Initializing Index App...');
+            //console.log('Initializing Index App...');
             
             // Initialize navigation
             IndexNavigation.init();
@@ -567,10 +567,10 @@ const IndexApp = {
             // Update footer
             this.updateFooter();
             
-            console.log('Index page initialized successfully');
+            //console.log('Index page initialized successfully');
             
         } catch (error) {
-            console.error('Failed to initialize index page:', error);
+            //console.error('Failed to initialize index page:', error);
         }
     },
 
@@ -632,7 +632,7 @@ const IndexApp = {
         if (newsletterForm) {
             newsletterForm.addEventListener('submit', (e) => {
                 // Form will submit naturally to form-confirmation.html
-                console.log('Newsletter form submitted');
+                //console.log('Newsletter form submitted');
             });
         }
     },
