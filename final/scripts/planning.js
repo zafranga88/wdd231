@@ -795,7 +795,7 @@ const Footer = {
 const PlanningApp = {
     async init() {
         try {
-            console.log('Initializing Patagonia Planning Tools...');
+
             
             // Initialize navigation
             Navigation.init();
