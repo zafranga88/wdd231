@@ -11,12 +11,12 @@ const IndexState = {
 
 // Utility functions
 const IndexUtils = {
-    // Template literal for creating featured trail cards - FIXED to use actual images
+    // Template literal for creating featured trail cards - 
     createFeaturedTrailCard: (trail) => {
         const isFavorite = IndexState.favorites.includes(trail.id);
         const favoriteIcon = isFavorite ? '❤️' : '🤍';
         
-        // Use actual image from JSON data with fallback
+        // Use image from JSON data with fallback
         const imageDisplay = `
             <img src="images/${trail.image}" 
                  alt="${trail.name}" 
@@ -117,30 +117,27 @@ const IndexUtils = {
         `;
     },
 
-    // Local storage utilities - Note: These won't work in Claude artifacts
+    
     saveToStorage: (key, data) => {
         try {
-            // In a real environment, this would use localStorage
-            // For Claude artifacts, we'll just store in memory
+            
             if (typeof window !== 'undefined' && window.localStorage) {
                 localStorage.setItem(key, JSON.stringify(data));
             }
         } catch (error) {
-            //console.error('Storage not available:', error);
+            // Silent failure for storage issues
         }
     },
 
     loadFromStorage: (key, defaultValue = []) => {
         try {
-            // In a real environment, this would use localStorage
-            // For Claude artifacts, return default value
+            
             if (typeof window !== 'undefined' && window.localStorage) {
                 const stored = localStorage.getItem(key);
                 return stored ? JSON.parse(stored) : defaultValue;
             }
             return defaultValue;
         } catch (error) {
-           // console.error('Storage not available:', error);
             return defaultValue;
         }
     }
@@ -158,7 +155,7 @@ const IndexDataManager = {
                     const data = JSON.parse(fileContent);
                     return data;
                 } catch (fileError) {
-                    //console.log('Could not read uploaded file, trying fetch...');
+                    // Silent fallback to fetch
                 }
             }
             
@@ -170,7 +167,6 @@ const IndexDataManager = {
             const data = await response.json();
             return data;
         } catch (error) {
-           // console.error('Error fetching trail data:', error);
             // Return sample data as fallback
             return {
                 trails: [
@@ -260,7 +256,6 @@ const IndexDataManager = {
                 icon: data.weather[0].icon
             };
         } catch (error) {
-            //console.error('Error fetching weather data:', error);
             // Return fallback data
             return {
                 location: 'El Calafate',
@@ -292,12 +287,8 @@ const IndexDataManager = {
             // Load favorites from storage
             IndexState.favorites = IndexUtils.loadFromStorage('patagonia-favorites', []);
             
-            //console.log('Loaded trails:', IndexState.trails.length);
-            //console.log('Featured trails:', IndexState.featuredTrails.length);
-            
             return true;
         } catch (error) {
-            //console.error('Failed to initialize index data:', error);
             IndexUI.showError('Failed to load data. Please refresh the page.');
             return false;
         }
@@ -310,7 +301,6 @@ const IndexUI = {
     renderFeaturedTrails() {
         const container = document.getElementById('featuredTrailsGrid');
         if (!container) {
-            //console.error('Featured trails container not found');
             return;
         }
         
@@ -326,7 +316,6 @@ const IndexUI = {
             .join('');
         
         container.innerHTML = trailsHTML;
-        //console.log('Rendered featured trails:', IndexState.featuredTrails.length);
     },
 
     // Render weather widget
@@ -540,15 +529,12 @@ const IndexNavigation = {
 const IndexApp = {
     async init() {
         try {
-            //console.log('Initializing Index App...');
-            
             // Initialize navigation
             IndexNavigation.init();
             
             // Load all data
             const success = await IndexDataManager.initialize();
             if (!success) {
-                //console.error('Failed to initialize data');
                 return;
             }
             
@@ -567,10 +553,8 @@ const IndexApp = {
             // Update footer
             this.updateFooter();
             
-            //console.log('Index page initialized successfully');
-            
         } catch (error) {
-            //console.error('Failed to initialize index page:', error);
+            // Silent error handling
         }
     },
 
@@ -632,7 +616,6 @@ const IndexApp = {
         if (newsletterForm) {
             newsletterForm.addEventListener('submit', (e) => {
                 // Form will submit naturally to form-confirmation.html
-                //console.log('Newsletter form submitted');
             });
         }
     },
