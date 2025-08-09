@@ -117,7 +117,7 @@ const PlanningUtils = {
         try {
             localStorage.setItem(key, JSON.stringify(data));
         } catch (error) {
-
+            // Silent error handling for production
         }
     },
 
@@ -126,7 +126,6 @@ const PlanningUtils = {
             const stored = localStorage.getItem(key);
             return stored ? JSON.parse(stored) : defaultValue;
         } catch (error) {
-
             return defaultValue;
         }
     }
@@ -152,7 +151,6 @@ const PlanningDataManager = {
             const data = await response.json();
             return PlanningUtils.formatWeatherData(data);
         } catch (error) {
-
             // Return mock data for demonstration
             return this.getMockWeatherData(locationKey);
         }
@@ -175,7 +173,6 @@ const PlanningDataManager = {
             const data = await response.json();
             return this.formatForecastData(data);
         } catch (error) {
-
             return this.getMockForecastData(locationKey);
         }
     },
@@ -238,7 +235,6 @@ const PlanningDataManager = {
             const data = await response.json();
             return data.planning_tools || [];
         } catch (error) {
-
             return this.getDefaultChecklist();
         }
     },
@@ -347,7 +343,6 @@ const PlanningUI = {
             this.updateChecklistProgress();
             
         } catch (error) {
-
             checklistContainer.innerHTML = '<p class="error">Error loading checklist. Please refresh the page.</p>';
         }
     },
@@ -399,7 +394,6 @@ const PlanningUI = {
         try {
             await this.updateWeatherForecast('el-calafate');
         } catch (error) {
-
             weatherContainer.innerHTML = '<p class="error">Error loading weather data. Please try again later.</p>';
         }
     },
@@ -462,7 +456,6 @@ const PlanningUI = {
             weatherContainer.innerHTML = weatherHTML;
 
         } catch (error) {
-
             weatherContainer.innerHTML = '<p class="error">Unable to load weather data. Please try again later.</p>';
         }
     },
@@ -795,8 +788,6 @@ const Footer = {
 const PlanningApp = {
     async init() {
         try {
-
-            
             // Initialize navigation
             Navigation.init();
             
@@ -809,11 +800,7 @@ const PlanningApp = {
             // Initialize planning components
             await PlanningUI.initialize();
             
-
-            
         } catch (error) {
-
-            
             // Show error message to user
             const errorDiv = document.createElement('div');
             errorDiv.className = 'error-notification';
