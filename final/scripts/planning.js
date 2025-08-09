@@ -117,7 +117,7 @@ const PlanningUtils = {
         try {
             localStorage.setItem(key, JSON.stringify(data));
         } catch (error) {
-            console.error('Error saving to localStorage:', error);
+
         }
     },
 
@@ -126,7 +126,7 @@ const PlanningUtils = {
             const stored = localStorage.getItem(key);
             return stored ? JSON.parse(stored) : defaultValue;
         } catch (error) {
-            console.error('Error loading from localStorage:', error);
+
             return defaultValue;
         }
     }
@@ -152,7 +152,7 @@ const PlanningDataManager = {
             const data = await response.json();
             return PlanningUtils.formatWeatherData(data);
         } catch (error) {
-            console.error('Error fetching weather data:', error);
+
             // Return mock data for demonstration
             return this.getMockWeatherData(locationKey);
         }
@@ -175,7 +175,7 @@ const PlanningDataManager = {
             const data = await response.json();
             return this.formatForecastData(data);
         } catch (error) {
-            console.error('Error fetching forecast data:', error);
+
             return this.getMockForecastData(locationKey);
         }
     },
@@ -238,7 +238,7 @@ const PlanningDataManager = {
             const data = await response.json();
             return data.planning_tools || [];
         } catch (error) {
-            console.error('Error loading checklist data:', error);
+
             return this.getDefaultChecklist();
         }
     },
@@ -347,7 +347,7 @@ const PlanningUI = {
             this.updateChecklistProgress();
             
         } catch (error) {
-            console.error('Error initializing checklist:', error);
+
             checklistContainer.innerHTML = '<p class="error">Error loading checklist. Please refresh the page.</p>';
         }
     },
@@ -399,7 +399,7 @@ const PlanningUI = {
         try {
             await this.updateWeatherForecast('el-calafate');
         } catch (error) {
-            console.error('Error initializing weather:', error);
+
             weatherContainer.innerHTML = '<p class="error">Error loading weather data. Please try again later.</p>';
         }
     },
@@ -462,7 +462,7 @@ const PlanningUI = {
             weatherContainer.innerHTML = weatherHTML;
 
         } catch (error) {
-            console.error('Error updating weather:', error);
+
             weatherContainer.innerHTML = '<p class="error">Unable to load weather data. Please try again later.</p>';
         }
     },
@@ -809,10 +809,10 @@ const PlanningApp = {
             // Initialize planning components
             await PlanningUI.initialize();
             
-            console.log('Planning tools initialized successfully');
+
             
         } catch (error) {
-            console.error('Failed to initialize planning app:', error);
+
             
             // Show error message to user
             const errorDiv = document.createElement('div');
