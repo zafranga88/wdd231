@@ -26,7 +26,7 @@ const ContactUtils = {
                 window.memoryStorage[key] = JSON.stringify(data);
             }
         } catch (error) {
-            console.error('Storage not available:', error);
+            // Silent error handling for production
         }
     },
 
@@ -42,7 +42,6 @@ const ContactUtils = {
                 return stored ? JSON.parse(stored) : defaultValue;
             }
         } catch (error) {
-            console.error('Storage not available:', error);
             return defaultValue;
         }
     },
@@ -101,11 +100,8 @@ const ContactDataManager = {
                 ContactState.formData = savedFormData;
             }
             
-            console.log('Contact data initialized successfully');
-            
             return true;
         } catch (error) {
-            console.error('Failed to initialize contact data:', error);
             return false;
         }
     }
@@ -309,15 +305,12 @@ const ContactNavigation = {
 const ContactApp = {
     async init() {
         try {
-            console.log('Initializing Contact App...');
-            
             // Initialize navigation
             ContactNavigation.init();
             
             // Load all data
             const success = await ContactDataManager.initialize();
             if (!success) {
-                console.error('Failed to initialize data');
                 return;
             }
             
@@ -331,10 +324,7 @@ const ContactApp = {
             // Update footer
             this.updateFooter();
             
-            console.log('Contact page initialized successfully');
-            
         } catch (error) {
-            console.error('Failed to initialize contact page:', error);
             ContactUtils.showNotification('Failed to load page data. Please refresh.', 'error');
         }
     },
@@ -595,11 +585,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Error handling for the entire contact page
 window.addEventListener('error', (e) => {
-    console.error('Contact page error:', e.error);
     ContactUtils.showNotification('An error occurred. Please refresh the page.', 'error');
 });
 
 window.addEventListener('unhandledrejection', (e) => {
-    console.error('Unhandled promise rejection:', e.reason);
     ContactUtils.showNotification('A network error occurred. Please check your connection.', 'error');
 });
