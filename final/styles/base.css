@@ -479,713 +479,188 @@ h4 {
 .checkbox-group label,
 .radio-group label {
     display: flex;
-
-
-
     align-items: center;
-
-
-
     margin-bottom: 0;
-
-
-
     font-weight: 400;
-
-
-
     cursor: pointer;
-
-
-
 }
-
-
-
-
-
-
 
 .checkbox-group input,
-
-
-
 .radio-group input {
-
-
-
     width: auto;
-
-
-
     margin-right: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
 
 /* Main Content */
 
-
-
 .main-content {
-
-
-
     padding: 3rem 0;
-
-
-
     background-color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .content-grid {
-
-
-
     display: grid;
-
-
-
     grid-template-columns: 2fr 1fr;
-
-
-
     gap: 3rem;
-
-
-
 }
-
-
-
-
-
-
 
 /* Updates Section */
 
-
-
 .updates-section {
-
-
-
     background-color: var(--light-gray);
-
-
-
     padding: 2rem;
-
-
-
     border-radius: 12px;
-
-
-
 }
-
-
-
-
-
-
 
 .updates-list {
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     gap: 1rem;
-
-
-
 }
-
-
-
-
-
-
 
 .update-item {
-
-
-
     background-color: var(--alpine-white);
-
-
-
     padding: 1.5rem;
-
-
-
     border-radius: 8px;
-
-
-
     border-left: 4px solid var(--glacier-blue);
-
-
-
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-
-
-
 }
-
-
-
-
-
-
 
 .update-date {
-
-
-
     font-size: 0.9rem;
-
-
-
     color: var(--glacier-blue);
-
-
-
     font-weight: 600;
-
-
-
     margin-bottom: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
 
 .update-title {
-
-
-
     font-size: 1.1rem;
-
-
-
     font-weight: 600;
-
-
-
     color: var(--patagonian-navy);
-
-
-
     margin-bottom: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
 
 .update-content {
-
-
-
     color: var(--mountain-charcoal);
-
-
-
     line-height: 1.6;
-
-
-
 }
-
-
-
-
-
-
 
 /* Sidebar Widgets */
 
-
-
 .sidebar {
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     gap: 2rem;
-
-
-
 }
-
-
-
-
-
-
 
 .widget {
-
-
-
     background-color: var(--alpine-white);
-
-
-
     border-radius: 12px;
-
-
-
     padding: 1.5rem;
-
-
-
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-
-
 }
-
-
-
-
-
-
 
 .widget h4 {
-
-
-
     color: var(--patagonian-navy);
-
-
-
     margin-bottom: 1rem;
-
-
-
     font-size: 1.2rem;
-
-
-
 }
-
-
-
-
-
-
 
 /* Weather Widget */
 
-
-
 .weather-info {
-
-
-
     text-align: center;
-
-
-
 }
-
-
-
-
-
-
 
 .weather-location {
-
-
-
     font-weight: 600;
-
-
-
     color: var(--glacier-blue);
-
-
-
     margin-bottom: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
 
 .weather-temp {
-
-
-
     font-size: 2rem;
-
-
-
     font-weight: 700;
-
-
-
     color: var(--alpine-white);
-
-
-
     margin-bottom: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
 
 .weather-condition {
-
-
-
     color: var(--mountain-charcoal);
-
-
-
     margin-bottom: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
 
 .weather-wind {
-
-
-
     font-size: 0.9rem;
-
-
-
     color: var(--glacier-blue);
-
-
-
 }
-
-
-
-
-
-
 
 /* Conditions Widget */
 
-
-
 .condition-list {
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     gap: 0.8rem;
-
-
-
 }
-
-
-
-
-
-
 
 .condition-item {
-
-
-
     display: flex;
-
-
-
     justify-content: space-between;
-
-
-
     align-items: center;
-
-
-
     padding: 0.5rem 0;
-
-
-
     border-bottom: 1px solid var(--medium-gray);
-
-
-
 }
-
-
-
-
-
-
 
 .condition-item:last-child {
-
-
-
     border-bottom: none;
-
-
-
 }
-
-
-
-
-
-
 
 .condition-trail {
-
-
-
     font-weight: 600;
-
-
-
     color: var(--mountain-charcoal);
-
-
-
 }
-
-
-
-
-
-
 
 .condition-status {
-
-
-
     padding: 2px 8px;
-
-
-
     border-radius: 12px;
-
-
-
     font-size: 0.8rem;
-
-
-
     font-weight: 600;
-
-
-
     text-transform: uppercase;
-
-
-
 }
-
-
-
-
-
-
 
 .condition-status.good {
-
-
-
     background-color: var(--success-green);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .condition-status.caution {
-
-
-
     background-color: var(--warning-orange);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 .condition-status.excellent {
-
-
-
     background-color: var(--accent-teal);
-
-
-
     color: var(--alpine-white);
-
-
-
 }
-
-
-
-
-
-
 
 /* Planning Widget */
 
-
-
 .tool-list {
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     gap: 0.8rem;
-
-
-
 }
 
-
-
-
-
-
-
 .tool-link {
-
-
-
     display: flex;
-
-
-
     align-items: center;
-
-
-
     padding: 0.8rem;
-
-
-
     background-color: var(--light-gray);
-
-
-
     color: var(--mountain-charcoal);
-
-
-
     text-decoration: none;
-
-
-
     border-radius: 6px;
-
-
-
     transition: all 0.3s ease;
-
-
-
     font-weight: 600;
-
-
-
 }
 
 
@@ -5199,59 +4674,32 @@ h4 {
 
 
 .error-notification {
-
     position: fixed;
-
     top: 20px;
-
     right: 20px;
-
     background: var(--alpine-white);
-
     border: 1px solid var(--danger-red);
-
     border-radius: 12px;
-
     padding: 1rem;
-
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-
     z-index: 2000;
-
     max-width: 300px;
-
 }
-
-
 
 .error-content h3 {
-
     color: var(--danger-red);
-
     font-size: 1.1rem;
-
     margin-bottom: 0.5rem;
-
 }
 
-
-
 .error-content button {
-
     background: var(--danger-red);
-
     color: var(--alpine-white);
-
     border: none;
-
     padding: 6px 12px;
-
     border-radius: 6px;
-
     cursor: pointer;
-
     margin-top: 0.5rem;
-
 }
 
 /* ==== RESPONSIVE ENHANCEMENTS ==== */
