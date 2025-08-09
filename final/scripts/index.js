@@ -548,7 +548,7 @@ const IndexApp = {
             // Load all data
             const success = await IndexDataManager.initialize();
             if (!success) {
-                console.error('Failed to initialize data');
+                //console.error('Failed to initialize data');
                 return;
             }
             
