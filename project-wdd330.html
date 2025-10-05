@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard - Project Proposal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1F2937;
+            background: #F9FAFB;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #1E40AF;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1E40AF;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6B7280;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1E40AF;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E5E7EB;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #1F2937;
+            margin: 20px 0 10px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: #374151;
+            margin: 15px 0 8px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #374151;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        strong {
+            color: #1F2937;
+            font-weight: 600;
+        }
+
+        .function, .api-card, .module {
+            background: #F9FAFB;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1E40AF;
+        }
+
+        .wireframe {
+            margin-bottom: 30px;
+            background: #F9FAFB;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .wireframe-container {
+            border: 2px solid #1E40AF;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .wireframe-desktop {
+            width: 100%;
+            min-height: 400px;
+            border: 3px solid #374151;
+            border-radius: 8px;
+            padding: 15px;
+            background: #FFFFFF;
+        }
+
+        .wireframe-mobile {
+            width: 320px;
+            min-height: 500px;
+            border: 3px solid #374151;
+            border-radius: 20px;
+            padding: 15px;
+            background: #FFFFFF;
+            margin: 0 auto;
+        }
+
+        .wf-header {
+            background: #1E40AF;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wf-nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .wf-nav-item {
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .wf-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .wf-card {
+            border: 2px solid #E5E7EB;
+            padding: 15px;
+            border-radius: 8px;
+            background: #F9FAFB;
+        }
+
+        .wf-card-title {
+            font-size: 0.85rem;
+            color: #6B7280;
+            margin-bottom: 5px;
+        }
+
+        .wf-card-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1F2937;
+        }
+
+        .wf-card-change {
+            font-size: 0.9rem;
+            color: #10B981;
+        }
+
+        .wf-charts {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .wf-chart {
+            border: 2px solid #E5E7EB;
+            padding: 15px;
+            border-radius: 8px;
+            min-height: 200px;
+            background: #FFFFFF;
+            position: relative;
+        }
+
+        .wf-chart-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1F2937;
+        }
+
+        .wf-chart-placeholder {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(135deg, #E5E7EB 0%, #F3F4F6 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6B7280;
+        }
+
+        .wf-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .wf-section {
+            border: 2px solid #E5E7EB;
+            padding: 15px;
+            border-radius: 8px;
+            background: #FFFFFF;
+        }
+
+        .wf-section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1F2937;
+        }
+
+        .wf-list-item {
+            padding: 8px;
+            background: #F9FAFB;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .wf-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .wf-table th, .wf-table td {
+            padding: 10px;
+            border: 1px solid #E5E7EB;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        .wf-table th {
+            background: #F3F4F6;
+            font-weight: 600;
+        }
+
+        .wf-button {
+            background: #1E40AF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .wf-search {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .wf-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #E5E7EB;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        .wf-mobile-header {
+            background: #1E40AF;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .wf-mobile-card {
+            border: 2px solid #E5E7EB;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background: #F9FAFB;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .color-item {
+            text-align: center;
+        }
+
+        .color-box {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 2px solid #E5E7EB;
+        }
+
+        .color-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .typography-item {
+            background: #F9FAFB;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #E5E7EB;
+        }
+
+        th {
+            background: #F3F4F6;
+            font-weight: 600;
+            color: #1F2937;
+        }
+
+        .week-card {
+            background: #F9FAFB;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #10B981;
+        }
+
+        .challenge-item {
+            background: #FEF3C7;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #F59E0B;
+        }
+
+        .icon-design {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            margin: 20px auto;
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .wf-stats {
+                grid-template-columns: 1fr;
+            }
+            .wf-charts {
+                grid-template-columns: 1fr;
+            }
+            .wf-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personal Finance Dashboard</h1>
+            <p class="subtitle">Final Web Application Project Proposal</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>1. Overview</h2>
+                <p><strong>Problem:</strong> People struggle to manage their finances due to fragmented information across multiple platforms. Tracking investments, monitoring spending, and staying informed requires juggling multiple apps.</p>
+                <p><strong>Solution:</strong> A comprehensive web dashboard that consolidates portfolio tracking, spending analysis, and financial news into one intuitive interface using vanilla JavaScript.</p>
+                <p><strong>Motivation:</strong> Financial literacy impacts quality of life. This project empowers users to take control of their finances while demonstrating proficiency in vanilla JavaScript, API integration, data visualization, and responsive design.</p>
+            </section>
+
+            <section>
+                <h2>2. Target Audience</h2>
+                <ul>
+                    <li><strong>Young Professionals (25-35):</strong> Tech-savvy individuals beginning their investment journey who want to track portfolios and manage spending</li>
+                    <li><strong>Retail Investors:</strong> Active traders wanting real-time portfolio updates and market insights</li>
+                    <li><strong>Budget-Conscious Individuals:</strong> Anyone looking to understand and optimize spending patterns</li>
+                </ul>
+                <p><strong>User Needs:</strong> Real-time portfolio valuation, historical performance tracking, spending analysis, financial news, goal tracking, and mobile-friendly access across devices.</p>
+            </section>
+
+            <section>
+                <h2>3. Major Functions</h2>
+                
+                <div class="function">
+                    <h3>Function 1: Portfolio Management</h3>
+                    <p>Users can add, edit, and delete stock holdings. Each holding includes stock symbol, quantity, purchase price, and date. Data stored in localStorage with search, filter, and sort capabilities. Includes bulk CSV import/export functionality.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 2: Real-Time Portfolio Valuation</h3>
+                    <p>Fetches current stock prices from Alpha Vantage API and calculates total portfolio value in real-time. Displays current value, total gain/loss (dollars and percentage), daily change, and color-coded performance indicators (green for gains, red for losses).</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 3: Interactive Performance Charts</h3>
+                    <p>Visual representation of portfolio performance using Chart.js or Canvas API. Line graphs show value trends over time, pie charts display asset allocation. Multiple time period views (1 day, 1 week, 1 month, 3 months, 1 year, all time) with interactive tooltips and zoom capabilities.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 4: Transaction History Tracking</h3>
+                    <p>Complete record of all buy/sell transactions with date, symbol, type, quantity, price, and total value. Filter by date range or stock symbol. Automatically calculates cost basis and realized gains/losses. Export transaction history to CSV.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 5: Spending Analysis and Categorization</h3>
+                    <p>Log expenses and categorize them (Food, Transport, Entertainment, Bills, Shopping, Healthcare, etc.). Visual breakdowns with bar and pie charts. Set monthly budgets per category with visual indicators and warnings when approaching 90% of limits.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 6: Financial Goals Management</h3>
+                    <p>Set and track multiple financial goals (savings targets, emergency fund, vacation fund, etc.). Each goal includes target amount, current progress, deadline, and notes. Visual progress bars show completion percentage. System calculates required monthly savings to meet deadlines.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 7: Personalized Financial News Feed</h3>
+                    <p>Integration with News API to display relevant financial news articles. Filters news based on stocks in user's portfolio and general market news. Search functionality, date filtering, and article bookmarking. Each article shows headline, summary, source, date, and link.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 8: Currency Conversion and Multi-Currency Support</h3>
+                    <p>Real-time currency conversion using ExchangeRate-API. View portfolio value in different currencies (USD, EUR, GBP, JPY, CAD, AUD, CHF, CNY). Historical exchange rates for accurate performance tracking. Built-in currency converter tool.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 9: Dashboard Overview and Analytics</h3>
+                    <p>Comprehensive home page aggregating all key metrics: portfolio summary cards, top gainers/losers, recent transactions, spending summary, goal progress, and latest news. Responsive CSS Grid layout adapts to mobile, tablet, and desktop. Customizable widgets.</p>
+                </div>
+
+                <div class="function">
+                    <h3>Function 10: Data Management and Settings</h3>
+                    <p>Settings panel for managing preferences and data. Export all data (portfolio, transactions, expenses, goals) as JSON or CSV. Import data from files. Clear/reset all data with confirmation. Customize display preferences: currency, refresh intervals, theme (dark/light), chart colors.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Wireframes</h2>
+                
+                <div class="wireframe">
+                    <h3>Desktop View - Dashboard Home</h3>
+                    <div class="wireframe-container">
+                        <div class="wireframe-desktop">
+                            <div class="wf-header">
+                                <div style="font-size: 1.2rem;">💰 Finance Dashboard</div>
+                                <div class="wf-nav">
+                                    <div class="wf-nav-item">Portfolio</div>
+                                    <div class="wf-nav-item">Spending</div>
+                                    <div class="wf-nav-item">Goals</div>
+                                    <div class="wf-nav-item">⚙</div>
+                                </div>
+                            </div>
+                            
+                            <div class="wf-stats">
+                                <div class="wf-card">
+                                    <div class="wf-card-title">Total Value</div>
+                                    <div class="wf-card-value">$45,230.00</div>
+                                </div>
+                                <div class="wf-card">
+                                    <div class="wf-card-title">Daily Change</div>
+                                    <div class="wf-card-value">+$234.50</div>
+                                    <div class="wf-card-change">+0.52%</div>
+                                </div>
+                                <div class="wf-card">
+                                    <div class="wf-card-title">Total Gain</div>
+                                    <div class="wf-card-value">+$5,230.00</div>
+                                    <div class="wf-card-change">+13.07%</div>
+                                </div>
+                            </div>
+                            
+                            <div class="wf-charts">
+                                <div class="wf-chart">
+                                    <div class="wf-chart-title">Portfolio Performance</div>
+                                    <div class="wf-chart-placeholder">[Line Chart]</div>
+                                </div>
+                                <div class="wf-chart">
+                                    <div class="wf-chart-title">Asset Allocation</div>
+                                    <div class="wf-chart-placeholder">[Pie Chart]</div>
+                                </div>
+                            </div>
+                            
+                            <div class="wf-sections">
+                                <div class="wf-section">
+                                    <div class="wf-section-title">Recent Transactions</div>
+                                    <div class="wf-list-item">• AAPL - Buy 10 @ $175.00</div>
+                                    <div class="wf-list-item">• MSFT - Sell 5 @ $380.00</div>
+                                    <div class="wf-list-item">• GOOGL - Buy 8 @ $142.20</div>
+                                </div>
+                                <div class="wf-section">
+                                    <div class="wf-section-title">Financial News</div>
+                                    <div class="wf-list-item">• Tech stocks rally on earnings</div>
+                                    <div class="wf-list-item">• Fed announces rate decision</div>
+                                    <div class="wf-list-item">• Market volatility expected</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wireframe">
+                    <h3>Desktop View - Portfolio Holdings</h3>
+                    <div class="wireframe-container">
+                        <div class="wireframe-desktop">
+                            <div class="wf-header">
+                                <div style="font-size: 1.2rem;">💰 Finance Dashboard</div>
+                                <div class="wf-nav">
+                                    <div class="wf-nav-item">Portfolio</div>
+                                    <div class="wf-nav-item">Spending</div>
+                                    <div class="wf-nav-item">Goals</div>
+                                    <div class="wf-nav-item">⚙</div>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                <h3 style="margin: 0;">Portfolio Holdings</h3>
+                                <button class="wf-button">+ Add Holding</button>
+                            </div>
+                            
+                            <div class="wf-search">
+                                <input type="text" class="wf-input" placeholder="🔍 Search...">
+                                <select class="wf-input" style="flex: 0 0 150px;">
+                                    <option>Filter: All</option>
+                                </select>
+                                <select class="wf-input" style="flex: 0 0 150px;">
+                                    <option>Sort: Value</option>
+                                </select>
+                            </div>
+                            
+                            <table class="wf-table">
+                                <thead>
+                                    <tr>
+                                        <th>Symbol</th>
+                                        <th>Shares</th>
+                                        <th>Avg Cost</th>
+                                        <th>Current Price</th>
+                                        <th>Value</th>
+                                        <th>Gain/Loss</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>AAPL</td>
+                                        <td>50</td>
+                                        <td>$150.00</td>
+                                        <td>$175.30</td>
+                                        <td>$8,765</td>
+                                        <td style="color: #10B981;">+16.87%</td>
+                                        <td><small>[Edit] [Delete]</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSFT</td>
+                                        <td>30</td>
+                                        <td>$320.00</td>
+                                        <td>$380.50</td>
+                                        <td>$11,415</td>
+                                        <td style="color: #10B981;">+18.91%</td>
+                                        <td><small>[Edit] [Delete]</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>GOOGL</td>
+                                        <td>25</td>
+                                        <td>$130.00</td>
+                                        <td>$142.20</td>
+                                        <td>$3,555</td>
+                                        <td style="color: #10B981;">+9.38%</td>
+                                        <td><small>[Edit] [Delete]</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div style="margin-top: 15px; padding: 15px; background: #F9FAFB; border-radius: 8px;">
+                                <strong>Total Portfolio Value: $45,230.00</strong> | Total Gain: <span style="color: #10B981;">+$5,230 (13.07%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wireframe">
+                    <h3>Mobile View - Dashboard Home</h3>
+                    <div class="wireframe-container">
+                        <div class="wireframe-mobile">
+                            <div class="wf-mobile-header">
+                                <span>☰ Dashboard</span>
+                                <span>⚙</span>
+                            </div>
+                            
+                            <div class="wf-mobile-card">
+                                <div class="wf-card-title">Total Value</div>
+                                <div class="wf-card-value">$45,230.00</div>
+                                <div style="margin-top: 10px;">
+                                    <div class="wf-card-title">Daily Change</div>
+                                    <div class="wf-card-change">+$234.50 (+0.52%)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="wf-mobile-card">
+                                <div class="wf-section-title">Performance Chart</div>
+                                <div class="wf-chart-placeholder" style="height: 150px;">[Line Chart]</div>
+                            </div>
+                            
+                            <div class="wf-mobile-card">
+                                <div class="wf-section-title">Top Holdings</div>
+                                <div class="wf-list-item">• AAPL - $8,765</div>
+                                <div class="wf-list-item">• MSFT - $11,415</div>
+                                <div class="wf-list-item" style="text-align: center; color: #1E40AF; margin-top: 10px;">[View All →]</div>
+                            </div>
+                            
+                            <div class="wf-mobile-card">
+                                <div class="wf-section-title">Latest News</div>
+                                <div class="wf-list-item">• Tech stocks rally...</div>
+                                <div class="wf-list-item" style="text-align: center; color: #1E40AF; margin-top: 10px;">[More →]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wireframe">
+                    <h3>Mobile View - Add Transaction</h3>
+                    <div class="wireframe-container">
+                        <div class="wireframe-mobile">
+                            <div class="wf-mobile-header">
+                                <span>← Add Transaction</span>
+                            </div>
+                            
+                            <div style="padding: 10px;">
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Transaction Type</label>
+                                    <div style="display: flex; gap: 10px;">
+                                        <label><input type="radio" name="type" checked> Buy</label>
+                                        <label><input type="radio" name="type"> Sell</label>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Stock Symbol *</label>
+                                    <input type="text" class="wf-input" value="AAPL">
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Quantity *</label>
+                                    <input type="number" class="wf-input" value="10">
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Price per Share *</label>
+                                    <input type="text" class="wf-input" value="$175.00">
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Date *</label>
+                                    <input type="date" class="wf-input" value="2025-10-04">
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Notes (optional)</label>
+                                    <textarea class="wf-input" rows="2"></textarea>
+                                </div>
+                                
+                                <div style="margin-bottom: 15px; padding: 15px; background: #F9FAFB; border-radius: 8px; text-align: center;">
+                                    <strong>Total: $1,750.00</strong>
+                                </div>
+                                
+                                <button class="wf-button" style="width: 100%; margin-bottom: 10px;">Add Transaction</button>
+                                <button style="width: 100%; padding: 10px; background: white; border: 2px solid #E5E7EB; border-radius: 6px;">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wireframe">
+                    <h3>Mobile View - Financial Goals</h3>
+                    <div class="wireframe-container">
+                        <div class="wireframe-mobile">
+                            <div class="wf-mobile-header">
+                                <span>☰ Financial Goals</span>
+                                <span>+</span>
+                            </div>
+                            
+                            <div class="wf-mobile-card">
+                                <div class="wf-section-title">Emergency Fund</div>
+                                <div style="margin: 10px 0;">
+                                    <div style="font-size: 0.9rem; color: #6B7280;">Target: $10,000</div>
+                                    <div style="font-size: 0.9rem; color: #6B7280;">Current: $6,500</div>
+                                </div>
+                                <div style="width: 100%; background: #E5E7EB; height: 20px; border-radius: 10px; overflow: hidden; margin: 10px 0;">
+                                    <div style="width: 65%; background: #10B981; height: 100%;"></div>
+                                </div>
+                                <div style="font-weight: bold;">65%</div>
+                                <div style="margin-top: 10px; font-size: 0.85rem; color: #6B7280;">Due: Dec 2025 | Need: $583/month</div>
+                            </div>
+                            
+                            <div class="wf-mobile-card">
+                                <div class="wf-section-title">Vacation Fund</div>
+                                <div style="margin: 10px 0;">
+                                    <div style="font-size: 0.9rem; color: #6B7280;">Target: $5,000</div>
+                                    <div style="font-size: 0.9rem; color: #6B7280;">Current: $2,800</div>
+                                </div>
+                                <div style="width: 100%; background: #E5E7EB; height: 20px; border-radius: 10px; overflow: hidden; margin: 10px 0;">
+                                    <div style="width: 56%; background: #8B5CF6; height: 100%;"></div>
+                                </div>
+                                <div style="font-weight: bold;">56%</div>
+                                <div style="margin-top: 10px; font-size: 0.85rem; color: #6B7280;">Due: Jun 2026 | Need: $275/month</div>
+                            </div>
+                            
+                            <div class="wf-mobile-card">
+                                <div class="wf-section-title">Car Down Payment</div>
+                                <div style="margin: 10px 0;">
+                                    <div style="font-size: 0.9rem; color: #6B7280;">Target: $15,000</div>
+                                    <div style="font-size: 0.9rem; color: #6B7280;">Current: $4,200</div>
+                                </div>
+                                <div style="width: 100%; background: #E5E7EB; height: 20px; border-radius: 10px; overflow: hidden; margin: 10px 0;">
+                                    <div style="width: 28%; background: #F59E0B; height: 100%;"></div>
+                                </div>
+                                <div style="font-weight: bold;">28%</div>
+                                <div style="margin-top: 10px; font-size: 0.85rem; color: #6B7280;">Due: Dec 2026 | Need: $771/month</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>5. External Data</h2>
+                
+                <div class="api-card">
+                    <h3>API 1: Alpha Vantage (Stock Market Data)</h3>
+                    <p><strong>Purpose:</strong> Real-time and historical stock prices</p>
+                    <p><strong>Endpoints:</strong></p>
+                    <ul>
+                        <li>GLOBAL_QUOTE - Current stock price and daily performance</li>
+                        <li>TIME_SERIES_DAILY - Historical daily prices for charts</li>
+                        <li>SYMBOL_SEARCH - Search and validate stock symbols</li>
+                    </ul>
+                    <p><strong>Data Needed:</strong> Current price, daily change, volume, historical prices</p>
+                    <p><strong>Rate Limit:</strong> Free tier 25 requests/day (will use caching)</p>
+                </div>
+
+                <div class="api-card">
+                    <h3>API 2: News API (Financial News)</h3>
+                    <p><strong>Purpose:</strong> Relevant financial and market news</p>
+                    <p><strong>Endpoints:</strong></p>
+                    <ul>
+                        <li>Search news by keyword (stock symbols)</li>
+                        <li>Top business/finance headlines</li>
+                        <li>Filter by date and source</li>
+                    </ul>
+                    <p><strong>Data Needed:</strong> Headline, summary, date, source, URL, thumbnail</p>
+                    <p><strong>Rate Limit:</strong> 100 requests/day (will cache articles)</p>
+                </div>
+
+                <div class="api-card">
+                    <h3>API 3: ExchangeRate-API (Currency Conversion)</h3>
+                    <p><strong>Purpose:</strong> Real-time currency exchange rates</p>
+                    <p><strong>Endpoints:</strong></p>
+                    <ul>
+                        <li>Latest exchange rates</li>
+                        <li>Historical rates</li>
+                        <li>Currency conversion</li>
+                    </ul>
+                    <p><strong>Data Needed:</strong> Exchange rates for USD, EUR, GBP, JPY, CAD, AUD</p>
+                    <p><strong>Rate Limit:</strong> 1,500 requests/month (daily cache updates)</p>
+                </div>
+
+                <h3>Data Storage (localStorage)</h3>
+                <ul>
+                    <li><strong>Portfolio Holdings:</strong> Symbol, quantity, avg cost, purchase date</li>
+                    <li><strong>Transactions:</strong> Date, type, symbol, quantity, price, notes</li>
+                    <li><strong>Expenses:</strong> Date, category, amount, description, merchant</li>
+                    <li><strong>Goals:</strong> Title, target amount, current amount, deadline</li>
+                    <li><strong>Settings:</strong> Currency, theme, refresh interval</li>
+                    <li><strong>Cache:</strong> Stock prices, exchange rates, news (with timestamps)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Module List</h2>
+                
+                <div class="module">
+                    <h4>1. App Module (app.js)</h4>
+                    <p>Main entry point, initialization, routing, global state management</p>
+                </div>
+
+                <div class="module">
+                    <h4>2. Storage Module (storage.js)</h4>
+                    <p>localStorage CRUD operations, data validation, import/export, clear data</p>
+                </div>
+
+                <div class="module">
+                    <h4>3. API Manager (api-manager.js)</h4>
+                    <p>Centralized API requests, caching, rate limiting, error handling</p>
+                </div>
+
+                <div class="module">
+                    <h4>4. Stock Service (stock-service.js)</h4>
+                    <p>Fetch stock prices, historical data, search symbols, calculate metrics</p>
+                </div>
+
+                <div class="module">
+                    <h4>5. Portfolio Manager (portfolio-manager.js)</h4>
+                    <p>Add/edit/delete holdings, calculate statistics, asset allocation</p>
+                </div>
+
+                <div class="module">
+                    <h4>6. Transaction Manager (transaction-manager.js)</h4>
+                    <p>Record transactions, update holdings, calculate gains/losses</p>
+                </div>
+
+                <div class="module">
+                    <h4>7. Spending Tracker (spending-tracker.js)</h4>
+                    <p>Add/edit expenses, categorize, budget tracking, spending reports</p>
+                </div>
+
+                <div class="module">
+                    <h4>8. Goals Manager (goals-manager.js)</h4>
+                    <p>Create/track goals, calculate savings rate, progress monitoring</p>
+                </div>
+
+                <div class="module">
+                    <h4>9. News Service (news-service.js)</h4>
+                    <p>Fetch news, filter by portfolio, search, cache articles</p>
+                </div>
+
+                <div class="module">
+                    <h4>10. Currency Service (currency-service.js)</h4>
+                    <p>Fetch exchange rates, convert currencies, format displays</p>
+                </div>
+
+                <div class="module">
+                    <h4>11. Chart Manager (chart-manager.js)</h4>
+                    <p>Create charts (line, pie, bar), handle interactions, responsive sizing</p>
+                </div>
+
+                <div class="module">
+                    <h4>12. UI Manager (ui-manager.js)</h4>
+                    <p>Render views, handle navigation, update elements, modals, notifications</p>
+                </div>
+
+                <div class="module">
+                    <h4>13. Form Handler (form-handler.js)</h4>
+                    <p>Validate forms, handle submissions, display errors, pre-populate data</p>
+                </div>
+
+                <div class="module">
+                    <h4>14. Utilities (utils.js)</h4>
+                    <p>Date/number formatting, generate IDs, debounce, DOM helpers</p>
+                </div>
+
+                <div class="module">
+                    <h4>15. Router (router.js)</h4>
+                    <p>Client-side routing, URL hash changes, load views, history management</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>7. Graphic Identity</h2>
+                
+                <h3>Color Scheme</h3>
+                <div class="color-grid">
+                    <div class="color-item">
+                        <div class="color-box" style="background: #1E40AF;"></div>
+                        <p><strong>Primary Blue</strong><br>#1E40AF<br>Buttons, links</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #10B981;"></div>
+                        <p><strong>Success Green</strong><br>#10B981<br>Gains, success</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #EF4444;"></div>
+                        <p><strong>Danger Red</strong><br>#EF4444<br>Losses, warnings</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #F59E0B;"></div>
+                        <p><strong>Warning Amber</strong><br>#F59E0B<br>Warnings</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #8B5CF6;"></div>
+                        <p><strong>Info Purple</strong><br>#8B5CF6<br>Information</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #1F2937;"></div>
+                        <p><strong>Dark Gray</strong><br>#1F2937<br>Primary text</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #6B7280;"></div>
+                        <p><strong>Medium Gray</strong><br>#6B7280<br>Secondary text</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #F3F4F6;"></div>
+                        <p><strong>Light Gray</strong><br>#F3F4F6<br>Backgrounds</p>
+                    </div>
+                </div>
+
+                <h3>Typography</h3>
+                <div class="typography-item">
+                    <p><strong>Primary Font:</strong> 'Inter', -apple-system, sans-serif</p>
+                    <p><strong>Numbers Font:</strong> 'Roboto Mono', monospace (for currency and data)</p>
+                    <p><strong>Font Sizes:</strong></p>
+                    <ul>
+                        <li>H1: 2.5rem (40px) - Bold (700)</li>
+                        <li>H2: 2rem (32px) - Semi-bold (600)</li>
+                        <li>H3: 1.5rem (24px) - Semi-bold (600)</li>
+                        <li>Body: 1rem (16px) - Regular (400)</li>
+                        <li>Small: 0.875rem (14px) - Regular (400)</li>
+                    </ul>
+                </div>
+
+                <h3>Component Styling</h3>
+                <div class="typography-item">
+                    <p><strong>Cards:</strong></p>
+                    <ul>
+                        <li>Background: White (#FFFFFF)</li>
+                        <li>Border: 1px solid #E5E7EB</li>
+                        <li>Border Radius: 12px</li>
+                        <li>Shadow: 0 1px 3px rgba(0, 0, 0, 0.1)</li>
+                        <li>Padding: 24px</li>
+                    </ul>
+                </div>
+
+                <div class="typography-item">
+                    <p><strong>Buttons:</strong></p>
+                    <ul>
+                        <li>Primary: Background #1E40AF, White text</li>
+                        <li>Padding: 12px 24px</li>
+                        <li>Border Radius: 8px</li>
+                        <li>Font Weight: 600</li>
+                        <li>Transition: all 0.2s ease</li>
+                    </ul>
+                </div>
+
+                <div class="typography-item">
+                    <p><strong>Forms:</strong></p>
+                    <ul>
+                        <li>Input Border: 1px solid #D1D5DB</li>
+                        <li>Border Radius: 8px</li>
+                        <li>Padding: 12px 16px</li>
+                        <li>Focus Border: #1E40AF with shadow</li>
+                    </ul>
+                </div>
+
+                <h3>Application Icon</h3>
+                <div class="icon-design">💰</div>
+                <p style="text-align: center;"><strong>Icon Design:</strong> Blue gradient background (#1E40AF to #3B82F6) with white dollar sign symbol. Modern, rounded corners (20px radius). Represents financial management and wealth growth.</p>
+            </section>
+
+            <section>
+                <h2>8. Timeline</h2>
+                
+                <div class="week-card">
+                    <h3>Week 5 Deliverables</h3>
+                    <p><strong>Focus:</strong> Foundation & Core Infrastructure</p>
+                    <ul>
+                        <li><strong>Project Setup:</strong> Initialize repository, folder structure, ES modules setup</li>
+                        <li><strong>Storage Module:</strong> Complete localStorage implementation with CRUD operations</li>
+                        <li><strong>API Manager:</strong> Set up API integration framework, implement caching</li>
+                        <li><strong>Basic UI:</strong> Create HTML structure, responsive CSS grid layout</li>
+                        <li><strong>Router:</strong> Implement client-side routing with hash navigation</li>
+                        <li><strong>Portfolio Manager:</strong> Add/edit/delete holdings functionality</li>
+                    </ul>
+                    <p><strong>Deliverable:</strong> Working prototype with portfolio management and data persistence</p>
+                </div>
+
+                <div class="week-card">
+                    <h3>Week 6 Deliverables</h3>
+                    <p><strong>Focus:</strong> API Integration & Core Features</p>
+                    <ul>
+                        <li><strong>Stock Service:</strong> Alpha Vantage integration, real-time price fetching</li>
+                        <li><strong>News Service:</strong> News API integration, article filtering</li>
+                        <li><strong>Currency Service:</strong> ExchangeRate-API integration</li>
+                        <li><strong>Transaction Manager:</strong> Complete transaction tracking system</li>
+                        <li><strong>Chart Manager:</strong> Implement Chart.js visualizations (line, pie, bar charts)</li>
+                        <li><strong>Dashboard:</strong> Complete dashboard overview with all widgets</li>
+                        <li><strong>Spending Tracker:</strong> Expense logging and categorization</li>
+                    </ul>
+                    <p><strong>Deliverable:</strong> Fully functional application with all major features working</p>
+                </div>
+
+                <div class="week-card">
+                    <h3>Week 7 Deliverables</h3>
+                    <p><strong>Focus:</strong> Polish, Testing & Deployment</p>
+                    <ul>
+                        <li><strong>Goals Manager:</strong> Financial goals tracking system</li>
+                        <li><strong>Settings:</strong> Complete settings panel, theme toggle, preferences</li>
+                        <li><strong>CSS Animations:</strong> Add smooth transitions, loading states, hover effects</li>
+                        <li><strong>Responsive Design:</strong> Test and perfect mobile/tablet layouts</li>
+                        <li><strong>Testing:</strong> Bug fixes, ESLint validation, cross-browser testing</li>
+                        <li><strong>Accessibility:</strong> ARIA labels, keyboard navigation, screen reader support</li>
+                        <li><strong>SEO:</strong> Meta tags, semantic HTML, performance optimization</li>
+                        <li><strong>Documentation:</strong> Code comments, README, user guide</li>
+                        <li><strong>Deployment:</strong> Deploy to hosting platform (Netlify/Vercel)</li>
+                    </ul>
+                    <p><strong>Deliverable:</strong> Production-ready application, deployed and documented</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>9. Project Planning</h2>
+                <p><strong>Trello Board Link:</strong> <a href="https://trello.com" target="_blank" style="color: #1E40AF;">https://trello.com/b/your-board-here</a></p>
+                <p><em>(Create your Trello board with the following lists and cards)</em></p>
+                
+                <h3>Trello Board Structure</h3>
+                
+                <h4>List 1: Backlog</h4>
+                <ul>
+                    <li>Set up project repository and folder structure</li>
+                    <li>Create HTML templates for all pages</li>
+                    <li>Design responsive CSS grid system</li>
+                    <li>Implement localStorage utilities</li>
+                    <li>Create data models for all entities</li>
+                    <li>Set up ES modules architecture</li>
+                </ul>
+
+                <h4>List 2: Week 5 - Foundation</h4>
+                <ul>
+                    <li>Build Storage Module with full CRUD</li>
+                    <li>Create API Manager base class</li>
+                    <li>Implement client-side router</li>
+                    <li>Design and code portfolio management UI</li>
+                    <li>Build form validation system</li>
+                    <li>Create utility functions module</li>
+                    <li>Implement add/edit/delete holdings</li>
+                </ul>
+
+                <h4>List 3: Week 6 - Integration</h4>
+                <ul>
+                    <li>Integrate Alpha Vantage API</li>
+                    <li>Integrate News API</li>
+                    <li>Integrate ExchangeRate-API</li>
+                    <li>Build transaction tracking system</li>
+                    <li>Create Chart.js visualizations</li>
+                    <li>Build spending tracker module</li>
+                    <li>Implement dashboard overview</li>
+                    <li>Add search and filter functionality</li>
+                    <li>Create news feed display</li>
+                    <li>Implement currency converter</li>
+                </ul>
+
+                <h4>List 4: Week 7 - Polish</h4>
+                <ul>
+                    <li>Build financial goals manager</li>
+                    <li>Create settings panel</li>
+                    <li>Implement dark/light theme toggle</li>
+                    <li>Add CSS animations and transitions</li>
+                    <li>Perfect mobile responsive design</li>
+                    <li>Add loading states and spinners</li>
+                    <li>Implement error handling UI</li>
+                    <li>Create data export functionality</li>
+                    <li>Add data import functionality</li>
+                </ul>
+
+                <h4>List 5: Testing & QA</h4>
+                <ul>
+                    <li>ESLint configuration and fixes</li>
+                    <li>Cross-browser testing (Chrome, Firefox, Safari, Edge)</li>
+                    <li>Mobile device testing</li>
+                    <li>Accessibility audit (WAVE, Lighthouse)</li>
+                    <li>Performance optimization</li>
+                    <li>Fix all console errors</li>
+                    <li>Test all user flows</li>
+                    <li>Validate HTML/CSS</li>
+                </ul>
+
+                <h4>List 6: Documentation & Deployment</h4>
+                <ul>
+                    <li>Write comprehensive code comments</li>
+                    <li>Create README.md with setup instructions</li>
+                    <li>Write user guide documentation</li>
+                    <li>Add JSDoc comments to functions</li>
+                    <li>Deploy to hosting platform</li>
+                    <li>Set up custom domain (optional)</li>
+                    <li>Final testing on production</li>
+                </ul>
+
+                <h4>List 7: Done</h4>
+                <p><em>(Move completed cards here)</em></p>
+            </section>
+
+            <section>
+                <h2>10. Challenges</h2>
+                
+                <div class="challenge-item">
+                    <h4>1. API Rate Limiting</h4>
+                    <p><strong>Challenge:</strong> Alpha Vantage free tier only allows 25 requests per day, which is very restrictive for a portfolio tracker.</p>
+                    <p><strong>Solution:</strong> Implement intelligent caching strategy with localStorage. Cache stock prices with timestamps and only refresh when data is older than 5 minutes during market hours. Use batch requests when possible. Implement manual refresh button to give users control.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>2. Real-Time Data Without WebSockets</h4>
+                    <p><strong>Challenge:</strong> Providing "real-time" updates using vanilla JavaScript without WebSocket libraries or frameworks.</p>
+                    <p><strong>Solution:</strong> Use setInterval for polling API at reasonable intervals (5-10 minutes). Implement smart refresh that only updates during market hours (9:30 AM - 4:00 PM EST). Provide manual refresh option for instant updates when needed.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>3. Complex State Management Without Framework</h4>
+                    <p><strong>Challenge:</strong> Managing application state across multiple modules without React/Vue state management.</p>
+                    <p><strong>Solution:</strong> Create centralized state management using ES modules with a pub/sub pattern. Implement custom event system for component communication. Use localStorage as single source of truth and trigger UI updates when localStorage changes.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>4. Chart Creation Without Heavy Libraries</h4>
+                    <p><strong>Challenge:</strong> Creating interactive, responsive charts using only Chart.js (allowed CSS library).</p>
+                    <p><strong>Solution:</strong> Learn Chart.js thoroughly and create reusable chart configurations. Optimize chart rendering for performance. Consider Canvas API fallback for simple visualizations if needed.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>5. Data Persistence and Synchronization</h4>
+                    <p><strong>Challenge:</strong> Keeping cached API data synchronized with localStorage and ensuring data integrity.</p>
+                    <p><strong>Solution:</strong> Implement timestamp-based cache validation. Create data migration system for localStorage schema updates. Add data export/import functionality as backup mechanism.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>6. Mobile Responsiveness for Data-Heavy UI</h4>
+                    <p><strong>Challenge:</strong> Displaying complex tables, charts, and multiple data points on mobile screens.</p>
+                    <p><strong>Solution:</strong> Design mobile-first with priority on essential information. Use CSS Grid and Flexbox for flexible layouts. Implement collapsible sections and tabs for mobile. Optimize tables to card layouts on small screens.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>7. Performance with Large Datasets</h4>
+                    <p><strong>Challenge:</strong> Maintaining performance when users have large portfolios or transaction histories.</p>
+                    <p><strong>Solution:</strong> Implement pagination for large lists. Use virtual scrolling for long tables. Optimize DOM manipulation by batching updates. Lazy load charts and heavy components.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>8. Cross-Browser Compatibility</h4>
+                    <p><strong>Challenge:</strong> Ensuring consistent functionality across all modern browsers without build tools or polyfills.</p>
+                    <p><strong>Solution:</strong> Use well-supported ES6+ features only. Test extensively on Chrome, Firefox, Safari, and Edge. Avoid experimental CSS features. Use feature detection for browser-specific functionality.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 2px solid #E5E7EB; color: #6B7280;">
+            <p><strong>Personal Finance Dashboard</strong> - Final Web Application Project</p>
+            <p>Built with HTML, CSS, and Vanilla JavaScript</p>
+        </footer>
+    </div>
+</body>
+</html>
